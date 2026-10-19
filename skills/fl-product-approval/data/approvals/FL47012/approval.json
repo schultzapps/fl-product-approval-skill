@@ -1,0 +1,83 @@
+{
+  "fl_number": "FL47012-R9",
+  "application_type": "Revision",
+  "code_version": "2023",
+  "status": "Approved",
+  "status_comments": "Archived",
+  "manufacturer": "Kawneer Company",
+  "category": "Panel Walls",
+  "subcategory": "Storefronts",
+  "compliance_method": "Evaluation Report from a Florida Registered Architect or a Licensed Florida Professional Engineer",
+  "approval_method": "Method 1 Option D",
+  "dates": {
+    "submitted": "06/16/2026",
+    "validated": "06/16/2026",
+    "pending_fbc": "06/24/2026",
+    "approved": "08/11/2026"
+  },
+  "quality_assurance_entity": "Intertek Testing Services NA, Inc. - QA Entity",
+  "quality_assurance_expires": "12/31/2026",
+  "evaluator": {
+    "name": "Lucas A. Turner",
+    "license": "PE-58201"
+  },
+  "referenced_standards": [
+    {
+      "standard": "AAMA 501",
+      "year": "2015"
+    },
+    {
+      "standard": "TAS 201/202/203",
+      "year": "1994"
+    }
+  ],
+  "products": [
+    {
+      "fl": "FL47012.1",
+      "model": "IR521 FG/PG NT/T/UT",
+      "description": "IR521 Field Glazed or Pre Glazed NT/T/UT Aluminum Storefront Systems, Large Missile Impact levels D and E and Small Missile Impact level A",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "Please see Installation Instructions and Evaluation Report for additional information and limits of use."
+      }
+    }
+  ],
+  "documents": [
+    {
+      "role": "certificate_of_independence",
+      "file": "FL47012_R9_COI_EvalReport-IR521-FPA.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Independence/FL47012_R9_COI_EvalReport-IR521-FPA.pdf",
+      "sha256": "aa578cf5b44c840e4c6b1155719c00054a558d44dba3f00ba88b0e3a286b3f14",
+      "bytes": 230538,
+      "cache_path": "cache/FL47012/FL47012_R9_COI_EvalReport-IR521-FPA.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47012_R9_II_IR521-FPA.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47012_R9_II_IR521-FPA.pdf",
+      "sha256": "54f65983ec627b984945c8aa4efe2d64ae88ad9bdaccf7222134ab282e655f58",
+      "bytes": 8264934,
+      "cache_path": "cache/FL47012/FL47012_R9_II_IR521-FPA.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47012_R9_AE_EvalReport-IR521-FPA.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47012_R9_AE_EvalReport-IR521-FPA.pdf",
+      "sha256": "aa578cf5b44c840e4c6b1155719c00054a558d44dba3f00ba88b0e3a286b3f14",
+      "bytes": 230538,
+      "cache_path": "cache/FL47012/FL47012_R9_AE_EvalReport-IR521-FPA.pdf"
+    }
+  ],
+  "source": {
+    "detail_page": "https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDquFoQ4Z2YZy8F1hX8BFpbdHZ376lYfvmSspH6Hy4V2qkA%3d%3d",
+    "retrieved": "2026-10-19T19:05:24+00:00",
+    "note": "Revision shown is the one the search returned; confirm it is the current approved revision on floridabuilding.org before relying on it."
+  },
+  "ingest_status": "structured",
+  "series": [
+    "IR 521/521T/521UT"
+  ]
+}

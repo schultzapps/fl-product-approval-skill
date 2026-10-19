@@ -1,0 +1,15 @@
+{
+  "_comment": "ILLUSTRATIVE ONLY - fictional project to exercise the checker. Replace with real project data and engineer-provided pressures.",
+  "project": {"name": "Example retail shell", "location": "Miami-Dade County, FL", "hvhz": true, "code": "FBC 8th Ed. (2023)", "height_ft": 22},
+  "approval": "FL47012",
+  "design_pressures": {"positive_psf": 52, "negative_psf": -68, "basis": "ASD"},
+  "missile_level": "D",
+  "glazing_mode": "field",
+  "thermal": "T",
+  "openings": [
+    {"id": "Elev-1 bay", "tributary_width_in": 36, "mullion_height_in": 102, "dlo_width_in": 33.5, "dlo_height_in": 95, "shim_gap_in": 0.25,
+     "members": ["glass", "mullion", "head", "sill", "intermediate_horizontal", "anchor_cluster"]},
+    {"id": "Elev-2 tall bay", "tributary_width_in": 48, "mullion_height_in": 126, "dlo_width_in": 57.5, "dlo_height_in": 100,
+     "members": ["glass", "mullion", "head", "sill", "anchor_cluster"]}
+  ]
+}

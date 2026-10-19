@@ -1,0 +1,2866 @@
+{
+ "approval": "FL47012",
+ "pdf_role": "installation_instructions",
+ "drawing_no": "IR521-FPA",
+ "tables": [
+  {
+   "id": "anchor-cluster-shim-0.25",
+   "component": "head_sill_anchor_cluster",
+   "family": "Head/Sill Anchor Cluster Load Capacity, 1/4\" max shim gap",
+   "sheet": 3,
+   "page": 3,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 5,
+   "columns": [
+    {
+     "id": "midspan_clusters",
+     "role": "required_midspan_cluster_qty"
+    },
+    {
+     "id": "end_2",
+     "end_cluster_anchor_qty": 2
+    },
+    {
+     "id": "end_3",
+     "end_cluster_anchor_qty": 3
+    },
+    {
+     "id": "end_4",
+     "end_cluster_anchor_qty": 4
+    },
+    {
+     "id": "end_5",
+     "end_cluster_anchor_qty": 5
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D",
+     "E"
+    ],
+    "shim_gap_in": 0.25
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "notes": "Clusters at both ends of each head/sill segment, and at midspan if 'Midspan Cluster Qty' > 0. null = not permitted. Axis labelled 'Tributary Mullion Width / Height'."
+  },
+  {
+   "id": "anchor-cluster-shim-0.375",
+   "component": "head_sill_anchor_cluster",
+   "family": "Head/Sill Anchor Cluster Load Capacity, 3/8\" max shim gap",
+   "sheet": 3,
+   "page": 3,
+   "panels": [
+    2,
+    3
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "midspan_clusters",
+     "role": "required_midspan_cluster_qty"
+    },
+    {
+     "id": "end_2",
+     "end_cluster_anchor_qty": 2
+    },
+    {
+     "id": "end_3",
+     "end_cluster_anchor_qty": 3
+    },
+    {
+     "id": "end_4",
+     "end_cluster_anchor_qty": 4
+    },
+    {
+     "id": "end_5",
+     "end_cluster_anchor_qty": 5
+    },
+    {
+     "id": "end_6",
+     "end_cluster_anchor_qty": 6
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D",
+     "E"
+    ],
+    "shim_gap_in": 0.375
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "mullion-shallow-LD-field",
+   "component": "mullion",
+   "family": "Mullions w/ Shallow Pocket Fillers",
+   "sheet": 7,
+   "page": 7,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "nosteel_NT",
+     "thermal": "NT",
+     "steel": false,
+     "label": "No Steel M1/M2/M3"
+    },
+    {
+     "id": "nosteel_T",
+     "thermal": "T",
+     "steel": false,
+     "label": "No Steel M1/M2/M3"
+    },
+    {
+     "id": "nosteel_UT",
+     "thermal": "UT",
+     "steel": false,
+     "label": "No Steel M1/M2/M3"
+    },
+    {
+     "id": "steel_NT",
+     "thermal": "NT",
+     "steel": true,
+     "label": "w/ Steel M4/M5"
+    },
+    {
+     "id": "steel_T",
+     "thermal": "T",
+     "steel": true,
+     "label": "w/ Steel M4/M5"
+    },
+    {
+     "id": "steel_UT",
+     "thermal": "UT",
+     "steel": true,
+     "label": "w/ Steel M4/M5"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "variants": [
+    {
+     "id": "M1",
+     "thermal": [
+      "NT"
+     ],
+     "steel": false,
+     "width_in": 2.5
+    },
+    {
+     "id": "M2",
+     "thermal": [
+      "T"
+     ],
+     "steel": false,
+     "width_in": 2.5
+    },
+    {
+     "id": "M3",
+     "thermal": [
+      "UT"
+     ],
+     "steel": false,
+     "width_in": 2.75
+    },
+    {
+     "id": "M4",
+     "thermal": [
+      "NT"
+     ],
+     "steel": true,
+     "width_in": 2.5
+    },
+    {
+     "id": "M5",
+     "thermal": [
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "width_in": 3.0
+    }
+   ]
+  },
+  {
+   "id": "mullion-expansion-LD-field-or-pre",
+   "component": "mullion",
+   "family": "Expansion Mullion",
+   "sheet": 8,
+   "page": 8,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "nosteel_NT",
+     "thermal": "NT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_T",
+     "thermal": "T",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_UT",
+     "thermal": "UT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "steel_NT",
+     "thermal": "NT",
+     "steel": true,
+     "label": "w/ Steel E4/E5"
+    },
+    {
+     "id": "steel_T",
+     "thermal": "T",
+     "steel": true,
+     "label": "w/ Steel E4/E5"
+    },
+    {
+     "id": "steel_UT",
+     "thermal": "UT",
+     "steel": true,
+     "label": "w/ Steel E4/E5"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field",
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "variants": [
+    {
+     "id": "E1-E3",
+     "steel": false
+    },
+    {
+     "id": "E4-E5",
+     "steel": true
+    }
+   ],
+   "notes": "E-variant to thermal mapping is by column header only; confirm detail on sheet 8."
+  },
+  {
+   "id": "mullion-5in-LD-field",
+   "component": "mullion",
+   "family": "5\" Mullions 5M7, 5M2, 5M4, 5M6",
+   "sheet": 9,
+   "page": 9,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 4,
+   "columns": [
+    {
+     "id": "5M7",
+     "thermal": "NT",
+     "steel": true
+    },
+    {
+     "id": "5M2",
+     "thermal": "NT",
+     "steel": true
+    },
+    {
+     "id": "5M4",
+     "thermal": "T",
+     "steel": true
+    },
+    {
+     "id": "5M6",
+     "thermal": "UT",
+     "steel": true
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "variants": [
+    {
+     "id": "5M1",
+     "thermal": [
+      "NT"
+     ],
+     "steel": false
+    },
+    {
+     "id": "5M2",
+     "thermal": [
+      "NT"
+     ],
+     "steel": true,
+     "steel_qty": 2
+    },
+    {
+     "id": "5M3",
+     "thermal": [
+      "T"
+     ],
+     "steel": false
+    },
+    {
+     "id": "5M4",
+     "thermal": [
+      "T"
+     ],
+     "steel": true,
+     "steel_qty": 2
+    },
+    {
+     "id": "5M5",
+     "thermal": [
+      "UT"
+     ],
+     "steel": true,
+     "steel_qty": 1
+    },
+    {
+     "id": "5M6",
+     "thermal": [
+      "UT"
+     ],
+     "steel": true,
+     "steel_qty": 2
+    },
+    {
+     "id": "5M7",
+     "thermal": [
+      "NT"
+     ],
+     "steel": true
+    }
+   ]
+  },
+  {
+   "id": "mullion-5in-LD-field-or-pre",
+   "component": "mullion",
+   "family": "5\" Mullions 5M1, 5M3, 5M5",
+   "sheet": 9,
+   "page": 9,
+   "panels": [
+    2,
+    3
+   ],
+   "ncols": 3,
+   "columns": [
+    {
+     "id": "5M1",
+     "thermal": "NT",
+     "steel": false
+    },
+    {
+     "id": "5M3",
+     "thermal": "T",
+     "steel": false
+    },
+    {
+     "id": "5M5",
+     "thermal": "UT",
+     "steel": true
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field",
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "mullion-shallow-E",
+   "component": "mullion",
+   "family": "Mullions w/ Shallow Pocket Fillers (Level E sheet)",
+   "sheet": 10,
+   "page": 10,
+   "panels": [
+    0
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "nosteel_NT",
+     "thermal": "NT",
+     "steel": false,
+     "label": "No Steel M2/M3"
+    },
+    {
+     "id": "nosteel_T",
+     "thermal": "T",
+     "steel": false,
+     "label": "No Steel M2/M3"
+    },
+    {
+     "id": "nosteel_UT",
+     "thermal": "UT",
+     "steel": false,
+     "label": "No Steel M2/M3"
+    },
+    {
+     "id": "steel_NT",
+     "thermal": "NT",
+     "steel": true,
+     "label": "w/ Steel M5"
+    },
+    {
+     "id": "steel_T",
+     "thermal": "T",
+     "steel": true,
+     "label": "w/ Steel M5"
+    },
+    {
+     "id": "steel_UT",
+     "thermal": "UT",
+     "steel": true,
+     "label": "w/ Steel M5"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "variants": [
+    {
+     "id": "M2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "width_in": 2.5
+    },
+    {
+     "id": "M3",
+     "thermal": [
+      "UT"
+     ],
+     "steel": false,
+     "width_in": 2.75
+    },
+    {
+     "id": "M5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "width_in": 3.0
+    }
+   ],
+   "notes": "Sheet title omits the glazing mode (field/pre); only listed under the Level E mullion sheet in the table of contents. Treat glazing mode as UNCONFIRMED."
+  },
+  {
+   "id": "mullion-expansion-E-field-or-pre",
+   "component": "mullion",
+   "family": "Expansion Mullion (Level E)",
+   "sheet": 11,
+   "page": 11,
+   "panels": [
+    0
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "nosteel_NT",
+     "thermal": "NT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_T",
+     "thermal": "T",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_UT",
+     "thermal": "UT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "steel_NT",
+     "thermal": "NT",
+     "steel": true,
+     "label": "w/ Steel E5"
+    },
+    {
+     "id": "steel_T",
+     "thermal": "T",
+     "steel": true,
+     "label": "w/ Steel E5"
+    },
+    {
+     "id": "steel_UT",
+     "thermal": "UT",
+     "steel": true,
+     "label": "w/ Steel E5"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field",
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "notes": "Left half of sheet 11: heights 96-108 only."
+  },
+  {
+   "id": "mullion-expansion-E-field",
+   "component": "mullion",
+   "family": "Expansion Mullion (Level E)",
+   "sheet": 11,
+   "page": 11,
+   "panels": [
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "nosteel_NT",
+     "thermal": "NT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_T",
+     "thermal": "T",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "nosteel_UT",
+     "thermal": "UT",
+     "steel": false,
+     "label": "No Steel E1/E2/E3"
+    },
+    {
+     "id": "steel_NT",
+     "thermal": "NT",
+     "steel": true,
+     "label": "w/ Steel E5"
+    },
+    {
+     "id": "steel_T",
+     "thermal": "T",
+     "steel": true,
+     "label": "w/ Steel E5"
+    },
+    {
+     "id": "steel_UT",
+     "thermal": "UT",
+     "steel": true,
+     "label": "w/ Steel E5"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in",
+   "notes": "Right half of sheet 11: heights 114-138, field glazed only."
+  },
+  {
+   "id": "mullion-5in-E-field",
+   "component": "mullion",
+   "family": "5\" Mullions 5M1, 5M3, 5M5 (Level E)",
+   "sheet": 12,
+   "page": 12,
+   "panels": [
+    0
+   ],
+   "ncols": 3,
+   "columns": [
+    {
+     "id": "5M1",
+     "thermal": "NT",
+     "steel": false
+    },
+    {
+     "id": "5M3",
+     "thermal": "T",
+     "steel": false
+    },
+    {
+     "id": "5M5",
+     "thermal": "UT",
+     "steel": true
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "corner-LD-pre",
+   "component": "corner_mullion",
+   "family": "Corner Mullion",
+   "sheet": 13,
+   "page": 13,
+   "panels": [
+    0
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "C1_90deg_NT",
+     "thermal": "NT",
+     "steel": null
+    },
+    {
+     "id": "C1_90deg_T",
+     "thermal": "T",
+     "steel": null
+    },
+    {
+     "id": "C1_90deg_UT",
+     "thermal": "UT",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_NT",
+     "thermal": "NT",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_T",
+     "thermal": "T",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_UT",
+     "thermal": "UT",
+     "steel": null
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "corner-LD-field",
+   "component": "corner_mullion",
+   "family": "Corner Mullion",
+   "sheet": 13,
+   "page": 13,
+   "panels": [
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "C1_90deg_NT",
+     "thermal": "NT",
+     "steel": null
+    },
+    {
+     "id": "C1_90deg_T",
+     "thermal": "T",
+     "steel": null
+    },
+    {
+     "id": "C1_90deg_UT",
+     "thermal": "UT",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_NT",
+     "thermal": "NT",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_T",
+     "thermal": "T",
+     "steel": null
+    },
+    {
+     "id": "C2_135deg_UT",
+     "thermal": "UT",
+     "steel": null
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "jamb-LD-field-or-pre",
+   "component": "jamb",
+   "family": "Jamb Mullion",
+   "sheet": 14,
+   "page": 14,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "J1-3_NT",
+     "thermal": "NT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J1-3_T",
+     "thermal": "T",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J1-3_UT",
+     "thermal": "UT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_NT",
+     "thermal": "NT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_T",
+     "thermal": "T",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_UT",
+     "thermal": "UT",
+     "steel": null,
+     "label": null
+    }
+   ],
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field",
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  },
+  {
+   "id": "jamb-E-pre",
+   "component": "jamb",
+   "family": "Jamb Mullion (Level E)",
+   "sheet": 15,
+   "page": 15,
+   "panels": [
+    0,
+    1
+   ],
+   "ncols": 6,
+   "columns": [
+    {
+     "id": "J1-3_NT",
+     "thermal": "NT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J1-3_T",
+     "thermal": "T",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J1-3_UT",
+     "thermal": "UT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_NT",
+     "thermal": "NT",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_T",
+     "thermal": "T",
+     "steel": null,
+     "label": null
+    },
+    {
+     "id": "J4-6_2pc_UT",
+     "thermal": "UT",
+     "steel": null,
+     "label": null
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "x_axis": "tributary_width_in",
+   "y_axis": "mullion_height_in"
+  }
+ ],
+ "manual_tables": [
+  {
+   "id": "head-LD-field",
+   "kind": "detail",
+   "component": "head",
+   "sheet": 16,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "H1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H4",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H5",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H6",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H7",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      60,
+      60,
+      null
+     ]
+    },
+    {
+     "detail": "H9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H10",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H11",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-E-field",
+   "kind": "detail",
+   "component": "head",
+   "sheet": 16,
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "H2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H6",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H7",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "H10",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-LD-pre",
+   "kind": "detail",
+   "component": "head",
+   "sheet": 17,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5
+   ],
+   "rows": [
+    {
+     "detail": "PGH1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "PGH2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "PGH3",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      70
+     ]
+    },
+    {
+     "detail": "PGH4",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "PGH5",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "PGH6",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "PGH7",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    },
+    {
+     "detail": "PGH8",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      50
+     ]
+    },
+    {
+     "detail": "PGH9",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH10",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH11",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      50
+     ]
+    },
+    {
+     "detail": "PGH12",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH13",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH14",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH15",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "PGH16",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head-E-pre",
+   "kind": "detail",
+   "component": "head",
+   "sheet": 17,
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5
+   ],
+   "rows": [
+    {
+     "detail": "PGH7",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sill-LD-field",
+   "kind": "detail",
+   "component": "sill",
+   "sheet": 19,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "S1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "S2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "S4",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "S5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S7",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      60,
+      60,
+      null
+     ]
+    },
+    {
+     "detail": "S9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sill-LD-pre",
+   "kind": "detail",
+   "component": "sill",
+   "sheet": 19,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5
+   ],
+   "rows": [
+    {
+     "detail": "S1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "S2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "S3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "S4",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      50
+     ]
+    },
+    {
+     "detail": "S5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "S6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "S7",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    },
+    {
+     "detail": "S8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    },
+    {
+     "detail": "S9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sill-E-field",
+   "kind": "detail",
+   "component": "sill",
+   "sheet": 19,
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "S2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "S5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "S9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sill-E-pre",
+   "kind": "detail",
+   "component": "sill",
+   "sheet": 19,
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5
+   ],
+   "rows": [
+    {
+     "detail": "S8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      70
+     ]
+    }
+   ]
+  },
+  {
+   "id": "intermediate-horizontal-LD-field",
+   "kind": "detail",
+   "component": "intermediate_horizontal",
+   "sheet": 20,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "H1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H4",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      90,
+      90
+     ]
+    },
+    {
+     "detail": "H7",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "intermediate-horizontal-LD-pre",
+   "kind": "detail",
+   "component": "intermediate_horizontal",
+   "sheet": 20,
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "pre"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5
+   ],
+   "rows": [
+    {
+     "detail": "H1",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "H2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "H3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "H4",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "H5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "H6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null
+     ]
+    },
+    {
+     "detail": "H7",
+     "thermal": [
+      "NT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "H8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    },
+    {
+     "detail": "H9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null
+     ]
+    }
+   ]
+  },
+  {
+   "id": "intermediate-horizontal-E-field",
+   "kind": "detail",
+   "component": "intermediate_horizontal",
+   "sheet": 20,
+   "applies": {
+    "missile": [
+     "E"
+    ],
+    "glazing": [
+     "field"
+    ]
+   },
+   "dlo_widths_in": [
+    33.5,
+    57.5,
+    69.5
+   ],
+   "rows": [
+    {
+     "detail": "H2",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H5",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H6",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      90,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H8",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "capacity_psf": [
+      50,
+      null,
+      null
+     ]
+    },
+    {
+     "detail": "H9",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "capacity_psf": [
+      70,
+      null,
+      null
+     ]
+    }
+   ]
+  }
+ ],
+ "manual": {
+  "rules": {
+   "governing": "Determine component load capacities from the applicable tables (anchorage, glazing, mullions, jambs, heads, sills, intermediate horizontals, door assemblies); the LEAST capacity applies to the entire system (sheet 1 note).",
+   "pressure_basis": "ASD; capacities are Ext.(+) and Int.(-) PSF, limited by ASTM E-1300 glass tables and tested pressures (general note 6).",
+   "tributary_width": "(Width 1 + Width 2) / 2, or (Width 2 + Width 3) / 2 (sheets 7, 9, 10).",
+   "mullion_height": "Max. mullion height; opening height = mullion height + 1-3/8\" max; frame height = mullion height + 5/8\" (sheet 7 drawing).",
+   "infill_size": "Infill size formula: DLO + 1 1/8\" unless otherwise noted (sheet 4 glazing note 1).",
+   "missile_to_glazing": {
+    "A": [
+     "G-F"
+    ],
+    "D": [
+     "G-A",
+     "G-B",
+     "G-C",
+     "G-D"
+    ],
+    "E": [
+     "G-E"
+    ]
+   },
+   "missile_names": {
+    "A": "Small Missile Level A",
+    "D": "Large Missile Level D",
+    "E": "Large Missile Level E"
+   },
+   "thermal_codes": {
+    "NT": "non-thermal, no thermal breaks",
+    "T": "thermal, one thermal break",
+    "UT": "ultra thermal, two thermal breaks"
+   },
+   "general_notes": [
+    "Tested to AAMA 501 and TAS 201/202/203; meets FBC incl. HVHZ (note 1).",
+    "Any number of panels horizontally provided max DLO sizes are not exceeded (note 3).",
+    "Required design pressures are determined per project from code and governing wind speed (note 5).",
+    "Capacities are ASD; alternate comparative/rational analysis by the engineer of record is acceptable (note 6).",
+    "Dissimilar materials (e.g. fasteners vs pressure-treated wood or aluminum) must be coated/protected (note 7).",
+    "Water infiltration sealing/flashing is NOT within the scope of this approval; by others (note 8).",
+    "4/3 stress increase not used in anchor analysis; 1.6 Cd factor used for wood substrate (note 9).",
+    "Substrate structural integrity and wood bucks by others / AHJ (note 10).",
+    "Min. 1-1/2\" center-to-center spacing between any two installation fasteners (note 11).",
+    "Anchor embedment beyond wall dressing/stucco and fully into substrate; load-bearing shims at every anchor location where gap > 1/16\"; max shim gap as indicated (note 12).",
+    "Substrates must meet Table 1 minimums; concrete/masonry must not be cracked; metal substrates need threads through plus 3/16\" min. (note 13).",
+    "Vertical members run through; horizontals are coped and butted to verticals (note 14)."
+   ],
+   "evaluation_report_limits": [
+    "Glazing types G-A..G-D approved for Large Missile Level D, G-E for Large Missile Level E, G-F for Small Missile Level A.",
+    "Interlayers limited to Kuraray SentryGlas, Kuraray Trosifol PVB, Eastman Saflex PVB, Eastman Saflex Storm (VS02), as indicated in IR521-FPA per current Miami-Dade NOA.",
+    "As-tested 6063-T6 aluminum extrusions with or without steel reinforcement as indicated.",
+    "Waterproofing / water infiltration not evaluated."
+   ]
+  },
+  "glazing_schedule": {
+   "G-A": {
+    "missile": "D",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 1/4\" HS inboard / 0.090 Kuraray Trosifol PVB"
+   },
+   "G-B": {
+    "missile": "D",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 1/4\" HS / 0.090 Eastman Saflex PVB / 1/4\" HS inboard"
+   },
+   "G-C": {
+    "missile": "D",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 1/4\" HS / 0.090 Kuraray SG (SentryGlas) / 1/4\" HS inboard"
+   },
+   "G-D": {
+    "missile": "D",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 1/4\" HS / 0.075 Eastman Saflex Storm (VS02) PVB / 1/4\" HS inboard"
+   },
+   "G-E": {
+    "missile": "E",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 3/16\" HS / 0.180 Kuraray SG / 3/16\" HS inboard"
+   },
+   "G-F": {
+    "missile": "A (small)",
+    "build": "1-5/16\" laminated: 1/4\" FT outboard / 1/2\" air / 1/4\" HS / 0.060 Kuraray Trosifol PVB / 1/4\" HS inboard"
+   }
+  },
+  "glazing_type_schedule": {
+   "WG-D": "wet glazed, Dow Corning 995",
+   "WG-G": "wet glazed, General Electric SilPruf",
+   "WG-T": "wet glazed, Tremco Proglaze SSG",
+   "DG": "dry glazed"
+  },
+  "glass_capacity": [
+   {
+    "location": "field",
+    "max_dlo_width_in": 69.5,
+    "max_dlo_height_in": 62.25,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 69.5,
+    "max_dlo_height_in": 74.25,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-C": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 91,
+    "sealant": [
+     "WG-D",
+     "WG-T"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-B": 50
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 32.875,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-E": 70
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-G"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-E": 70
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 27.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 60,
+     "G-B": 60
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D",
+     "WG-G"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 90,
+     "G-D": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-T"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 50,
+     "G-B": 50
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-E": 50
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "WG-D",
+     "WG-G"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 90,
+     "G-E": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 115,
+    "sealant": [
+     "WG-D",
+     "WG-G"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 115,
+    "sealant": [
+     "WG-T"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-D": 90
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-C": 70,
+     "G-E": 70
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-D": 70,
+     "G-E": 70
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 27.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 60,
+     "G-D": 60
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-D": 50
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-E": 50
+    }
+   },
+   {
+    "location": "field",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 32.875,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "WG-T"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-B": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 27.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 70,
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "WG-D"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 55
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "WG-D",
+     "WG-G"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 55
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 109,
+    "sealant": [
+     "WG-D",
+     "WG-G"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 91,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 32.875,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-B": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-B": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 92.5,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 27.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 70,
+     "G-B": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 33.5,
+    "max_dlo_height_in": 97,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG",
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 90
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-C": 70,
+     "G-D": 70,
+     "G-E": 70,
+     "G-F": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-A": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 103,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-A": 50
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 109,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "OG"
+    ],
+    "capacity_psf": {
+     "G-D": 70
+    }
+   },
+   {
+    "location": "pre",
+    "max_dlo_width_in": 57.5,
+    "max_dlo_height_in": 109,
+    "sealant": [
+     "DG"
+    ],
+    "direction": [
+     "IG"
+    ],
+    "capacity_psf": {
+     "G-F": 60
+    }
+   }
+  ],
+  "installation_anchors": [
+   {
+    "id": "A",
+    "substrate": "solid uncracked concrete, 3050 psi min.",
+    "anchor": "1/4\" DeWalt coated carbon steel Ultracon+",
+    "min_embedment_in": 1.75,
+    "min_edge_distance_in": 2.5
+   },
+   {
+    "id": "B",
+    "substrate": "2x min. Southern Pine wood (G=0.55 min.)",
+    "anchor": "#14 Grade 5 wood screw",
+    "min_embedment_in": 2.0,
+    "min_edge_distance_in": 1.0
+   },
+   {
+    "id": "C",
+    "substrate": "16 ga (0.060\") min. steel stud (33 ksi min.) or 1/8\" min. aluminum (6063-T5 min.) or 1/8\" min. A36 steel",
+    "anchor": "#1/4-14 ITW Teks self-drilling screw",
+    "min_embedment": "full + 3 threads",
+    "min_edge_distance_in": 0.5
+   }
+  ],
+  "door_assemblies": {
+   "applies": {
+    "missile": [
+     "A",
+     "D"
+    ],
+    "glazing": [
+     "field",
+     "pre"
+    ]
+   },
+   "capacity_psf_by_thermal": "NT/T/UT as listed",
+   "rows": [
+    {
+     "id": "D1",
+     "config": "Door pair / sidelite using expansion mull or std mull door jamb, with transom using standard transom header",
+     "max_door_opening_w_in": 96,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.125,
+     "max_sidelite_dlo_in": 57.5,
+     "max_transom_dlo_in": 23.5,
+     "NT": 50,
+     "T": 50,
+     "UT": 50
+    },
+    {
+     "id": "D2",
+     "config": "Double door (w/ center common mullion) with transom using COC transom bar",
+     "max_door_opening_w_in": 48,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.5,
+     "max_sidelite_dlo_in": null,
+     "max_transom_dlo_in": 22.125,
+     "NT": 70,
+     "T": 70,
+     "UT": 70
+    },
+    {
+     "id": "D3",
+     "config": "Single door / sidelite using expansion mull door jamb, with transom using COC transom bar",
+     "max_door_opening_w_in": 48,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.125,
+     "max_sidelite_dlo_in": 48,
+     "max_transom_dlo_in": 22.125,
+     "NT": 70,
+     "T": 70,
+     "UT": 70
+    },
+    {
+     "id": "D4",
+     "config": "Single door / sidelite using std mull door jamb, with transom using COC transom bar",
+     "max_door_opening_w_in": 48,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.125,
+     "max_sidelite_dlo_in": 48,
+     "max_transom_dlo_in": 22.125,
+     "NT": 70,
+     "T": null,
+     "UT": null
+    },
+    {
+     "id": "D5",
+     "config": "Single door / sidelite using expansion mull door jamb, with transom using standard transom header",
+     "max_door_opening_w_in": 48,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.125,
+     "max_sidelite_dlo_in": 48,
+     "max_transom_dlo_in": 23.5,
+     "NT": 50,
+     "T": 50,
+     "UT": 50
+    },
+    {
+     "id": "D6",
+     "config": "Twin single door with transom assemblies using COC transom bar, mulled with full-height common mullion",
+     "max_door_opening_w_in": 48,
+     "max_door_opening_h_in": 96,
+     "max_overall_framing_h_in": 124.5,
+     "max_sidelite_dlo_in": null,
+     "max_transom_dlo_in": 22.125,
+     "NT": 70,
+     "T": 70,
+     "UT": 70
+    }
+   ],
+   "note": "Door table on sheet 21 covers Level A/D only; no Level E door table found. Elevations/BOM on sheets 21-25N are drawings and were not transcribed."
+  }
+ }
+}

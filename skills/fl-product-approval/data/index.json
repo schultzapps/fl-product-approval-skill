@@ -1,0 +1,450 @@
+{
+ "generated": "2026-10-19",
+ "approvals": {
+  "FL47012": {
+   "fl_number": "FL47012-R9",
+   "manufacturer": "Kawneer Company",
+   "category": "Panel Walls",
+   "subcategory": "Storefronts",
+   "status": "Approved",
+   "code_version": "2023",
+   "series": [
+    "IR 521/521T/521UT"
+   ],
+   "ingest_status": "structured",
+   "has_structured_tables": true,
+   "path": "approvals/FL47012"
+  }
+ },
+ "by_category": {
+  "Panel Walls/Storefronts": [
+   "FL47012"
+  ]
+ },
+ "by_manufacturer": {
+  "Kawneer Company": [
+   "FL47012"
+  ]
+ },
+ "by_series": {
+  "IR 521/521T/521UT": [
+   "FL47012"
+  ]
+ },
+ "backlog": [
+  {
+   "fpa": "FL5388",
+   "category": "Curtain Walls",
+   "series": "1600 System 1",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL5388",
+   "category": "Curtain Walls",
+   "series": "1600 System 1 and System 2",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL11488",
+   "category": "Curtain Walls",
+   "series": "1600 System 1",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL11490",
+   "category": "Curtain Walls",
+   "series": "1600 System 1 and System 2",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL29202",
+   "category": "Curtain Walls",
+   "series": "1600 System 1",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL29202",
+   "category": "Curtain Walls",
+   "series": "1600 System 1 (Large glass size)",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL11492",
+   "category": "Curtain Walls",
+   "series": "1600 System 5",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16564",
+   "category": "Curtain Walls",
+   "series": "1600 UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL10285",
+   "category": "Curtain Walls",
+   "series": "1600 System SS",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL17083",
+   "category": "Curtain Walls",
+   "series": "1620/1620 SS System",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16369",
+   "category": "Curtain Walls",
+   "series": "1630 SS IR",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL9924",
+   "category": "Curtain Walls",
+   "series": "2250 IG",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL17577",
+   "category": "Curtain Walls",
+   "series": "2500 PG",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL20394",
+   "category": "Curtain Walls",
+   "series": "2500 UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16576",
+   "category": "Curtain Walls",
+   "series": "Clearwall",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL29109",
+   "category": "Curtain Walls",
+   "series": "Clearwall",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL10845",
+   "category": "Curtain Walls",
+   "series": "FG 623",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7237",
+   "category": "Storefronts",
+   "series": "Trifab 450",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7237",
+   "category": "Storefronts",
+   "series": "Trifab 451",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL10008",
+   "category": "Storefronts",
+   "series": "Trifab 451UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL37876",
+   "category": "Storefronts",
+   "series": "Trifab 451T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL32590",
+   "category": "Storefronts",
+   "series": "Trifab 451T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL14287",
+   "category": "Storefronts",
+   "series": "Trifab 451/451T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16517",
+   "category": "Storefronts",
+   "series": "Trifab 601T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL8787",
+   "category": "Storefronts",
+   "series": "IR 500",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL8787",
+   "category": "Storefronts",
+   "series": "IR 501",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15404",
+   "category": "Storefronts",
+   "series": "IR 501T/501UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7359",
+   "category": "Storefronts",
+   "series": "IR 631",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL14159",
+   "category": "Door - Sliding",
+   "series": "AA3200 IR",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16001",
+   "category": "Door - Sliding",
+   "series": "Traco SGD948",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL10388",
+   "category": "Doors - Swinging",
+   "series": "190 / 350 / 500 Doors with Trifab 450",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL34895",
+   "category": "Doors - Swinging",
+   "series": "AA250/425",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15850",
+   "category": "Doors - Swinging",
+   "series": "350/500 HW",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15850",
+   "category": "Doors - Swinging",
+   "series": "350 HW",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16715",
+   "category": "Doors - Swinging",
+   "series": "350 IR / 350 HW",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL17819",
+   "category": "Doors - Swinging",
+   "series": "350 IR / 350 HW",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL8786",
+   "category": "Doors - Swinging",
+   "series": "350 IR",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL17053",
+   "category": "Doors - Swinging",
+   "series": "350 IR / 500 IR",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15194",
+   "category": "Doors - Swinging",
+   "series": "500",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL13482",
+   "category": "Doors - Swinging",
+   "series": "2000T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL20102",
+   "category": "Doors - Swinging",
+   "series": "Flushline",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL28914",
+   "category": "Doors - Swinging",
+   "series": "350T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL28914",
+   "category": "Doors - Swinging",
+   "series": "500T",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL20501",
+   "category": "Window - Projected",
+   "series": "GLASSvent UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL20500",
+   "category": "Window - Projected",
+   "series": "GLASSvent UT",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16792",
+   "category": "Window - Fixed",
+   "series": "AA4325",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16793",
+   "category": "Window - Projected",
+   "series": "AA4325",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16794",
+   "category": "Window - Casement",
+   "series": "AA4325",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL11568",
+   "category": "Window - Projected",
+   "series": "8225TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL44175",
+   "category": "Window - Projected",
+   "series": "8225TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL44172",
+   "category": "Window - Fixed",
+   "series": "8225TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL46588",
+   "category": "Window - Casement",
+   "series": "8225TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL5455",
+   "category": "Window – Single Hung",
+   "series": "8430TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL41749",
+   "category": "Window - Fixed",
+   "series": "8400TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15115",
+   "category": "Window - Sliding",
+   "series": "8400TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7912",
+   "category": "Window – Double Hung",
+   "series": "8400TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7913",
+   "category": "Window - Horizontal Slider",
+   "series": "8400TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL7903",
+   "category": "Window – Single Hung",
+   "series": "8400TL",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15880",
+   "category": "Window - Casement",
+   "series": "NX3100",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15882",
+   "category": "Window - Casement",
+   "series": "NX3200",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL15883",
+   "category": "Project Out Swing",
+   "series": "NX3500",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL19311",
+   "category": "Window - Fixed",
+   "series": "TR7100",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16005",
+   "category": "Window – Single Hung",
+   "series": "TR9100",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16006",
+   "category": "Window - Casement",
+   "series": "NX3100",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16007",
+   "category": "Window - Fixed/Projected",
+   "series": "NX3510",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16016",
+   "category": "Window - Fixed",
+   "series": "NX3800",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16032",
+   "category": "Window – Single Hung",
+   "series": "TR9100",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16034",
+   "category": "Window - Inswing Projected/Hopper",
+   "series": "NX3400",
+   "listing": "KPA001"
+  },
+  {
+   "fpa": "FL16035",
+   "category": "Window - Fixed",
+   "series": "NX3800",
+   "listing": "KPA001"
+  }
+ ]
+}

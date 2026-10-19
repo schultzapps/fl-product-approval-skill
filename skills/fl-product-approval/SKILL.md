@@ -35,7 +35,7 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
    - Tributary width, mullion height and DLO for each typical and worst-case opening, plus shim gap and substrate.
 3. Write a `project.json` file in the format of `examples/miami-dade-storefront.project.json` and run `python3 scripts/check_config.py project.json`. Add `--json` for structured output.
 4. Explain the result to the user (see `references/review-method.md`):
-   - For each component, list the options that pass and the margin above the requirement.
+   - For each component, list the options that pass (capacity ≥ required; no extra margin, see general rule R-001).
    - State that the **least capacity of the chosen components governs the system**.
    - Point out any component with no passing option, give the table limit that caused it (the report prints it), and suggest what to change (steel-reinforced or 5" mullion, narrower bay, more anchors per cluster, smaller shim gap, a different glazing schedule).
    - Repeat the flags and open items from `NOTES.md`.

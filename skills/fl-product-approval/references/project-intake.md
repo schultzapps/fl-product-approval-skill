@@ -14,6 +14,7 @@ Collect these facts before running a review. If any are missing, ask for them, a
 | Thermal frame | NT (no thermal break), T (one) or UT (two) | `thermal` |
 | Preferred glazing | Optional filters: schedule, sealant (WG-D/WG-G/WG-T/DG), direction (OG/IG) | `glazing.schedule`, `glazing.sealant`, `glazing.direction` |
 | Each typical and worst-case opening | Tributary width = (left bay width + right bay width) / 2. Mullion height = max mullion length. DLO = daylight opening | `openings[].tributary_width_in`, `mullion_height_in`, `dlo_width_in`, `dlo_height_in` |
+| Jamb tributary width | Half the end bay. Defaults to half of `tributary_width_in` (end bay = typical bay) | `openings[].jamb_tributary_width_in` |
 | Members to check | Any of `glass`, `mullion`, `jamb`, `corner`, `head`, `sill`, `intermediate_horizontal`, `anchor_cluster`, `door` | `openings[].members` |
 | Shim gap at head/sill | Selects the anchor-cluster table (FL47012: 1/4" or 3/8" max) | `openings[].shim_gap_in` |
 | Substrate | Picks the anchor type from Table 1 (concrete, wood, steel/aluminum) | report text; see `components.json` → `installation_anchors` |

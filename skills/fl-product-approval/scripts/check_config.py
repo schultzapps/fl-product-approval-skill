@@ -64,9 +64,11 @@ def eval_mullions(comp, o, req, missile, mode, thermal, kinds):
         ok, warn = applies(t, missile, mode)
         if not ok:
             continue
-        hit = grid_lookup(t, o["tributary_width_in"], o["mullion_height_in"])
+        # a jamb carries half of its single adjacent bay; default to half the typical tributary width (end bay = typical bay)
+        x = o.get("jamb_tributary_width_in", o["tributary_width_in"] / 2) if t["component"] == "jamb" else o["tributary_width_in"]
+        hit = grid_lookup(t, x, o["mullion_height_in"])
         if hit is None:
-            out.append(opt(t["component"], f"{t['family']} [{t['id']}]", None, req, note=range_note(t, o["tributary_width_in"], o["mullion_height_in"])))
+            out.append(opt(t["component"], f"{t['family']} [{t['id']}]", None, req, note=range_note(t, x, o["mullion_height_in"])))
             continue
         by, rx, vals = hit
         for c, v in zip(t["columns"], vals):

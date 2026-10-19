@@ -20,4 +20,8 @@ Collect these facts before running a review. If any are missing, ask for them, a
 | Door openings | Width and height for the door-assembly table | `openings[].door_width_in`, `door_height_in` |
 | Zone-specific pressure | Optional per-opening override (ASD) | `openings[].pressure_psf_asd` |
 
+**Tributary width:** a bay is the mullion-to-mullion spacing. For an intermediate mullion, tributary width = (bay on its left + bay on its right) / 2.
+- With equal bays it **equals the mullion spacing**. Mullions every 60" give a 60" tributary width, not 120". When a table allows tributary width X, it allows equal bays (mullion spacing) of X.
+- A jamb or other end member carries only half of its single adjacent bay: tributary width = end bay / 2.
+
 Example file: `examples/miami-dade-storefront.project.json` (illustrative values only).

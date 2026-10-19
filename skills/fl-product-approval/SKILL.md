@@ -20,6 +20,8 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
   - `extract_spec.json`: hand-curated instructions describing how to read the drawing.
   - `components.json`: the structured capacity tables and rules. The review uses this file.
   - `NOTES.md`: verification log, discrepancies and open items. **Read it before quoting this approval.**
+  - `RULES.md`: rules the user has taught for **this approval only** (see "Learned rules" below).
+- `data/manufacturers/<slug>/RULES.md`: rules the user has taught that apply to every product from one manufacturer.
 - `data/kpa/KPA001.json` is Kawneer's published approval directory, parsed into rows (series → FL number, missile rating, DP, glazing).
 - Source PDFs are downloaded to `<repo>/cache/` (git-ignored). Re-fetch them with `scripts/fpa_fetch.py`.
 
@@ -37,6 +39,7 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
    - State that the **least capacity of the chosen components governs the system**.
    - Point out any component with no passing option, give the table limit that caused it (the report prints it), and suggest what to change (steel-reinforced or 5" mullion, narrower bay, more anchors per cluster, smaller shim gap, a different glazing schedule).
    - Repeat the flags and open items from `NOTES.md`.
+   - Apply the learned rules in scope (see below) and say which rule you applied.
    - Cite drawing sheets (e.g. "IR521-FPA sheet 7").
 5. Close with the limits: this is a screening aid. The engineer of record and the AHJ decide acceptability, and the approval doesn't cover water infiltration or substrate adequacy.
 
@@ -51,6 +54,39 @@ Follow `references/ingest-workflow.md`. In short:
 3. Write `extract_spec.json`. Grid tables in the Kawneer panel layout are parsed automatically. Transcribe the other tables into `manual_tables` / `manual`, following `references/data-schema.md`.
 4. Run `python3 scripts/extract_tables.py 16517` (strict validation) and `python3 scripts/verify_manual.py 16517` (checks hand-entered rows against the PDF text layer). Spot-check a few cells against the rendered sheet images.
 5. Write `NOTES.md` recording what was verified and how, and any discrepancies (for example KPA001 vs the live record, unlabeled tables, or an imminent QA expiry). Set `ingest_status` in `approval.json`, then run `python3 scripts/catalog.py rebuild`.
+
+## Learned rules (user-taught guidance)
+
+When the user corrects you, states a practice ("for IR 521 we always...", "never use X when..."), or "trains" the skill on a product, save it so it persists. Keep it isolated to the scope it belongs to.
+
+**Scopes, from narrowest to broadest:**
+1. **Approval:** `data/approvals/FL<n>/RULES.md`. Use this when the rule mentions things that exist only in that approval: its member IDs (M5, 5M4, PGH7...), its tables or sheets, its glazing types. This is the default.
+2. **Manufacturer:** `data/manufacturers/<slug>/RULES.md` (for example `kawneer`). Use this only when the user says the rule applies to all of that manufacturer's products.
+3. **General:** `references/general-rules.md`. Use this only when the user says it applies to every product (for example a firm-wide practice on pressure basis or margins).
+
+If the scope isn't clear, ask before saving. For example: "Is this IR 521 only, all Kawneer, or every product?"
+
+**When reviewing approval FL<n>, read only:**
+- that approval's `RULES.md`
+- its manufacturer's `RULES.md`
+- `references/general-rules.md`
+
+Never apply another approval's rules. For example, IR 521 pre-glazed mullion rules must not leak into a Trifab 601T review. If a question about one product reminds you of a rule saved for another, you may mention that it exists, labeled as belonging to that other approval, but don't apply it.
+
+**Precedence:** approval > manufacturer > general. The approval's own sealed documents (`components.json`, the drawing) outrank every learned rule. If a rule contradicts the approval, say so and follow the approval unless the user, as the responsible professional, decides otherwise. Record that decision in the rule entry.
+
+**Entry format.** Append one entry per rule. Never silently rewrite an existing entry. If a rule is replaced, mark the old one superseded.
+
+```
+### R-003  Pre-glazed mullions: prefer expansion mullion over M-series
+- Scope: FL47012 (IR 521) - pre-glazed only
+- Rule: ...
+- Why / source: user instruction 2026-10-19 ("..."), or a sheet reference
+- Applies when: missile D, pre-glazed, mullion height > 108"
+- Status: active | superseded by R-00x
+```
+
+After saving, run `python3 scripts/catalog.py rebuild` so the index records which approvals have rules, then tell the user which file the rule went into.
 
 ## Approvals ingested so far
 

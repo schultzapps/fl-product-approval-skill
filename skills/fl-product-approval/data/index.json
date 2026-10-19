@@ -13,6 +13,7 @@
    ],
    "ingest_status": "structured",
    "has_structured_tables": true,
+   "learned_rules": 0,
    "path": "approvals/FL47012"
   }
  },

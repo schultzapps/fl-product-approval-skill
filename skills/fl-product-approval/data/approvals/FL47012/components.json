@@ -2629,15 +2629,53 @@
    "y_axis": "mullion_height_in",
    "variants": [
     {
-     "id": "E1-E3",
-     "steel": false
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
     },
     {
-     "id": "E4-E5",
-     "steel": true
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E4",
+     "thermal": [
+      "NT"
+     ],
+     "steel": true,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
     }
    ],
-   "notes": "E-variant to thermal mapping is by column header only; confirm detail on sheet 8.",
    "kind": "grid",
    "blocks": [
     {
@@ -5161,6 +5199,47 @@
       }
      ]
     }
+   ],
+   "variants": [
+    {
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
+    }
    ]
   },
   {
@@ -5463,6 +5542,47 @@
        ]
       }
      ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
     }
    ]
   },

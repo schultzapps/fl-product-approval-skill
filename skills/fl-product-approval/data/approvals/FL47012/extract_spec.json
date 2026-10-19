@@ -263,15 +263,53 @@
    "y_axis": "mullion_height_in",
    "variants": [
     {
-     "id": "E1-E3",
-     "steel": false
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
     },
     {
-     "id": "E4-E5",
-     "steel": true
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E4",
+     "thermal": [
+      "NT"
+     ],
+     "steel": true,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
     }
-   ],
-   "notes": "E-variant to thermal mapping is by column header only; confirm detail on sheet 8."
+   ]
   },
   {
    "id": "mullion-5in-LD-field",
@@ -559,7 +597,48 @@
    },
    "x_axis": "tributary_width_in",
    "y_axis": "mullion_height_in",
-   "notes": "Left half of sheet 11: heights 96-108 only."
+   "notes": "Left half of sheet 11: heights 96-108 only.",
+   "variants": [
+    {
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
+    }
+   ]
   },
   {
    "id": "mullion-expansion-E-field",
@@ -619,7 +698,48 @@
    },
    "x_axis": "tributary_width_in",
    "y_axis": "mullion_height_in",
-   "notes": "Right half of sheet 11: heights 114-138, field glazed only."
+   "notes": "Right half of sheet 11: heights 114-138, field glazed only.",
+   "variants": [
+    {
+     "id": "E1",
+     "thermal": [
+      "NT",
+      "T"
+     ],
+     "steel": false,
+     "face_in": "2-1/2 to 2-3/4"
+    },
+    {
+     "id": "E2",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "2-3/4 to 3"
+    },
+    {
+     "id": "E3",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": false,
+     "face_in": "3 to 3-1/4"
+    },
+    {
+     "id": "E5",
+     "thermal": [
+      "NT",
+      "T",
+      "UT"
+     ],
+     "steel": true,
+     "face_in": "3 to 3-1/4"
+    }
+   ]
   },
   {
    "id": "mullion-5in-E-field",

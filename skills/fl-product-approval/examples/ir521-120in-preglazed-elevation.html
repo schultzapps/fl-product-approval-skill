@@ -1,0 +1,239 @@
+<title>IR 521 Elevation E-1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one drawing sheet — elevation on top, selection schedule and notes below, title block strip */
+:root {
+  --paper: #f7f8f9;
+  --sheet: #ffffff;
+  --ink: #1d2328;
+  --ink-soft: #5a646d;
+  --line: #c9d0d6;
+  --metal: #8e99a3;
+  --glass: #d9e9ef;
+  --glass-hatch: #8fb3c1;
+  --dim: #2f5d78;
+  --accent: #2f5d78;
+  --ok: #2d7a4f;
+  --ok-bg: #e5f2ea;
+  --display: "Archivo Narrow", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12161a; --sheet: #191e23; --ink: #e3e8ec; --ink-soft: #9aa6b0; --line: #34404a;
+    --metal: #7d8a95; --glass: #1f3440; --glass-hatch: #4f7f92; --dim: #8cc1de; --accent: #8cc1de;
+    --ok: #7fd1a1; --ok-bg: #173226; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12161a; --sheet: #191e23; --ink: #e3e8ec; --ink-soft: #9aa6b0; --line: #34404a;
+  --metal: #7d8a95; --glass: #1f3440; --glass-hatch: #4f7f92; --dim: #8cc1de; --accent: #8cc1de;
+  --ok: #7fd1a1; --ok-bg: #173226; color-scheme: dark;
+}
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 40px;
+}
+.sheet { max-width: 1180px; margin: 0 auto; background: var(--sheet); border: 1px solid var(--line); display: grid; gap: 0; }
+header.tb { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: end; padding: 20px 24px 16px; border-bottom: 1px solid var(--line); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.1; margin: 4px 0 0; text-wrap: balance; letter-spacing: .01em; }
+.criteria { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.chip { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line); padding: 3px 8px; white-space: nowrap; }
+.chip.ok { border-color: var(--ok); color: var(--ok); background: var(--ok-bg); font-weight: 500; }
+.drawing { overflow-x: auto; padding: 8px 12px 4px; border-bottom: 1px solid var(--line); }
+.drawing svg { display: block; width: 100%; min-width: 720px; height: auto; }
+svg text { font-family: var(--mono); fill: var(--ink); }
+svg .dimtxt { fill: var(--dim); }
+svg .tagtxt { font-family: var(--display); font-weight: 600; }
+.cols { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.cols > section { padding: 18px 24px 22px; min-width: 0; }
+.cols > section + section { border-left: 1px solid var(--line); }
+h2 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: .02em; text-transform: uppercase; margin: 0 0 10px; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--mono); font-weight: 500; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; padding-right: 0; white-space: nowrap; }
+td .id { font-family: var(--mono); font-weight: 500; }
+tr.gov td { font-weight: 600; }
+.sub { color: var(--ink-soft); font-size: 12.5px; }
+.result { margin-top: 12px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; font-size: 14px; }
+.result b { font-family: var(--mono); color: var(--ok); }
+ol.notes { margin: 0; padding-left: 20px; display: grid; gap: 7px; font-size: 13.5px; }
+ol.notes li::marker { font-family: var(--mono); color: var(--ink-soft); }
+footer { padding: 12px 24px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 24px; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
+@media (max-width: 820px) {
+  header.tb { grid-template-columns: 1fr; }
+  .criteria { justify-content: flex-start; }
+  .cols { grid-template-columns: 1fr; }
+  .cols > section + section { border-left: 0; border-top: 1px solid var(--line); }
+}
+</style>
+
+<div class="sheet">
+  <header class="tb">
+    <div>
+      <div class="eyebrow">Kawneer IR 521T · FL47012-R9 · Drawing IR521-FPA</div>
+      <h1>Elevation E-1 — 120" frame, horizontal at mid-height, max mullion spacing</h1>
+    </div>
+    <div class="criteria" aria-label="Design criteria">
+      <span class="chip">45 psf ASD</span>
+      <span class="chip">Large Missile Level D</span>
+      <span class="chip">Pre-glazed · inside · wet</span>
+      <span class="chip">T framing</span>
+      <span class="chip ok">All components pass</span>
+    </div>
+  </header>
+
+  <div class="drawing">
+    <svg viewBox="-34 -34 260 196" role="img" aria-label="Storefront elevation, 182 and a half inches wide by 120 inches tall, five bays with an intermediate horizontal at 60 inches">
+      <defs>
+        <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse">
+          <path d="M1 8 L4 5 M3.5 8 L6.5 5" stroke="var(--glass-hatch)" stroke-width=".35" fill="none"/>
+        </pattern>
+        <marker id="tick" viewBox="-2 -2 4 4" markerWidth="4" markerHeight="4" orient="auto">
+          <path d="M-1.4 1.4 L1.4 -1.4" stroke="var(--dim)" stroke-width=".7" fill="none"/>
+        </marker>
+      </defs>
+      <!-- geometry in inches, origin = top-left of frame, y down -->
+      <g id="glass"></g>
+      <g id="frame"></g>
+      <g id="anchors"></g>
+      <g id="dims"></g>
+      <g id="tags"></g>
+    </svg>
+  </div>
+
+  <div class="cols">
+    <section>
+      <h2>Selection schedule</h2>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Component</th><th>Selection</th><th>Looked up at</th><th style="text-align:right">psf</th></tr></thead>
+        <tbody>
+          <tr><td>Glass</td><td><span class="id">G-A</span> (0.090 Trosifol PVB) or <span class="id">G-B</span> (0.090 Saflex PVB), wet glazed <span class="id">WG-T</span> Tremco Proglaze SSG, inside<div class="sub">1-5/16" laminated IG · sheet 4</div></td><td class="sub">DLO ≤ 33.5 × 92.5</td><td class="num">70</td></tr>
+          <tr><td>Mullion</td><td><span class="id">E1</span> expansion, no steel, 2½–2¾" face<div class="sub">sheet 8 · FL47012 rule R-002</div></td><td class="sub">trib 36 · ht 120</td><td class="num">90</td></tr>
+          <tr><td>Jambs</td><td><span class="id">J2</span> (T)<div class="sub">trib = ½ end bay · sheet 14</div></td><td class="sub">trib 19.25 · ht 120</td><td class="num">90</td></tr>
+          <tr><td>Head</td><td>Pre-glazed head, T: <span class="id">PGH13</span> / <span class="id">PGH14</span><div class="sub">sheets 17–18</div></td><td class="sub">DLO 33.5</td><td class="num">70</td></tr>
+          <tr><td>Int. horizontal</td><td><span class="id">H2</span> / <span class="id">H5</span> / <span class="id">H8</span> (T), pre-glazed<div class="sub">sheet 20 · pre-glazed tabulated to DLO 33.5 only</div></td><td class="sub">DLO 33.5</td><td class="num">70</td></tr>
+          <tr><td>Sill</td><td><span class="id">S2</span> / <span class="id">S5</span> / <span class="id">S8</span> (T), pre-glazed<div class="sub">sheet 19</div></td><td class="sub">DLO 33.5</td><td class="num">70</td></tr>
+          <tr class="gov"><td>Anchorage</td><td>2 anchors per end cluster, ¼" max shim, no midspan clusters<div class="sub">⅜" shim: 47 psf · Table 1 anchor per substrate · sheets 2–3</div></td><td class="sub">trib 36 · ht 120</td><td class="num">65</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="result">System capacity (least component): <b>65 psf ≥ 45 psf required</b> <span class="sub">governed by anchorage</span></div>
+    </section>
+    <section>
+      <h2>Notes</h2>
+      <ol class="notes">
+        <li>Maximum spacing is set by the pre-glazed intermediate horizontal: DLO width ≤ 33.5". With E1 (2½–2¾" face), 36" o.c. keeps every lite ≤ 33.5" across the full expansion range.</li>
+        <li>Typical bays (36" o.c.) may repeat as needed; end bays are 37¼" from frame edge to mullion centerline (2½" jamb + 33½" DLO + ½ mullion).</li>
+        <li>Vertical sightlines from the drawing: head 2½" (sheet 17), horizontal 2½" (sheet 20), sill 5⁄8" + 1" + 2½" = 4⅛" to DLO (sheet 19). Confirm on shop drawings.</li>
+        <li>Mullion height = frame height − 5⁄8" = 119⅜"; rough opening = 120¾" × 183¼" (⅜" max shim each side).</li>
+        <li>Anchor type, embedment and edge distance per Table 1 for the substrate; 1½" min. between fasteners; load-bearing shims where gap &gt; 1⁄16".</li>
+        <li>E5 (steel) would allow about 36¾" o.c.; not used because of its larger 3–3¼" sightline.</li>
+        <li>Screening layout from the FL47012-R9 tables; water infiltration and substrate are outside the approval. Engineer of record to confirm.</li>
+      </ol>
+    </section>
+  </div>
+  <footer>
+    <span>FL47012-R9 · IR521-FPA (sealed 6/16/2026)</span>
+    <span>Dimensions in inches · NTS</span>
+    <span>Prepared with the fl-product-approval skill</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  const NS = "http://www.w3.org/2000/svg";
+  const W = 182.5, H = 120, JAMB = 2.5, MULL = 2.5, HEAD = 2.5, SILL = 4.125, IHF = 2.5, IHC = 60;
+  const CL = [37.25, 73.25, 109.25, 145.25];           // mullion centerlines from left frame edge
+  const el = (tag, attrs, parent, text) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; parent.appendChild(e); return e; };
+  const g = id => document.getElementById(id);
+  const metal = { fill: "var(--metal)", stroke: "var(--ink)", "stroke-width": ".3" };
+
+  // verticals: [left, right] of every member
+  const verts = [[0, JAMB], ...CL.map(c => [c - MULL / 2, c + MULL / 2]), [W - JAMB, W]];
+  const ihTop = IHC - IHF / 2, ihBot = IHC + IHF / 2;
+
+  // glass lites
+  for (let i = 0; i < verts.length - 1; i++) {
+    const x0 = verts[i][1], x1 = verts[i + 1][0];
+    for (const [y0, y1] of [[HEAD, ihTop], [ihBot, H - SILL]]) {
+      el("rect", { x: x0, y: y0, width: x1 - x0, height: y1 - y0, fill: "var(--glass)" }, g("glass"));
+      el("rect", { x: x0, y: y0, width: x1 - x0, height: y1 - y0, fill: "url(#hatch)" }, g("glass"));
+    }
+  }
+  // frame members
+  el("rect", { x: 0, y: 0, width: W, height: HEAD, ...metal }, g("frame"));
+  el("rect", { x: 0, y: H - SILL, width: W, height: SILL, ...metal }, g("frame"));
+  for (let i = 0; i < verts.length - 1; i++) el("rect", { x: verts[i][1], y: ihTop, width: verts[i + 1][0] - verts[i][1], height: IHF, ...metal }, g("frame"));
+  for (const [a, b] of verts) el("rect", { x: a, y: 0, width: b - a, height: H, ...metal }, g("frame"));
+  el("line", { x1: 0, y1: H - SILL + 0.625, x2: W, y2: H - SILL + 0.625, stroke: "var(--ink)", "stroke-width": ".2", "stroke-dasharray": "1 .8" }, g("frame"));
+
+  // anchor clusters: both ends of each head/sill segment
+  const anchorMark = (x, y) => el("path", { d: `M${x - .9} ${y} L${x} ${y - 1.3} L${x + .9} ${y} L${x} ${y + 1.3} Z`, fill: "var(--accent)" }, g("anchors"));
+  for (let i = 0; i < verts.length - 1; i++) {
+    const a = verts[i][1] + 2.2, b = verts[i + 1][0] - 2.2;
+    for (const x of [a, b]) { anchorMark(x - .9, HEAD / 2); anchorMark(x + .9, HEAD / 2); anchorMark(x - .9, H - SILL / 2); anchorMark(x + .9, H - SILL / 2); }
+  }
+
+  // dimension helper (horizontal or vertical)
+  const D = g("dims"), dimStroke = { stroke: "var(--dim)", "stroke-width": ".3", fill: "none" };
+  function hdim(x0, x1, y, label, ext0, sz) {
+    el("line", { x1: x0, y1: y, x2: x1, y2: y, ...dimStroke, "marker-start": "url(#tick)", "marker-end": "url(#tick)" }, D);
+    for (const x of [x0, x1]) el("line", { x1: x, y1: ext0, x2: x, y2: y + (y < ext0 ? -1.2 : 1.2), ...dimStroke, "stroke-width": ".2" }, D);
+    el("text", { x: (x0 + x1) / 2, y: y - 1.2, "text-anchor": "middle", "font-size": sz || 3.2, class: "dimtxt" }, D, label);
+  }
+  function vdim(y0, y1, x, label, ext0, sz) {
+    el("line", { x1: x, y1: y0, x2: x, y2: y1, ...dimStroke, "marker-start": "url(#tick)", "marker-end": "url(#tick)" }, D);
+    for (const y of [y0, y1]) el("line", { x1: ext0, y1: y, x2: x + (x > ext0 ? 1.2 : -1.2), y2: y, ...dimStroke, "stroke-width": ".2" }, D);
+    const t = el("text", { x: x + (x > ext0 ? 1.6 : -1.6), y: (y0 + y1) / 2 + 1.1, "text-anchor": x > ext0 ? "start" : "end", "font-size": sz || 3.2, class: "dimtxt" }, D, label);
+    return t;
+  }
+  // top: overall and bay (to centerlines)
+  hdim(0, W, -24, `15'-2½"  (182½") frame width`, -1);
+  const stops = [0, ...CL, W], bayLbl = ['37¼"', '36"', '36"', '36"', '37¼"'];
+  for (let i = 0; i < stops.length - 1; i++) hdim(stops[i], stops[i + 1], -12, bayLbl[i], -1);
+  for (const c of CL) el("line", { x1: c, y1: -10.8, x2: c, y2: H + 3, stroke: "var(--dim)", "stroke-width": ".15", "stroke-dasharray": "2.5 1 .5 1" }, D);
+  el("text", { x: -1, y: -15.5, "text-anchor": "start", "font-size": 2.6, fill: "var(--ink-soft)" }, D, "mullion spacing (to centerlines)");
+  // bottom: DLO widths
+  for (let i = 0; i < verts.length - 1; i++) hdim(verts[i][1], verts[i + 1][0], H + 11, i === 0 || i === verts.length - 2 ? '33½"' : '33¼–33½"', H + 1, 2.8);
+  el("text", { x: W / 2, y: H + 17.5, "text-anchor": "middle", "font-size": 2.6, fill: "var(--ink-soft)" }, D, "glass DLO width (pre-glazed horizontal limit 33½\")");
+  // right: vertical stack
+  const yStops = [0, HEAD, ihTop, ihBot, H - SILL, H], yLbl = ['2½"', '56¼" DLO', '2½"', '54⅝" DLO', '4⅛"'];
+  for (let i = 0; i < yStops.length - 1; i++) vdim(yStops[i], yStops[i + 1], W + 7, yLbl[i], W + 1, i % 2 ? 3.2 : 2.6);
+  vdim(0, H, W + 30, '120" frame', W + 1);
+  // left: mullion height + horizontal location
+  vdim(0, H - 0.625, -9, '119⅜" mullion ht', -1, 3);
+  vdim(IHC, H, -24, '60" to ℄ horiz.', -1, 3);
+
+  // tags
+  const T = g("tags");
+  function tag(x, y, txt, w) {
+    w = w || 7;
+    el("rect", { x: x - w / 2, y: y - 2.4, width: w, height: 4.8, rx: 2.4, fill: "var(--sheet)", stroke: "var(--ink)", "stroke-width": ".3" }, T);
+    el("text", { x, y: y + 1.15, "text-anchor": "middle", "font-size": 3.1, class: "tagtxt" }, T, txt);
+  }
+  CL.forEach(c => tag(c, 30, "E1"));
+  tag(JAMB / 2 + 4.6, 88, "J2"); tag(W - JAMB / 2 - 4.6, 88, "J2");
+  tag(55.25, HEAD + 4.2, "PGH13", 11);
+  tag(127.25, IHC + 5.2, "H2", 6);
+  tag(91.25, H - SILL - 4.2, "S2", 6);
+  [19.6, 55.25, 91.25, 127.25, 163.1].forEach((x, i) => {
+    el("text", { x, y: 26, "text-anchor": "middle", "font-size": 2.9, fill: "var(--ink-soft)" }, T, "G-A / G-B");
+    el("text", { x, y: 92, "text-anchor": "middle", "font-size": 2.9, fill: "var(--ink-soft)" }, T, "G-A / G-B");
+  });
+  // legend
+  anchorMark(-30, 150); anchorMark(-28.2, 150);
+  el("text", { x: -26, y: 151.1, "font-size": 2.8, fill: "var(--ink-soft)" }, T, "anchor cluster — 2 per end, each head/sill segment");
+  el("line", { x1: 60, y1: 150, x2: 66, y2: 150, stroke: "var(--dim)", "stroke-width": ".2", "stroke-dasharray": "2.5 1 .5 1" }, T);
+  el("text", { x: 67.5, y: 151.1, "font-size": 2.8, fill: "var(--ink-soft)" }, T, "mullion centerline");
+  el("text", { x: 100, y: 151.1, "font-size": 2.8, fill: "var(--ink-soft)" }, T, "Elevation viewed from exterior · glazed from interior");
+})();
+</script>

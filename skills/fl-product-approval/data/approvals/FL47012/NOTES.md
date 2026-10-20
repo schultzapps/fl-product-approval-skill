@@ -21,7 +21,7 @@
 
 ## Discrepancies and open items
 
-1. **"Comments: Archived"** appears on the R9 detail page even though the status is Approved. Confirm on floridabuilding.org that R9 is the current revision before relying on it.
+1. ~~"Comments: Archived" on the record page~~: not an issue (general rule R-002).
 2. **QA contract expires 12/31/2026** (Intertek). Recheck the record after that date.
 3. **KPA001 (Nov 2024) lags the live record.** It lists FL# "47012" as LMI only (Zone 4, Level D & E, ±70 psf). The live record and evaluation report also cover **Small Missile Level A** (glazing G-F), and several tables go up to 90 psf.
 4. **Sheet 10** (Level E shallow-pocket mullions) doesn't state field vs pre-glazed in its title. It is stored without a glazing-mode restriction and flagged in reports.

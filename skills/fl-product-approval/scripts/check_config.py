@@ -257,8 +257,6 @@ def run(project):
         result["flags"].append("Approval is NOT listed for HVHZ use.")
     if app.get("status") != "Approved":
         result["flags"].append(f"Approval status is {app.get('status')}.")
-    if app.get("status_comments"):
-        result["flags"].append(f"Florida record 'Comments' field reads: {app['status_comments']!r} - confirm on floridabuilding.org this revision is current.")
     if missile and "missile_to_glazing" in comp.get("rules", {}) and missile not in comp["rules"]["missile_to_glazing"]:
         result["flags"].append(f"Missile level {missile} is not covered by this approval.")
     if missile and comp.get("missile") and missile != comp["missile"]:

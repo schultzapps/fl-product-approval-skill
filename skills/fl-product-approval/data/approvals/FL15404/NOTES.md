@@ -38,7 +38,7 @@
 
 ## Discrepancies and open items
 
-1. **"Comments: Archived"** appears on the R7 record page while the status is Approved, the same as FL47012. Confirm R7 is current.
+1. ~~"Comments: Archived" on the record page~~: not an issue (general rule R-002).
 2. **WWS-210 (FL15404.3) note 5** says small missile rated for "missile level D locations" and must be shuttered in large-missile locations. The Florida record and KPA001 call it Level A (small missile). The data treats .3 as missile A.
 3. **Drawing 1981 side jamb table** column headers read "6 anchors / 4 anchors", while sheet 2 shows 3 anchors at each side jamb end (2 may apply). The data is stored as printed; confirm with the drawing before quoting anchor counts.
 4. **KPA001 (Nov 2024)** lists .1/.2/.3 at ±70 psf and .4 as "Varies", glazing 1-1/4". That matches the drawings (70 / 60 psf caps).

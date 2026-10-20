@@ -1,0 +1,17 @@
+{
+ "approval": "FL15404",
+ "product": "FL15404.2",
+ "extends": "../../common/components.json",
+ "drawing": "1760",
+ "evaluation_report": "WWS-209",
+ "missile": "D",
+ "glazing_method": "dry",
+ "description": "IR501T/UT large missile impact storefront, dry glazed",
+ "glass": [
+  {
+   "id": "Option 1",
+   "build": "1-5/16\" laminated IG: 1/4\" HS or tempered exterior / 1/2\" spacer / 1/4\" HS / 0.090 DuPont SG (SentryGlas) / 1/4\" HS interior"
+  }
+ ],
+ "glazing": "Dry glazed: exterior glazing gasket (35) and interior wedge/spacer gasket (36); 5/8\" min. bite; setting blocks at sill, W blocks at sides (sheet 8). Gaskets per ASTM C864 or C509."
+}

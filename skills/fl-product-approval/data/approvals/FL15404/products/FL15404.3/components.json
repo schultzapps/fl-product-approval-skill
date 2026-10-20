@@ -1,0 +1,20 @@
+{
+ "approval": "FL15404",
+ "product": "FL15404.3",
+ "extends": "../../common/components.json",
+ "drawing": "1759",
+ "evaluation_report": "WWS-210",
+ "missile": "A",
+ "glazing_method": "dry",
+ "description": "IR501T/UT small missile impact storefront, dry glazed",
+ "glass": [
+  {
+   "id": "Option 1",
+   "build": "1-5/16\" laminated IG: 1/4\" tempered exterior / 1/2\" spacer / 1/4\" HS / 0.060 DuPont Butacite PVB / 1/4\" HS interior"
+  }
+ ],
+ "glazing": "Dry glazed: exterior glazing gasket (35) and interior gasket (36); 5/8\" min. bite (sheet 8).",
+ "warnings": [
+  "Small missile only: must be shuttered when required by code in a large missile location (WWS-210 note 5)."
+ ]
+}

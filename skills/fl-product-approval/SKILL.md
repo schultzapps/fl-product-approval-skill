@@ -21,18 +21,31 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
   - `components.json`: the structured capacity tables and rules. The review uses this file.
   - `NOTES.md`: verification log, discrepancies and open items. **Read it before quoting this approval.**
   - `RULES.md`: rules the user has taught for **this approval only** (see "Learned rules" below).
+  - For a **multi-product approval** (see below), instead of one `components.json`:
+    - `common/components.json`: tables shared by several sub-products.
+    - `products/FL<n>.<k>/components.json`: one per sub-product. It holds what is specific to that product (glass, glazing method, missile level, any of its own tables), and `"extends": "../../common/components.json"` when it shares the common tables. A sub-product with a different system stands alone (no `extends`).
 - `data/manufacturers/<slug>/RULES.md`: rules the user has taught that apply to every product from one manufacturer.
 - `data/kpa/KPA001.json` is Kawneer's published approval directory, parsed into rows (series → FL number, missile rating, DP, glazing).
 - Source PDFs are downloaded to `<repo>/cache/` (git-ignored). Re-fetch them with `scripts/fpa_fetch.py`.
 
+## Multi-product approvals (FL<n>.1, .2, ...)
+
+One FL number often covers several **sub-products**, numbered `.1`, `.2`, `.3` and so on. Each is listed separately on the Florida record with its own limits of use, and usually its own installation drawing and evaluation report.
+
+- **How they differ:** sub-products are usually largely the same system in different configurations, such as wet vs. dry glazing, large vs. small missile, a different glass make-up, or a Level E version.
+- **Shared vs. separate data:** sometimes the framing tables are identical (FL15404.1–.3 share every mullion, jamb, corner and anchor table and differ only in glass and glazing). Sometimes one product is a different system (FL15404.4, Level E: different framing, heights, pressure cap and glass). Store shared tables once in `common/` and only the differences in `products/FL<n>.<k>/`.
+- **During review:** always establish **which sub-product** applies before reviewing. Pick it from the project's missile level, glazing method and glass (`catalog.py show <n>` lists them). If more than one could fit, ask. Set `"approval": "FL15404.2"` in `project.json`. The checker refuses an ambiguous `FL15404` and lists the choices.
+- **During ingest:** confirm whether the sub-products' drawings really are identical in a given table by comparing them side by side. Don't assume. Record the comparison in `NOTES.md`.
+- **Rules:** learned rules for the approval live in `data/approvals/FL<n>/RULES.md`. A rule that applies to only one sub-product says so in its Scope line.
+
 ## Workflow A: review a project
 
-1. Make sure the approval has been ingested (`data/approvals/FL<n>/components.json` exists). If it hasn't, run Workflow B first.
+1. Make sure the approval has been ingested (`data/approvals/FL<n>/components.json` or `products/*/components.json` exists). If it hasn't, run Workflow B first. For a multi-product approval, decide which sub-product applies (see above).
 2. Collect the project facts using `references/project-intake.md`. **Ask for anything missing; don't assume it.** The most important items are:
    - Design pressures and their basis. The approval tables are **ASD**, while ASCE 7 C&C pressures are strength-level (multiply by 0.6 for ASD). Ask which one the user has.
    - Missile level (Large D, Large E, or Small A).
    - Field- or pre-glazed, and frame type (NT/T/UT).
-   - Tributary width, mullion height and DLO for each typical and worst-case opening, plus shim gap and substrate.
+   - Tributary width, mullion height (or **frame height**, for approvals whose tables use it, such as FL15404) and DLO for each typical and worst-case opening, plus shim gap and substrate. Check each table's `x_axis` / `y_axis` to see which inputs it uses.
 3. Write a `project.json` file in the format of `examples/miami-dade-storefront.project.json` and run `python3 scripts/check_config.py project.json`. Add `--json` for structured output.
 4. Explain the result to the user (see `references/review-method.md`):
    - For each component, list the options that pass (capacity ≥ required; no extra margin, see general rule R-001).
@@ -53,6 +66,8 @@ Follow `references/ingest-workflow.md`. In short:
 2. Read the evaluation report (limits of use, glazing/interlayer limits, missile levels) and the installation instructions sheet by sheet: the general notes and table of contents first, then each capacity table.
 3. Write `extract_spec.json`. Grid tables in the Kawneer panel layout are parsed automatically. Transcribe the other tables into `manual_tables` / `manual`, following `references/data-schema.md`.
 4. Run `python3 scripts/extract_tables.py 16517` (strict validation) and `python3 scripts/verify_manual.py 16517` (checks hand-entered rows against the PDF text layer). Spot-check a few cells against the rendered sheet images.
+   - **Scanned documents** (no text layer; `pdftotext` returns nothing, which is common for older approvals such as FL15404): OCR the evaluation reports with `tesseract`. Transcribe the drawing tables visually from 200 dpi renders. Then verify by OCR'ing each value column on its own and comparing against your transcription, which catches dropped or transposed cells. OCR confuses 5/9 and 3/5, so resolve every mismatch against the image.
+   - **Multiple sub-products:** fetch records each sub-product's documents (`products[].documents` in `approval.json`). Ingest each one, sharing identical tables through `common/`.
 5. Write `NOTES.md` recording what was verified and how, and any discrepancies (for example KPA001 vs the live record, unlabeled tables, or an imminent QA expiry). Set `ingest_status` in `approval.json`, then run `python3 scripts/catalog.py rebuild`.
 
 ## Learned rules (user-taught guidance)
@@ -90,4 +105,11 @@ After saving, run `python3 scripts/catalog.py rebuild` so the index records whic
 
 ## Approvals ingested so far
 
-Check `data/index.json`. As of this version it contains FL47012-R9, Kawneer IR 521/521T/521UT storefront (field- or pre-glazed, Large Missile D/E, Small Missile A, HVHZ).
+Check `data/index.json`. As of this version it contains:
+- **FL47012-R9:** Kawneer IR 521/521T/521UT storefront (field- or pre-glazed, Large Missile D/E, Small Missile A, HVHZ). Single product.
+- **FL15404-R7:** Kawneer IR 501T/501UT storefront. Four sub-products:
+  - .1 large missile D, wet glazed;
+  - .2 large missile D, dry glazed;
+  - .3 small missile A, dry glazed;
+  - .4 large missile E, wet glazed.
+  .1–.3 share their framing tables (`common/`). .4 is standalone. Tables use frame height × load width with end-anchor columns. Project-out GLASSvent windows apply to .1–.3.

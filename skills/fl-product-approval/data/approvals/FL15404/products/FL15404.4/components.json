@@ -1,0 +1,1007 @@
+{
+ "approval": "FL15404",
+ "product": "FL15404.4",
+ "drawing": "1981",
+ "evaluation_report": "WWS-379",
+ "missile": "E",
+ "glazing_method": "wet",
+ "description": "IR501T/UT Level E large missile impact storefront, wet glazed (2-3/4\" framing only)",
+ "value_semantics": "allowable design pressure in PSF (+/-); null = not permitted. Lookup: round frame height and load width UP to the next tabulated value.",
+ "axes": {
+  "x": "maximum load width (in) = glass centerline to glass centerline for intermediate mullions; frame edge to first glass centerline for side jambs; greater of A/B for corners",
+  "y": "maximum frame height (in)"
+ },
+ "tables": [
+  {
+   "id": "mullion-intermediate-E",
+   "kind": "grid",
+   "component": "mullion",
+   "family": "Vertical intermediate mullion 2-3/4\" (Level E)",
+   "sheet": 1,
+   "x_axis": "load_width_in",
+   "y_axis": "frame_height_in",
+   "columns": [
+    {
+     "id": "anchors_6",
+     "end_anchors": 6,
+     "label": "6 anchors per end"
+    },
+    {
+     "id": "anchors_4",
+     "end_anchors": 4,
+     "label": "4 anchors per end"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ]
+   },
+   "blocks": [
+    {
+     "y": 63.0,
+     "rows": [
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 66.0,
+     "rows": [
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        57.3
+       ]
+      }
+     ]
+    },
+    {
+     "y": 72.0,
+     "rows": [
+      {
+       "x": 52.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        58.3
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        52.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 78.0,
+     "rows": [
+      {
+       "x": 48.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        53.9
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        48.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 84.0,
+     "rows": [
+      {
+       "x": 45.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        60.0,
+        56.3
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        50.0
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        45.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 90.0,
+     "rows": [
+      {
+       "x": 42.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        60.0,
+        52.5
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        46.7
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        60.0,
+        42.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 96.0,
+     "rows": [
+      {
+       "x": 39.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        60.0,
+        56.3
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        60.0,
+        49.2
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        43.8
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        57.4,
+        39.4
+       ]
+      }
+     ]
+    },
+    {
+     "y": 102.0,
+     "rows": [
+      {
+       "x": 37.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        60.0,
+        53.0
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        60.0,
+        46.3
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        60.0,
+        41.2
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        54.0,
+        37.1
+       ]
+      }
+     ]
+    },
+    {
+     "y": 108.0,
+     "rows": [
+      {
+       "x": 35.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 36.0,
+       "v": [
+        60.0,
+        58.3
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        60.0,
+        50.0
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        56.9,
+        43.8
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        50.5,
+        38.9
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        45.5,
+        35.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 114.0,
+     "rows": [
+      {
+       "x": 33.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 36.0,
+       "v": [
+        60.0,
+        55.3
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        55.3,
+        47.4
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        48.3,
+        41.5
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        43.0,
+        36.8
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        38.7,
+        33.2
+       ]
+      }
+     ]
+    },
+    {
+     "y": 120.0,
+     "rows": [
+      {
+       "x": 30.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 36.0,
+       "v": [
+        55.3,
+        52.5
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        47.4,
+        45.0
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        41.5,
+        39.4
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        36.8,
+        35.0
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        33.2,
+        31.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 126.0,
+     "rows": [
+      {
+       "x": 28.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 30.0,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 36.0,
+       "v": [
+        50.0,
+        50.0
+       ]
+      },
+      {
+       "x": 42.0,
+       "v": [
+        42.9,
+        42.9
+       ]
+      },
+      {
+       "x": 48.0,
+       "v": [
+        37.5,
+        37.5
+       ]
+      },
+      {
+       "x": 54.0,
+       "v": [
+        33.3,
+        33.3
+       ]
+      },
+      {
+       "x": 60.0,
+       "v": [
+        30.0,
+        30.0
+       ]
+      }
+     ]
+    }
+   ],
+   "notes": "6 anchors per end shown; 4 may apply. Only the 2-3/4\" intermediate mullion (item 6) is detailed; no expansion mullion."
+  },
+  {
+   "id": "jamb-E",
+   "kind": "grid",
+   "component": "jamb",
+   "family": "Vertical side jamb 2-3/4\" (Level E)",
+   "sheet": 1,
+   "x_axis": "load_width_in",
+   "y_axis": "frame_height_in",
+   "columns": [
+    {
+     "id": "anchors_6",
+     "end_anchors": 6,
+     "label": "6 anchors per end"
+    },
+    {
+     "id": "anchors_4",
+     "end_anchors": 4,
+     "label": "4 anchors per end"
+    }
+   ],
+   "applies": {
+    "missile": [
+     "E"
+    ]
+   },
+   "blocks": [
+    {
+     "y": 63.0,
+     "rows": [
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 66.0,
+     "rows": [
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        57.3
+       ]
+      }
+     ]
+    },
+    {
+     "y": 72.0,
+     "rows": [
+      {
+       "x": 27.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        58.3
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        52.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 78.0,
+     "rows": [
+      {
+       "x": 25.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        53.9
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        48.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 84.0,
+     "rows": [
+      {
+       "x": 23.875,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        60.0,
+        56.3
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        50.0
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        45.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 90.0,
+     "rows": [
+      {
+       "x": 22.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        60.0,
+        52.5
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        46.7
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        60.0,
+        42.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 96.0,
+     "rows": [
+      {
+       "x": 20.875,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        60.0,
+        56.3
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        60.0,
+        49.2
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        43.8
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        57.4,
+        39.4
+       ]
+      }
+     ]
+    },
+    {
+     "y": 102.0,
+     "rows": [
+      {
+       "x": 19.875,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        60.0,
+        53.0
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        60.0,
+        46.3
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        60.0,
+        41.2
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        54.0,
+        37.1
+       ]
+      }
+     ]
+    },
+    {
+     "y": 108.0,
+     "rows": [
+      {
+       "x": 18.875,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 19.375,
+       "v": [
+        60.0,
+        58.3
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        60.0,
+        50.0
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        56.9,
+        43.8
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        50.5,
+        38.9
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        45.5,
+        35.0
+       ]
+      }
+     ]
+    },
+    {
+     "y": 114.0,
+     "rows": [
+      {
+       "x": 17.875,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 19.375,
+       "v": [
+        60.0,
+        55.3
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        55.3,
+        47.4
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        48.3,
+        41.5
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        43.0,
+        36.8
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        38.7,
+        33.2
+       ]
+      }
+     ]
+    },
+    {
+     "y": 120.0,
+     "rows": [
+      {
+       "x": 16.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 19.375,
+       "v": [
+        55.3,
+        52.5
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        47.4,
+        45.0
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        41.5,
+        39.4
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        36.8,
+        35.0
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        33.2,
+        31.5
+       ]
+      }
+     ]
+    },
+    {
+     "y": 126.0,
+     "rows": [
+      {
+       "x": 15.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 16.375,
+       "v": [
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "x": 19.375,
+       "v": [
+        50.0,
+        50.0
+       ]
+      },
+      {
+       "x": 22.375,
+       "v": [
+        42.9,
+        42.9
+       ]
+      },
+      {
+       "x": 25.375,
+       "v": [
+        37.5,
+        37.5
+       ]
+      },
+      {
+       "x": 28.375,
+       "v": [
+        33.3,
+        33.3
+       ]
+      },
+      {
+       "x": 31.375,
+       "v": [
+        30.0,
+        30.0
+       ]
+      }
+     ]
+    }
+   ],
+   "notes": "Columns are 6 / 4 anchors as printed on drawing 1981 (sheet 2 shows 3 per jamb end, 2 may apply) - confirm anchor count with the drawing."
+  }
+ ],
+ "dlo_limits": [
+  {
+   "max_dlo_height_in": 120,
+   "max_dlo_width_in": 41
+  },
+  {
+   "max_dlo_height_in": 116.5,
+   "max_dlo_width_in": 42.25
+  },
+  {
+   "max_dlo_height_in": 108.75,
+   "max_dlo_width_in": 45.25
+  },
+  {
+   "max_dlo_height_in": 102,
+   "max_dlo_width_in": 48.25
+  },
+  {
+   "max_dlo_height_in": 96,
+   "max_dlo_width_in": 51.25
+  },
+  {
+   "max_dlo_height_in": 90.625,
+   "max_dlo_width_in": 54.25
+  },
+  {
+   "max_dlo_height_in": 86,
+   "max_dlo_width_in": 57.25
+  }
+ ],
+ "glass": [
+  {
+   "id": "Option 1",
+   "build": "1-1/4\" laminated IG: 1/4\" tempered exterior / 3/8\" spacer / 1/4\" HS / 0.180 Kuraray SG (SentryGlas) / 1/4\" HS interior"
+  }
+ ],
+ "glazing": "Exterior glazing gasket (24) and interior Tremco Proglaze SSG or Dow 995 (no GE SilPruf); 5/8\" min. bite; setting block at sill (13), W block at sides (15) (sheet 4).",
+ "rules": {
+  "max_pressure_psf": 60.0,
+  "max_frame_height_in": 126.0,
+  "governing": "Pressure is controlled by the vertical framing members/mullions and their end anchor quantities (sheet 2 'Allowable design pressure'). There are no separate head, sill, horizontal or glass pressure tables; glass is limited by the D.L.O. size table.",
+  "frame_height": "Frame height up to 126\".",
+  "load_width": "Intermediate mullion: glass centerline to glass centerline (= tributary width). Side jamb: frame edge to first glass centerline. Corner: greater of the two sides A and B.",
+  "anchors": "Intermediate mullion: 6 anchors per end shown, 4 may apply (use the matching column). Side jamb: 3 per end shown, 2 may apply. Corner mullion: 6 end anchors. Strap anchors not applicable at sill. Side jamb anchors at mid-height: 3\" from center (6\" with CMU).",
+  "side_jamb_screws": "Side jamb end frame screws or strap anchors per sheet 2/3 (3 shown, 2 may apply).",
+  "expansion": "Horizontal stacking unlimited providing dimensions are not exceeded and expansion/contraction is not an issue (sheet 2).",
+  "members": "2-3/4\" jamb (item 4), 2-3/4\" intermediate mullion (item 6), mid-rail (item 5), head option 1/2, sill frame, optional sub-sill (sheet 4). No 5\" jamb, expansion mullion, corner mullions or project-out windows in this product.",
+  "shims": "3/8\" max shim at each frame screw anchor; 1/4\" max at each strap anchor (min. 6\" x 3\" shim).",
+  "general_notes": [
+   "Design pressures may not exceed the 'Allowable design pressure' tables (note 1).",
+   "Openings, bucking and bucking fasteners by others, designed to transfer loads (note 2).",
+   "Anchor embedment must be beyond wall finish or stucco (note 3).",
+   "Anchors into pressure treated wood must resist corrosion (note 6).",
+   "Kd = 0.85 directionality factor may be applied per ASCE 7 (note 7).",
+   "Horizontal stacking and overall unit width unlimited if dimensions are not exceeded; vertically stacked lites unlimited within max unit height (sheet 2)."
+  ],
+  "corner_construction": "Frame corners and vertical intermediate corners: horizontals square cut, butted, 3-4 S.S. #12 x 1\" PHTF screws through verticals into screw splines, sealed.",
+  "debridging": "IR501T: outer cavity poured and debridged. IR501UT: inner and outer cavities poured and debridged.",
+  "screws": "Concrete screws: Elco Ultracon (C.S.), Elco Crete-Flex (S.S.), ITW Ramset/Red Head Tapcon (C.S. or S.S.) or Hilti Kwik-Con II (C.S. or S.S.)."
+ },
+ "installation_anchors": [
+  {
+   "id": "wood",
+   "substrate": "min. 2x wood frame or buck (min. Gr. 3, G=0.55)",
+   "anchor": "No. 14 SMS or wood screw",
+   "min_embedment": "1 3/8\"",
+   "min_edge_distance": "1\"",
+   "notes": "frame screw mount needs min. 2x4; strap anchor mount needs min. 2x6. Wood + frame screws at sides: shim at sides max 1/4\" unless Gr. 5 screws (up to 3/8\")."
+  },
+  {
+   "id": "steel_stud",
+   "substrate": "min. 16 ga. 50 ksi metal stud",
+   "anchor": "1/4\" self tap/drill screw",
+   "min_embedment": "full",
+   "min_edge_distance": "1/2\""
+  },
+  {
+   "id": "steel",
+   "substrate": "min. 1/8\" thk A36 steel",
+   "anchor": "1/4\" self tap/drill screw",
+   "min_embedment": "full",
+   "min_edge_distance": "1/2\""
+  },
+  {
+   "id": "aluminum",
+   "substrate": "min. 0.100\" thk 6063-T6 aluminum",
+   "anchor": "1/4\" self tap/drill screw",
+   "min_embedment": "full",
+   "min_edge_distance": "1/2\""
+  },
+  {
+   "id": "concrete",
+   "substrate": "3000 psi concrete",
+   "anchor": "1/4\" concrete screw",
+   "min_embedment": "1 3/4\"",
+   "min_edge_distance": "2 1/2\""
+  }
+ ],
+ "parts_list": "Drawing sheet 5: store front parts (6063-T6 aluminum) head frame opt. 1/2, sill frame, jamb frame, mid-rail, intermediate mullion, frame screw filler, glazing bead/frame filler, interior/exterior mullion insert, sub-sill, strap anchor (profiles on sheet 4)."
+}

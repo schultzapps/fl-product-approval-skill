@@ -1,0 +1,21 @@
+{
+ "approval": "FL15404",
+ "product": "FL15404.1",
+ "extends": "../../common/components.json",
+ "drawing": "1758",
+ "evaluation_report": "WWS-208",
+ "missile": "D",
+ "glazing_method": "wet",
+ "description": "IR501T/UT large missile impact storefront, wet glazed",
+ "glass": [
+  {
+   "id": "Option 1",
+   "build": "1-5/16\" laminated IG: 1/4\" HS or tempered exterior / 1/2\" spacer / 1/4\" HS / 0.090 DuPont Butacite PVB / 1/4\" HS interior"
+  },
+  {
+   "id": "Option 2",
+   "build": "1-5/16\" laminated IG: 1/4\" HS or tempered exterior / 1/2\" spacer / 1/4\" HS / 0.090 Eastman Saflex PVB / 1/4\" HS interior"
+  }
+ ],
+ "glazing": "Exterior glazing gasket (item 35) and interior structural silicone: Tremco Proglaze SSG, Dow 995 or GE SilPruf; 5/8\" min. bite; setting blocks at sill, W blocks at sides (sheet 8)."
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "ILLUSTRATIVE ONLY - exercises a multi-product approval. 'approval' names the sub-product (FL15404.1 = LMI wet glazed).",
+  "project": {"name": "Example IR 501T storefront", "location": "Broward County, FL", "hvhz": true},
+  "approval": "FL15404.1",
+  "design_pressures": {"positive_psf": 55, "negative_psf": -60, "basis": "ASD"},
+  "missile_level": "D",
+  "openings": [
+    {"id": "Typical bay, 4 anchors", "frame_height_in": 108, "tributary_width_in": 48, "jamb_tributary_width_in": 25,
+     "dlo_width_in": 45, "dlo_height_in": 100, "members": ["glass", "mullion", "jamb"]},
+    {"id": "Bay with project-out window", "frame_height_in": 88, "tributary_width_in": 56, "dlo_width_in": 53, "dlo_height_in": 50,
+     "project_out_window": {"dlo_width_in": 50, "dlo_height_in": 30, "opening_height_in": 36}, "members": ["glass", "mullion", "jamb", "head", "anchor_cluster"]}
+  ]
+}

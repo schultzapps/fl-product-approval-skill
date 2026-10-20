@@ -116,6 +116,12 @@ def parse_detail(page_html: str) -> dict:
                     break
                 lim[hit[0]] = L[j + 1]; j += 2
             p["limits_of_use"] = lim
+            # this product's own documents, listed before the next product number
+            p["documents"] = []
+            while j < len(L) and not re.match(r"^\d+\.\d+$", L[j]) and L[j] not in ("Back", "Next"):
+                if L[j].lower().endswith(".pdf"):
+                    p["documents"].append(L[j])
+                j += 1
             products.append(p)
     d["products"] = products
     # documents
@@ -123,7 +129,9 @@ def parse_detail(page_html: str) -> dict:
     for href, text in re.findall(r"href=['\"](\.\./upload/[^'\"]+\.pdf)['\"][^>]*>(.*?)</a>", page_html, flags=re.S | re.I):
         role = ("installation_instructions" if "PR_Instl_Docs" in href else "evaluation_report" if "PR_Tech_Docs" in href
                 else "certificate_of_independence" if "PR_Independence" in href else "other")
-        docs.append({"role": role, "file": href.rsplit("/", 1)[-1], "url": requests.compat.urljoin(BASE, href)})
+        fname = html.unescape(href.rsplit("/", 1)[-1])
+        owner = [p["fl"] for p in products if fname in p.get("documents", [])]
+        docs.append({"role": role, "file": fname, "url": requests.compat.urljoin(BASE, href), "products": owner})
     d["documents"] = docs
     return d
 

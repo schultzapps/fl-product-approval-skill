@@ -1,0 +1,240 @@
+{
+  "fl_number": "FL15404-R7",
+  "application_type": "Revision",
+  "code_version": "2023",
+  "status": "Approved",
+  "status_comments": "Archived",
+  "manufacturer": "Kawneer Company",
+  "category": "Panel Walls",
+  "subcategory": "Storefronts",
+  "compliance_method": "Evaluation Report from a Florida Registered Architect or a Licensed Florida Professional Engineer",
+  "approval_method": "Method 1 Option D",
+  "dates": {
+    "submitted": "07/12/2023",
+    "validated": "07/22/2023",
+    "pending_fbc": "07/28/2023",
+    "approved": "10/17/2023"
+  },
+  "quality_assurance_entity": "Architectural Testing, Inc., an Intertek Company",
+  "quality_assurance_expires": "12/31/2026",
+  "evaluator": {
+    "name": "Warren W. Schaefer",
+    "license": "PE-44135"
+  },
+  "referenced_standards": [
+    {
+      "standard": "AAMA 501",
+      "year": "2015"
+    },
+    {
+      "standard": "ASTM E1886",
+      "year": "2013"
+    },
+    {
+      "standard": "ASTM E1996",
+      "year": "2017"
+    },
+    {
+      "standard": "ASTM E1996",
+      "year": "2014"
+    },
+    {
+      "standard": "ASTM E283",
+      "year": "2012"
+    },
+    {
+      "standard": "ASTM E330",
+      "year": "2014"
+    },
+    {
+      "standard": "ASTM E331",
+      "year": "2009"
+    },
+    {
+      "standard": "TAS 201",
+      "year": "1994"
+    },
+    {
+      "standard": "TAS 202",
+      "year": "1994"
+    },
+    {
+      "standard": "TAS 203",
+      "year": "1994"
+    }
+  ],
+  "products": [
+    {
+      "fl": "FL15404.1",
+      "model": "IR501T & IR501UT Storefront System",
+      "description": "IR501T & IR501UT Large Missile Impact Storefront System (Wet glazed)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "Storefront size, pressure, assembly and installation requirements are to be as specified in the attached drawings No. 1758.  Job required design wind pressure shall be calculated in accordance with the Florida Building Code Chapter 16 and ASCE 7 Minimum Design Loads for Buildings and Other Structures.  This storefront system is rated as a wind zone 4 missile level \"D\" product."
+      },
+      "documents": [
+        "FL15404_R7_II_Drawing 1758.pdf",
+        "FL15404_R7_AE_evaluation report WWS-208.pdf"
+      ]
+    },
+    {
+      "fl": "FL15404.2",
+      "model": "IR501T & IR501UT Storefront System",
+      "description": "IR501T & IR501UT Large Missile Impact Storefront System (Dry glazed)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "Storefront size, pressure, assembly and installation requirements are to be as specified in the attached drawings No. 1760.  Job required design wind pressure shall be calculated in accordance with the Florida Building Code Chapter 16 and ASCE 7 Minimum Design Loads for Buildings and Other Structures.  This storefront system is rated as a wind zone 4 missile level \"D\" product."
+      },
+      "documents": [
+        "FL15404_R7_II_Drawing 1760.pdf",
+        "FL15404_R7_AE_evaluation report WWS-209.pdf"
+      ]
+    },
+    {
+      "fl": "FL15404.3",
+      "model": "IR501T & IR501UT Storefront System",
+      "description": "IR501T & IR501UT Small Missile Impact Storefront System",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "Storefront size, pressure, assembly and installation requirements are to be as specified in the attached drawings No. 1759. Job required design wind pressure shall be calculated in accordance with the Florida Building Code Chapter 16 and ASCE 7 Minimum Design Loads for Buildings and Other Structures. This storefront system is rated as a wind zone 4 missile level \"A\" product."
+      },
+      "documents": [
+        "FL15404_R7_II_Drawing 1759.pdf",
+        "FL15404_R7_AE_evaluation report WWS-210.pdf"
+      ]
+    },
+    {
+      "fl": "FL15404.4",
+      "model": "IR501T & IR501UT Storefront System",
+      "description": "IR501T & IR501UT Large Missile Impact Storefront System (Wet glazed) (Missile Level \"E\" Impact Rated)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "Storefront size, pressure, assembly and installation requirements are to be as specified in the attached drawings No. 1981. Job required design wind pressure shall be calculated in accordance with the Florida Building Code Chapter 16 and ASCE 7 Minimum Design Loads for Buildings and Other Structures. This storefront system is rated as a wind zone 4 missile level \"E\" product."
+      },
+      "documents": [
+        "FL15404_R7_II_Drawing 1981.pdf",
+        "FL15404_R7_AE_Evaluation report WWS-379.pdf"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "role": "certificate_of_independence",
+      "file": "FL15404_R7_COI_Certificate of independence.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Independence/FL15404_R7_COI_Certificate of independence.pdf",
+      "products": [],
+      "sha256": "3894e082f54be2f11d9f88de4eb2bf4c3e3a764a802dfb5f3c67c8d491a5dfb2",
+      "bytes": 65942,
+      "cache_path": "cache/FL15404/FL15404_R7_COI_Certificate of independence.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL15404_R7_II_Drawing 1758.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL15404_R7_II_Drawing 1758.pdf",
+      "products": [
+        "FL15404.1"
+      ],
+      "sha256": "f3d7809ba782b219ec8f92784829ed0b3fc64cdabd9a3a19a7fc0c9b5bbfcecc",
+      "bytes": 2708819,
+      "cache_path": "cache/FL15404/FL15404_R7_II_Drawing 1758.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL15404_R7_AE_evaluation report WWS-208.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL15404_R7_AE_evaluation report WWS-208.pdf",
+      "products": [
+        "FL15404.1"
+      ],
+      "sha256": "5d1b57c7c2d127967c188dfae3e697bcfd9c06407b51062e9ef0758090ae95fa",
+      "bytes": 168941,
+      "cache_path": "cache/FL15404/FL15404_R7_AE_evaluation report WWS-208.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL15404_R7_II_Drawing 1760.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL15404_R7_II_Drawing 1760.pdf",
+      "products": [
+        "FL15404.2"
+      ],
+      "sha256": "ca31511a0d2d5fc22df2afdc9ea36d9e6ce5a2e2d5a0467121462302bfe0cf58",
+      "bytes": 2667187,
+      "cache_path": "cache/FL15404/FL15404_R7_II_Drawing 1760.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL15404_R7_AE_evaluation report WWS-209.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL15404_R7_AE_evaluation report WWS-209.pdf",
+      "products": [
+        "FL15404.2"
+      ],
+      "sha256": "ae76e049c131dd75729a5ac45f0e3d312f8f2b033485a743982beef6cf054b7e",
+      "bytes": 169870,
+      "cache_path": "cache/FL15404/FL15404_R7_AE_evaluation report WWS-209.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL15404_R7_II_Drawing 1759.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL15404_R7_II_Drawing 1759.pdf",
+      "products": [
+        "FL15404.3"
+      ],
+      "sha256": "a72143f80611774de6d6c63a46200745722c10718cebed96143d4b0e1f37cd44",
+      "bytes": 2676926,
+      "cache_path": "cache/FL15404/FL15404_R7_II_Drawing 1759.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL15404_R7_AE_evaluation report WWS-210.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL15404_R7_AE_evaluation report WWS-210.pdf",
+      "products": [
+        "FL15404.3"
+      ],
+      "sha256": "08b23c7fff6dd8ac96f2f4f57a39da75ca87bb4489df4af01d2193ccf38b9d3c",
+      "bytes": 170875,
+      "cache_path": "cache/FL15404/FL15404_R7_AE_evaluation report WWS-210.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL15404_R7_II_Drawing 1981.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL15404_R7_II_Drawing 1981.pdf",
+      "products": [
+        "FL15404.4"
+      ],
+      "sha256": "6d90c0aad136a586c7140dbc75aa6fc1ffcf315839e5b24582a27ae1e932e5d3",
+      "bytes": 1208505,
+      "cache_path": "cache/FL15404/FL15404_R7_II_Drawing 1981.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL15404_R7_AE_Evaluation report WWS-379.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL15404_R7_AE_Evaluation report WWS-379.pdf",
+      "products": [
+        "FL15404.4"
+      ],
+      "sha256": "26591b33f960bb21a54548b087e7986a5345a0d6b39fdb4a03770f32afbd1e75",
+      "bytes": 158891,
+      "cache_path": "cache/FL15404/FL15404_R7_AE_Evaluation report WWS-379.pdf"
+    }
+  ],
+  "source": {
+    "detail_page": "https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqtep%2bDhVRQZHLaQnC6VBQ0Kd8YHETSpr5ShBB3Dp1%2fkeA%3d%3d",
+    "retrieved": "2026-10-20T13:57:52+00:00",
+    "note": "Revision shown is the one the search returned; confirm it is the current approved revision on floridabuilding.org before relying on it."
+  },
+  "ingest_status": "structured",
+  "series": [
+    "IR 501T/501UT"
+  ]
+}

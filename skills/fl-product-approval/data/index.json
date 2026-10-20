@@ -1,6 +1,43 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-20",
  "approvals": {
+  "FL15404": {
+   "fl_number": "FL15404-R7",
+   "manufacturer": "Kawneer Company",
+   "category": "Panel Walls",
+   "subcategory": "Storefronts",
+   "status": "Approved",
+   "code_version": "2023",
+   "series": [
+    "IR 501T/501UT"
+   ],
+   "products": [
+    {
+     "fl": "FL15404.1",
+     "description": "IR501T & IR501UT Large Missile Impact Storefront System (Wet glazed)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL15404.2",
+     "description": "IR501T & IR501UT Large Missile Impact Storefront System (Dry glazed)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL15404.3",
+     "description": "IR501T & IR501UT Small Missile Impact Storefront System",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL15404.4",
+     "description": "IR501T & IR501UT Large Missile Impact Storefront System (Wet glazed) (Missile Level \"E\" Impact Rated)",
+     "has_structured_tables": true
+    }
+   ],
+   "ingest_status": "structured",
+   "has_structured_tables": true,
+   "learned_rules": 0,
+   "path": "approvals/FL15404"
+  },
   "FL47012": {
    "fl_number": "FL47012-R9",
    "manufacturer": "Kawneer Company",
@@ -11,6 +48,13 @@
    "series": [
     "IR 521/521T/521UT"
    ],
+   "products": [
+    {
+     "fl": "FL47012.1",
+     "description": "IR521 Field Glazed or Pre Glazed NT/T/UT Aluminum Storefront Systems, Large Missile Impact levels D and E and Small Missile Impact level A",
+     "has_structured_tables": true
+    }
+   ],
    "ingest_status": "structured",
    "has_structured_tables": true,
    "learned_rules": 2,
@@ -19,15 +63,20 @@
  },
  "by_category": {
   "Panel Walls/Storefronts": [
+   "FL15404",
    "FL47012"
   ]
  },
  "by_manufacturer": {
   "Kawneer Company": [
+   "FL15404",
    "FL47012"
   ]
  },
  "by_series": {
+  "IR 501T/501UT": [
+   "FL15404"
+  ],
   "IR 521/521T/521UT": [
    "FL47012"
   ]
@@ -187,12 +236,6 @@
    "fpa": "FL8787",
    "category": "Storefronts",
    "series": "IR 501",
-   "listing": "KPA001"
-  },
-  {
-   "fpa": "FL15404",
-   "category": "Storefronts",
-   "series": "IR 501T/501UT",
    "listing": "KPA001"
   },
   {

@@ -32,13 +32,17 @@ def rebuild():
         a = json.loads(p.read_text())
         num = p.parent.name
         series = sorted({r["series"] for r in kpa if base(r["fpa"]) == num[2:]} | set(a.get("series", [])))
-        has_tables = (p.parent / "components.json").exists()
+        pdir = p.parent / "products"
+        products = [{"fl": pr["fl"], "description": pr["description"],
+                     "has_structured_tables": (pdir / pr["fl"] / "components.json").exists() or (p.parent / "components.json").exists()}
+                    for pr in a.get("products", [])]
+        has_tables = (p.parent / "components.json").exists() or any(pr["has_structured_tables"] for pr in products)
         rules_file = p.parent / "RULES.md"
         rule_count = rules_file.read_text().count("\n### R-") if rules_file.exists() else 0
         idx["approvals"][num] = {
             "fl_number": a.get("fl_number"), "manufacturer": a.get("manufacturer"), "category": a.get("category"),
             "subcategory": a.get("subcategory"), "status": a.get("status"), "code_version": a.get("code_version"),
-            "series": series, "ingest_status": a.get("ingest_status"), "has_structured_tables": has_tables, "learned_rules": rule_count,
+            "series": series, "products": products, "ingest_status": a.get("ingest_status"), "has_structured_tables": has_tables, "learned_rules": rule_count,
             "path": f"approvals/{num}"}
         idx["by_category"].setdefault(f"{a.get('category')}/{a.get('subcategory')}", []).append(num)
         idx["by_manufacturer"].setdefault(a.get("manufacturer"), []).append(num)

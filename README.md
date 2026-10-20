@@ -2,7 +2,17 @@
 
 A Claude skill for reviewing building-envelope products (storefront, curtain wall, windows, doors) against their **Florida Product Approval (FL#)**. You give it the project facts (location/HVHZ, design wind pressures, missile level, glazing mode, opening sizes). It reads the approval's installation tables and tells you which mullions, glass and interlayers, anchorage, heads and sills, and door assemblies meet those requirements. The least capacity of the chosen components governs the system.
 
-The first approval ingested is **FL47012-R9: Kawneer IR 521/521T/521UT storefront**. Its sealed drawing IR521-FPA has been turned into 25 structured tables. Any other approval goes through the same workflow: say "analyze FPA 16517" and the skill fetches, extracts and verifies it.
+Approvals ingested so far:
+- **FL47012-R9: Kawneer IR 521/521T/521UT storefront.** Its sealed drawing IR521-FPA has been turned into 25 structured tables.
+- **FL15404-R7: Kawneer IR 501T/501UT storefront.** This is a multi-product approval:
+  - .1 LMI wet glazed;
+  - .2 LMI dry glazed;
+  - .3 SMI;
+  - .4 Level E.
+
+  Its four scanned drawings were transcribed and verified. The tables shared by .1–.3 are stored once, and each sub-product keeps only what differs.
+
+Any other approval goes through the same workflow: say "analyze FPA 16517" and the skill fetches, extracts and verifies it.
 
 ## Layout
 
@@ -22,7 +32,8 @@ skills/fl-product-approval/
   data/
     index.json                 # catalog (by FL#, by category, by manufacturer, by series, backlog)
     kpa/KPA001.json            # Kawneer published approval directory (Nov 2024), 89 rows
-    approvals/FL47012/         # approval.json, extract_spec.json, components.json, NOTES.md
+    approvals/FL47012/         # approval.json, extract_spec.json, components.json, NOTES.md, RULES.md
+    approvals/FL15404/         # multi-product: common/components.json + products/FL15404.1..4/components.json
 .claude/skills/fl-product-approval -> skills/fl-product-approval   (so Claude Code picks it up in this repo)
 cache/                         # downloaded PDFs (git-ignored; re-fetch with fpa_fetch.py)
 ```

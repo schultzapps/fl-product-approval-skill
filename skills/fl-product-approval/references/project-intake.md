@@ -20,9 +20,15 @@ Collect these facts before running a review. If any are missing, ask for them, a
 | Substrate | Picks the anchor type from Table 1 (concrete, wood, steel/aluminum) | report text; see `components.json` → `installation_anchors` |
 | Door openings | Width and height for the door-assembly table | `openings[].door_width_in`, `door_height_in` |
 | Zone-specific pressure | Optional per-opening override (ASD) | `openings[].pressure_psf_asd` |
+| Sub-product | Multi-product approvals: which `.k` applies (by missile level, wet/dry glazing, glass). Ask if unclear | `approval` = e.g. `FL15404.2` |
+| Frame height | Tables keyed on frame height instead of mullion height (e.g. FL15404) | `openings[].frame_height_in` |
+| Jamb / corner load width | FL15404: side jamb load width = frame edge to the first glass centerline; corner = greater of sides A and B | `openings[].jamb_tributary_width_in`, `corner_load_width_in` |
+| Project-out window | FL15404.1–.3: GLASSvent window DLO and opening height in that bay | `openings[].project_out_window` = `{dlo_width_in, dlo_height_in, opening_height_in}` |
 
 **Tributary width:** a bay is the mullion-to-mullion spacing. For an intermediate mullion, tributary width = (bay on its left + bay on its right) / 2.
 - With equal bays it **equals the mullion spacing**. Mullions every 60" give a 60" tributary width, not 120". When a table allows tributary width X, it allows equal bays (mullion spacing) of X.
 - A jamb or other end member carries only half of its single adjacent bay: tributary width = end bay / 2.
 
-Example file: `examples/miami-dade-storefront.project.json` (illustrative values only).
+Example files (illustrative values only):
+- `examples/miami-dade-storefront.project.json`: FL47012, single product.
+- `examples/ir501-fl15404.project.json`: FL15404.1, multi-product approval with frame-height tables and a project-out window.

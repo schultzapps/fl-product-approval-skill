@@ -15,3 +15,10 @@ Only add rules here when the user says a rule applies to all products and manufa
 - Why / source: user instruction, 2026-10-20 ("ignore that comments archived thing - not an issue")
 - Applies when: always
 - Status: active
+
+### R-003  The approval's own documents are the source of truth; KPA001 is only an index
+- Scope: general (all approvals; applies to any manufacturer listing such as KPA001)
+- Rule: When sources disagree, follow the product approval's own documents: evaluation report, sealed installation drawings and the floridabuilding.org record. KPA001 and other manufacturer directories are maintained by hand and can be wrong or out of date. Use them only to find approvals (series → FL number). Never take a rating, design pressure, glazing or missile level from them when the approval documents say something else. Record the discrepancy in NOTES.md as "KPA001 differs; approval documents govern".
+- Why / source: user instruction, 2026-10-20 ("always treat the product approval evaluation as the truth, KPA001 is manually updated and could be wrong")
+- Applies when: always
+- Status: active

@@ -25,7 +25,7 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
     - `common/components.json`: tables shared by several sub-products.
     - `products/FL<n>.<k>/components.json`: one per sub-product. It holds what is specific to that product (glass, glazing method, missile level, any of its own tables), and `"extends": "../../common/components.json"` when it shares the common tables. A sub-product with a different system stands alone (no `extends`).
 - `data/manufacturers/<slug>/RULES.md`: rules the user has taught that apply to every product from one manufacturer.
-- `data/kpa/KPA001.json` is Kawneer's published approval directory, parsed into rows (series → FL number, missile rating, DP, glazing).
+- `data/kpa/KPA001.json` is Kawneer's published approval directory, parsed into rows (series → FL number, missile rating, DP, glazing). It is maintained by hand and can be wrong: use it **only to find approvals**. Ratings, pressures and glazing come from the approval's own documents (general rule R-003).
 - Source PDFs are downloaded to `<repo>/cache/` (git-ignored). Re-fetch them with `scripts/fpa_fetch.py`.
 
 ## Multi-product approvals (FL<n>.1, .2, ...)

@@ -39,8 +39,8 @@
 ## Discrepancies and open items
 
 1. ~~"Comments: Archived" on the record page~~: not an issue (general rule R-002).
-2. **WWS-210 (FL15404.3) note 5** says small missile rated for "missile level D locations" and must be shuttered in large-missile locations. The Florida record and KPA001 call it Level A (small missile). The data treats .3 as missile A.
+2. **FL15404.3 rating (resolved per general rule R-003).** Evaluation report WWS-210 governs. It rates the product **small missile impact** (Level A; the drawing title and Florida record agree). Note 5: it is "for use in wind zone 4 & missile level D locations and must be shuttered when required by code if in a large missile impact location". So in a large-missile location it may be used only with code-required shutters. Stored as `missile: "A"` with that warning.
 3. **Drawing 1981 side jamb table** column headers read "6 anchors / 4 anchors", while sheet 2 shows 3 anchors at each side jamb end (2 may apply). The data is stored as printed; confirm with the drawing before quoting anchor counts.
-4. **KPA001 (Nov 2024)** lists .1/.2/.3 at ±70 psf and .4 as "Varies", glazing 1-1/4". That matches the drawings (70 / 60 psf caps).
+4. **KPA001 (Nov 2024)** lists .1/.2/.3 at ±70 psf and .4 as "Varies", glazing 1-1/4". That is consistent with the drawings (70 / 60 psf caps). KPA001 is an index only; the approval documents govern (general rule R-003).
 5. **Pre-1981 sheets 6–7** (sections) and project-out window details were viewed but not transcribed. They are drawings only.
 6. **Not modeled:** door/entrance framing. This approval has none.

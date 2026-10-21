@@ -13,7 +13,17 @@ This skill does two things:
 
 Paths below are relative to this skill directory. Run the scripts from this directory. They need `python3` with `requests` and `pdfplumber` (`pip install -r requirements.txt`, here in the skill directory), plus `pdftotext`/`pdftoppm` from poppler-utils. Scanned approvals also need `tesseract`.
 
-Reviewing a project only reads files. Ingesting an approval or saving a learned rule writes inside this directory (`data/`, `cache/`), and ingest needs network access to floridabuilding.org. If the agent's sandbox blocks either, tell the user what the step needs instead of working around it.
+## Publisher mode and customer mode
+
+This skill is published as a plugin. Check whether the file `.maintainer` exists in this directory:
+
+- **It exists: publisher mode.** You are running in the publisher's clone of the repository. Every workflow below is available, including ingesting approvals (Workflow B) and saving learned rules into the skill's own data.
+- **It doesn't exist: customer mode.** You are running from an installed copy that the next update replaces, so anything written into this directory would be lost. In customer mode:
+  - **Review projects** (Workflow A) as normal.
+  - **Never ingest an approval.** If the user asks about an approval that isn't in `data/index.json`, say that it isn't in the library yet, and that the publisher adds and verifies new approvals and releases them as an update. Ask them to request it (see "Requesting an approval" in the repository README). You may point them to the record on floridabuilding.org, but don't review a project against an approval that isn't in the library.
+  - **Save learned rules to the customer's own rules file**, not into this directory (see "Customer rules" under Learned rules).
+
+Reviewing a project only reads files. Ingesting an approval writes inside this directory (`data/`, `cache/`) and needs network access to floridabuilding.org. If the agent's sandbox blocks a step, tell the user what the step needs instead of working around it.
 
 ## Data store
 
@@ -43,7 +53,7 @@ One FL number often covers several **sub-products**, numbered `.1`, `.2`, `.3` a
 
 ## Workflow A: review a project
 
-1. Make sure the approval has been ingested (`data/approvals/FL<n>/components.json` or `products/*/components.json` exists). If it hasn't, run Workflow B first. For a multi-product approval, decide which sub-product applies (see above).
+1. Make sure the approval has been ingested (`data/approvals/FL<n>/components.json` or `products/*/components.json` exists). If it hasn't: in publisher mode, run Workflow B first; in customer mode, say it isn't in the library yet (see above). For a multi-product approval, decide which sub-product applies (see above).
 2. Collect the project facts using `references/project-intake.md`. **Ask for anything missing; don't assume it.** The most important items are:
    - Design pressures and their basis. The approval tables are **ASD**, while ASCE 7 C&C pressures are strength-level (multiply by 0.6 for ASD). Ask which one the user has.
    - Missile level (Large D, Large E, or Small A). `references/missile-levels.md` explains levels A–E and LMI/SMI. An unqualified "LMI" is Level D (general rule R-004).
@@ -62,6 +72,8 @@ One FL number often covers several **sub-products**, numbered `.1`, `.2`, `.3` a
 Questions the scripts don't cover (door hardware, part numbers, detail geometry, sheets that are drawings only) have to be answered from the drawing itself. Render the page with `pdftoppm -r 110 -f N -l N -png <pdf> /tmp/x` and read the image. Never invent a value that isn't in `components.json` or on a sheet you have looked at.
 
 ## Workflow B: ingest an approval (e.g. "analyze FPA 16517")
+
+Publisher mode only (see above). In customer mode, explain that the approval isn't in the library yet and ask the user to request it.
 
 Follow `references/ingest-workflow.md`. In short:
 
@@ -84,10 +96,13 @@ When the user corrects you, states a practice ("for IR 521 we always...", "never
 
 If the scope isn't clear, ask before saving. For example: "Is this IR 521 only, all Kawneer, or every product?"
 
+In customer mode, don't save to these three files. Save to the customer rules file instead (see "Customer rules" below).
+
 **When reviewing approval FL<n>, read only:**
 - that approval's `RULES.md`
 - its manufacturer's `RULES.md`
 - `references/general-rules.md`
+- the entries in the customer rules file (if it exists) whose Scope is FL<n>, that manufacturer, or general
 
 Never apply another approval's rules. For example, IR 521 pre-glazed mullion rules must not leak into a Trifab 601T review. If a question about one product reminds you of a rule saved for another, you may mention that it exists, labeled as belonging to that other approval, but don't apply it.
 
@@ -105,6 +120,16 @@ Never apply another approval's rules. For example, IR 521 pre-glazed mullion rul
 ```
 
 After saving, run `python3 scripts/catalog.py rebuild` so the index records which approvals have rules, then tell the user which file the rule went into.
+
+### Customer rules
+
+In customer mode, a rule the user teaches goes in `.fl-product-approval/RULES.md` under the root of the user's current project (the agent's working directory), not in this skill directory. Updates never touch that file, and the customer can commit it to share it with their colleagues.
+
+- Create the file if it doesn't exist, with a first line `# Customer rules for the fl-product-approval skill`.
+- Use the same entry format, numbered `C-001`, `C-002`, ... so customer rules can't be confused with the published `R-` rules.
+- Every entry's Scope line names one approval (`FL47012`), one manufacturer (`Kawneer`) or `general`. Ask if the scope isn't clear, as above.
+- Precedence: the approval's sealed documents > the published rules (approval > manufacturer > general) > customer rules. If a customer rule conflicts with a published rule, point out the conflict and follow the published rule unless the user, as the responsible professional, decides otherwise. Record that decision in the customer rule entry.
+- Don't run `catalog.py rebuild` for a customer rule. Tell the user the rule was saved to `.fl-product-approval/RULES.md` in their project and only applies where that file is present.
 
 ## Approvals ingested so far
 

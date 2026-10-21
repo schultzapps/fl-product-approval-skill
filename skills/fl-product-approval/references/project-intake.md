@@ -9,7 +9,7 @@ Collect these facts before running a review. If any are missing, ask for them, a
 | Risk category, Vult (mph), exposure, mean roof height | Inputs to the engineer's C&C pressures; record them for traceability | `project.*` (free form) |
 | Design pressures, positive and negative, per zone (4 and 5 near corners) | Compared against the tables. Use the worst zone the opening sits in | `design_pressures.positive_psf / negative_psf` |
 | Pressure basis | Approval tables are **ASD**. ASCE 7 C&C pressures are strength-level, so ASD = 0.6 × strength. Ask which one the user has | `design_pressures.basis` = `ASD` or `strength` |
-| Missile level | Selects the glazing schedules (FL47012: D → G-A to G-D, E → G-E, A → G-F) and the mullion/jamb/sill tables. The project's engineer or AHJ sets the required level by location and height | `missile_level` = `D`, `E` or `A` |
+| Missile level | Selects the glazing schedules (FL47012: D → G-A to G-D, E → G-E, A → G-F) and the mullion/jamb/sill tables. The project's engineer or AHJ sets the required level by location and height. Levels and LMI/SMI are explained in `missile-levels.md` | `missile_level` = `D`, `E` or `A` |
 | Field- or pre-glazed | Many tables are limited to one mode | `glazing_mode` = `field` or `pre` |
 | Thermal frame | NT (no thermal break), T (one) or UT (two) | `thermal` |
 | Preferred glazing | Optional filters: schedule, sealant (WG-D/WG-G/WG-T/DG), direction (OG/IG) | `glazing.schedule`, `glazing.sealant`, `glazing.direction` |
@@ -19,6 +19,8 @@ Collect these facts before running a review. If any are missing, ask for them, a
 | Shim gap at head/sill | Selects the anchor-cluster table (FL47012: 1/4" or 3/8" max) | `openings[].shim_gap_in` |
 | Substrate | Picks the anchor type from Table 1 (concrete, wood, steel/aluminum) | report text; see `components.json` → `installation_anchors` |
 | Door openings | Width and height for the door-assembly table | `openings[].door_width_in`, `door_height_in` |
+| Door ratings (FL47880 style) | Config (`X` single, `XX` pair, `XXX` 3-panel); leaf, door opening or frame size, whichever the product's table uses (leaf defaults to opening ÷ leaves); optional frame type, door series, lock, glass option and butt/pivot hinge count to narrow the rows | `openings[].door_config`, `door_leaf_width_in`, `door_leaf_height_in`, `door_opening_width_in`, `door_opening_height_in`, `frame_width_in`, `frame_height_in`, `door_frame_type`, `door_series`, `door_lock`, `door_glass`, `door_hinges` |
+| Wind zone | WZ3-only door products need impact protection in wind zone 4; some rows carry a wind zone rating | `project.wind_zone` |
 | Zone-specific pressure | Optional per-opening override (ASD) | `openings[].pressure_psf_asd` |
 | Sub-product | Multi-product approvals: which `.k` applies (by missile level, wet/dry glazing, glass). Ask if unclear | `approval` = e.g. `FL15404.2` |
 | Frame height | Tables keyed on frame height instead of mullion height (e.g. FL15404) | `openings[].frame_height_in` |

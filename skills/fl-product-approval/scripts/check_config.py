@@ -242,6 +242,72 @@ def eval_doors(comp, o, req, thermal):
     return out
 
 
+def norm(s):
+    return re.sub(r"[^a-z0-9]", "", str(s).lower())
+
+
+def door_sizes(o):
+    """Door inputs. Leaf size falls back to the door opening (single) or half of it (pair), which is conservative."""
+    cfg = o.get("door_config", "X").upper()
+    ow, oh = o.get("door_opening_width_in", o.get("door_width_in")), o.get("door_opening_height_in", o.get("door_height_in"))
+    lw, lh, note = o.get("door_leaf_width_in"), o.get("door_leaf_height_in"), None
+    if lw is None and ow is not None:
+        lw, note = ow / len(cfg), "leaf width taken as door opening / leaves (conservative)"
+    if lh is None and oh is not None:
+        lh = oh
+    return cfg, {"max_leaf_w_in": lw, "max_leaf_h_in": lh, "max_opening_w_in": ow, "max_opening_h_in": oh,
+                 "max_frame_w_in": o.get("frame_width_in"), "max_frame_h_in": o.get("frame_height_in")}, note
+
+
+def eval_door_ratings(comp, o, req, missile, wind_zone):
+    """Door approvals (FL47880 style): each rating table (lock, glass, hinge, or a complete assembly table) is one component;
+    a row applies when the opening fits its size limits and its config / frame / missile / option filters."""
+    cfg, have, leaf_note = door_sizes(o)
+    names = {"max_leaf_w_in": "leaf width", "max_leaf_h_in": "leaf height", "max_opening_w_in": "door opening width",
+             "max_opening_h_in": "door opening height", "max_frame_w_in": "frame width", "max_frame_h_in": "frame height"}
+    want_frame, want_series = o.get("door_frame_type"), o.get("door_series")
+    want_lock, want_glass, want_hinges = o.get("door_lock"), o.get("door_glass"), o.get("door_hinges")
+    out = {}
+    for t in comp["door_ratings"]["tables"]:
+        opts = []
+        for r in t["rows"]:
+            if r.get("config") and cfg not in r["config"]:
+                continue
+            if want_frame and r.get("frame_types") and not any(norm(f) in norm(want_frame) or norm(want_frame) in norm(f) for f in r["frame_types"]):
+                continue
+            if want_series and r.get("door_series") and norm(want_series) not in map(norm, r["door_series"]):
+                continue
+            if missile and r.get("missile") and missile not in r["missile"]:
+                continue
+            if want_lock and (t["component"] == "door_lock" and norm(want_lock) not in norm(r["option"]) or r.get("lock_options") and str(want_lock) not in r["lock_options"]):
+                continue
+            if want_glass and r.get("glass_options") and str(want_glass) not in r["glass_options"]:
+                continue
+            if want_hinges and r.get("hinges") and want_hinges != r["hinges"]:
+                continue
+            probs, missing = [], []
+            limits = dict((k, r[k]) for k in names if k in r)
+            if "max_leaf_w_single_in" in r:      # glass tables: single-door leaf width or double-door opening width
+                limits["max_leaf_w_in" if cfg == "X" else "max_opening_w_in"] = r["max_leaf_w_single_in"] if cfg == "X" else r["max_opening_w_double_in"]
+            for k, lim in limits.items():
+                if have[k] is None:
+                    missing.append(names[k])
+                elif have[k] > lim:
+                    probs.append(f"{names[k]} {have[k]:g} > {lim:g}")
+            if r.get("wind_zone") and wind_zone and wind_zone > r["wind_zone"]:
+                probs.append(f"row rated wind zone {r['wind_zone']}, project is wind zone {wind_zone}")
+            cap = None if probs or missing or r["dp_psf"] is None else r["dp_psf"]
+            note = "; ".join(probs + ([f"input needed: {', '.join(missing)}"] if missing else []) + ([r["note"]] if r.get("note") else []) + (["N/A on the drawing"] if r["dp_psf"] is None else []))
+            sizes = ", ".join(f"{names[k]} {v:g}" for k, v in limits.items())
+            opts.append(opt(t["component"], r["option"], cap, req, table=t["id"], sheet=t["sheet"], size_class=f"max {sizes}" if sizes else None,
+                            **({"note": note} if note else {}), **({"warning": leaf_note} if leaf_note and "max_leaf_w_in" in limits else {})))
+        if not opts:
+            opts.append(opt(t["component"], f"{t['title']}: no row applies", None, req, table=t["id"], sheet=t["sheet"],
+                            note=f"no row matches config {cfg} and the given frame / door series / missile / lock / glass / hinge filters"))
+        out[t["component"]] = opts
+    return out
+
+
 def run(project):
     app, comp = load(project["approval"])
     dp = project["design_pressures"]
@@ -259,15 +325,21 @@ def run(project):
         result["flags"].append(f"Approval status is {app.get('status')}.")
     if missile and "missile_to_glazing" in comp.get("rules", {}) and missile not in comp["rules"]["missile_to_glazing"]:
         result["flags"].append(f"Missile level {missile} is not covered by this approval.")
-    if missile and comp.get("missile") and missile != comp["missile"]:
-        result["flags"].append(f"Product {comp.get('product')} is rated missile level {comp['missile']}; the project calls for level {missile}. Check the other products of this approval.")
+    rated = comp.get("missile")
+    rated = [rated] if isinstance(rated, str) else rated
+    if missile and rated and missile not in rated:
+        result["flags"].append(f"Product {comp.get('product')} is rated missile level {'/'.join(rated)}; the project calls for level {missile}. Check the other products of this approval.")
     cap = comp.get("rules", {}).get("max_pressure_psf")
     if cap and req_asd > cap:
         result["flags"].append(f"Required {req_asd:.1f} psf exceeds this product's maximum tabulated pressure of {cap:g} psf.")
+    wz = project.get("project", {}).get("wind_zone")
+    if wz and comp.get("max_wind_zone_unprotected") and wz > comp["max_wind_zone_unprotected"]:
+        result["flags"].append(f"Project is wind zone {wz}; product {comp.get('product')} needs an impact protective system above wind zone {comp['max_wind_zone_unprotected']}.")
     for w in comp.get("warnings", []):
         result["flags"].append(w)
+    door_only = "door_ratings" in comp and not comp.get("tables")
     for o in project["openings"]:
-        members = o.get("members", ["glass", "mullion", "head", "sill", "anchor_cluster"])
+        members = o.get("members", ["door"] if door_only else ["glass", "mullion", "head", "sill", "anchor_cluster"])
         req = round(o.get("pressure_psf_asd", req_asd), 1)
         comps = {}
         if "glass" in members: comps["glass"] = eval_glass(comp, o, req, missile, mode, want)
@@ -278,6 +350,7 @@ def run(project):
             if k in members: comps[k] = eval_details(comp, o, req, missile, mode, thermal, k)
         if "anchor_cluster" in members: comps["anchor_cluster"] = eval_anchor_clusters(comp, o, req, missile, mode)
         if "door" in members and "door_assemblies" in comp: comps["door"] = eval_doors(comp, o, req, thermal)
+        if "door" in members and "door_ratings" in comp: comps.update(eval_door_ratings(comp, o, req, missile, wz))
         pw = o.get("project_out_window")
         if pw:
             comps["project_out_window"] = eval_project_out(comp, o, pw, req)

@@ -22,3 +22,10 @@ Only add rules here when the user says a rule applies to all products and manufa
 - Why / source: user instruction, 2026-10-20 ("always treat the product approval evaluation as the truth, KPA001 is manually updated and could be wrong")
 - Applies when: always
 - Status: active
+
+### R-004  LMI (large missile impact) = Level D
+- Scope: general (all products, all manufacturers)
+- Rule: Where an approval's drawings or evaluation report rate impact as "LMI" (large missile impact) without naming a level, read it as large missile Level D. A product is Level E only where its own documents say Level E. A Level E project can't use an LMI-only product.
+- Why / source: user instruction, 2026-10-21 ("LMI is Level D", then confirmed it applies beyond FL47880). Consistent with TAS 201: the 9 lb 2x4 large missile at 50 ft/s is the Level D test; at 80 ft/s it matches Level E (see `references/missile-levels.md`)
+- Applies when: setting a product's missile level at ingest, and matching a project's missile level at review
+- Status: active

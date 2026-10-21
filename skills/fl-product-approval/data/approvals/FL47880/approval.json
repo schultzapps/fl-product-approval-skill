@@ -1,0 +1,327 @@
+{
+  "fl_number": "FL47880-R0",
+  "application_type": "New",
+  "code_version": "2023",
+  "status": "Approved",
+  "status_comments": "\"Identify spacer as tested\". m.c.",
+  "manufacturer": "Kawneer Company",
+  "category": "Exterior Doors",
+  "subcategory": "Swinging Exterior Door Assemblies",
+  "compliance_method": "Evaluation Report from a Florida Registered Architect or a Licensed Florida Professional Engineer",
+  "approval_method": "Method 1 Option D",
+  "dates": {
+    "submitted": "10/22/2025",
+    "validated": "10/22/2025",
+    "pending_fbc": "10/25/2025",
+    "approved": "12/09/2025"
+  },
+  "quality_assurance_entity": "Architectural Testing, Inc., an Intertek Company",
+  "quality_assurance_expires": "12/31/2026",
+  "evaluator": {
+    "name": "Hermes F. Norero, P.E.",
+    "license": "PE-73778"
+  },
+  "referenced_standards": [
+    {
+      "standard": "AAMA/WDMA/CSA 101/I.S.2/A440",
+      "year": "2017"
+    },
+    {
+      "standard": "TAS 201",
+      "year": "1994"
+    },
+    {
+      "standard": "TAS 202",
+      "year": "1994"
+    },
+    {
+      "standard": "TAS 203",
+      "year": "1994"
+    }
+  ],
+  "products": [
+    {
+      "fl": "FL47880.1",
+      "model": "350 IR/HW Outswing & Bi-Fold Showroom Doors (HVHZ) (Impact)",
+      "description": "350 IR/HW Outswing & Bi-Fold Showroom Doors (HVHZ) (Impact)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW046 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9646 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.2",
+      "model": "350/500 IR 8 ft. Tall Outswing Doors (HVHZ) (Impact)",
+      "description": "350/500 IR 8 ft. Tall Outswing Doors (HVHZ) (Impact)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW042 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9642 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.3",
+      "model": "350/500 IR 9 ft. Tall Outswing Doors (HVHZ) (Impact)",
+      "description": "350/500 IR 9 ft. Tall Outswing Doors (HVHZ) (Impact)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW041 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9641 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.4",
+      "model": "350/500 IR Outswing Doors (WZ3) (Impact)",
+      "description": "350/500 IR Outswing Doors",
+      "limits_of_use": {
+        "hvhz": "No",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW045 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9645 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.5",
+      "model": "Flushline Outswing Doors (HVHZ) (Impact)",
+      "description": "Flushline Outswing Doors (HVHZ) (Impact)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW047 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9647 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.6",
+      "model": "IR350/500 HW Outswing Doors (HVHZ) (Impact)",
+      "description": "IR350/500 HW Outswing Doors (HVHZ) (Impact)",
+      "limits_of_use": {
+        "hvhz": "Yes",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW044 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9644 SS 2025-10-22.pdf"
+      ]
+    },
+    {
+      "fl": "FL47880.7",
+      "model": "IR350/500 HW Outswing Doors (WZ3) (Impact)",
+      "description": "IR350/500 HW Outswing Doors (WZ3) (Impact)",
+      "limits_of_use": {
+        "hvhz": "No",
+        "outside_hvhz": "Yes",
+        "impact_resistant": "Yes",
+        "design_pressure": "N/A",
+        "other": "See Installation Instructions and Evaluation Report for allowable design pressures, sizes, configurations, installation requirements and limits of use."
+      },
+      "documents": [
+        "FL47880_R0_II_KAW043 SS 2025-10-22.pdf",
+        "FL47880_R0_AE_PER9643 SS 2025-10-22.pdf"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "role": "certificate_of_independence",
+      "file": "FL47880_R0_COI_COI Kawneer SS 2025-02-07.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Independence/FL47880_R0_COI_COI Kawneer SS 2025-02-07.pdf",
+      "products": [],
+      "sha256": "da7419240ad6df0443cc5a3e93badda8b04ae1cc4bf9deed450488f1debe6f20",
+      "bytes": 319467,
+      "cache_path": "cache/FL47880/FL47880_R0_COI_COI Kawneer SS 2025-02-07.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW046 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW046 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.1"
+      ],
+      "sha256": "86f4ae28274151f06da8659e73d7402eda561a37e2d7fdee7eb666f3f25e4b6e",
+      "bytes": 2367331,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW046 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9646 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9646 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.1"
+      ],
+      "sha256": "36f5645edd15b94d02d30be8a5685f9092e6d4ed082d7c996fa65ab33f528149",
+      "bytes": 414169,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9646 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW042 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW042 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.2"
+      ],
+      "sha256": "5f9789772db9d29f63298331a1234e05bc29e5be9913632a49a216e7bd82d498",
+      "bytes": 5063934,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW042 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9642 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9642 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.2"
+      ],
+      "sha256": "16f42c391a7f158a0a78c2c8631ebd3267f6451efbbcc119dfb405b392dfb084",
+      "bytes": 417354,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9642 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW041 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW041 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.3"
+      ],
+      "sha256": "272522ea8c5469a2e99236f89d5c5c56d5d1ff882aa2d2be144d78f0e7c8c96c",
+      "bytes": 3540412,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW041 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9641 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9641 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.3"
+      ],
+      "sha256": "b640bfd2860c9a61881678e86f2041536003ecbdcd9214f547c9db71fbd210a7",
+      "bytes": 416535,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9641 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW045 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW045 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.4"
+      ],
+      "sha256": "68bcc67475745eb989b0cbd1f0452e40a27f6f04873c883118984dfc5a617d5c",
+      "bytes": 5100732,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW045 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9645 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9645 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.4"
+      ],
+      "sha256": "ae60a3f04dea42d717a48949f28587b021dc69a3009bb1ef8dc4f1e8ffeb7b57",
+      "bytes": 415507,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9645 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW047 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW047 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.5"
+      ],
+      "sha256": "ee02d9fd1dd78d00c88dda3cc2a0abb48f7e931778ebcded5f600d453db696b0",
+      "bytes": 3882479,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW047 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9647 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9647 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.5"
+      ],
+      "sha256": "661a308cd2d64d3284efc96928d95323862d698d7b338194d8b052bf1f86f7a0",
+      "bytes": 412681,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9647 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW044 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW044 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.6"
+      ],
+      "sha256": "3f93a22d74d24b2a50631b0523fe3b97bae7bdcb3f88a696a7c317e18211b129",
+      "bytes": 4299476,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW044 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9644 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9644 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.6"
+      ],
+      "sha256": "f64ded2810b2e37f308fcaea86d0809d8aff1ddf139d53892c660512a3f5ee68",
+      "bytes": 415430,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9644 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "installation_instructions",
+      "file": "FL47880_R0_II_KAW043 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Instl_Docs/FL47880_R0_II_KAW043 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.7"
+      ],
+      "sha256": "d86e014414e46028fc04d4872f0a9a162fbf270538f28ecd68e83a3591a618fb",
+      "bytes": 3873321,
+      "cache_path": "cache/FL47880/FL47880_R0_II_KAW043 SS 2025-10-22.pdf"
+    },
+    {
+      "role": "evaluation_report",
+      "file": "FL47880_R0_AE_PER9643 SS 2025-10-22.pdf",
+      "url": "https://www.floridabuilding.org/upload/PR_Tech_Docs/FL47880_R0_AE_PER9643 SS 2025-10-22.pdf",
+      "products": [
+        "FL47880.7"
+      ],
+      "sha256": "9f468fddce7bb29208dea4de3a065aa8db101b6690741ba47b6deaf4e0297116",
+      "bytes": 412658,
+      "cache_path": "cache/FL47880/FL47880_R0_AE_PER9643 SS 2025-10-22.pdf"
+    }
+  ],
+  "source": {
+    "detail_page": "https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqs6UvxYXi4D1iO%2fSKVEQhLTiTVC%2b3I%2bG4qrPKAV%2bwXupg%3d%3d",
+    "retrieved": "2026-10-21T15:27:51+00:00",
+    "note": "Revision shown is the one the search returned; confirm it is the current approved revision on floridabuilding.org before relying on it."
+  },
+  "ingest_status": "structured"
+}

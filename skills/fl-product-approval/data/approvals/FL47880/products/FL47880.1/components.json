@@ -1,0 +1,198 @@
+{
+ "approval": "FL47880",
+ "product": "FL47880.1",
+ "drawing": "KAW046",
+ "drawing_date": "2025-03-11",
+ "evaluation_report": "PER9646 (2025-10-21)",
+ "description": "350 IR / 350 HW outswing and bi-fold showroom doors (HVHZ)(impact)",
+ "hvhz": true,
+ "missile": [
+  "D",
+  "A"
+ ],
+ "missile_rating": "Large missile = Level D per general rule R-004; drawing states LMI/SMI (sheet 1)",
+ "value_semantics": "Design pressures are allowable (ASD) PSF, +/- unless stated. Size limits are maxima. null = N/A on the drawing (not permitted).",
+ "door_ratings": {
+  "sheet": 1,
+  "tables": [
+   {
+    "id": "design-rating",
+    "component": "door_assembly",
+    "sheet": 1,
+    "title": "Design Rating (overall frame size)",
+    "rows": [
+     {
+      "option": "Trifab 450 frame, 3-panel (XXX)",
+      "config": [
+       "XXX"
+      ],
+      "frame_types": [
+       "Trifab 450"
+      ],
+      "max_frame_w_in": 123.5,
+      "max_frame_h_in": 97.75,
+      "dp_psf": 70
+     },
+     {
+      "option": "Trifab 451 frame, 3-panel (XXX)",
+      "config": [
+       "XXX"
+      ],
+      "frame_types": [
+       "Trifab 451"
+      ],
+      "max_frame_w_in": 124,
+      "max_frame_h_in": 98,
+      "dp_psf": 70
+     },
+     {
+      "option": "Trifab 450 frame, double (XX) - 350HW only",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 450"
+      ],
+      "door_series": [
+       "350HW"
+      ],
+      "max_frame_w_in": 111.5,
+      "max_frame_h_in": 97.75,
+      "dp_psf": 70
+     },
+     {
+      "option": "Trifab 451 frame, double (XX) - 350HW only",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 451"
+      ],
+      "door_series": [
+       "350HW"
+      ],
+      "max_frame_w_in": 112,
+      "max_frame_h_in": 98,
+      "dp_psf": 70
+     }
+    ]
+   }
+  ]
+ },
+ "glass": [
+  {
+   "id": "Detail 1",
+   "door": "350IR",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" SentryGlas (Kuraray) / 3/16\" HS",
+   "seal": "7/8\" 3M VHB glazing tape",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "Detail 2",
+   "door": "350HW",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" SentryGlas (Kuraray) / 3/16\" HS",
+   "seal": "7/8\" 3M VHB glazing tape",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  }
+ ],
+ "hardware": [
+  {
+   "mark": 1,
+   "type": "continuous hinge",
+   "description": "Kawneer standard continuous hinge",
+   "part": "050820"
+  },
+  {
+   "mark": 2,
+   "type": "active panel lock assembly",
+   "description": "Adams-Rite 3-point lock system with Kawneer's cylinder & thumbturn activated dead bolt"
+  },
+  {
+   "mark": 3,
+   "type": "inactive and bi-fold panel lock assembly",
+   "description": "Kawneer flush bolts",
+   "part": "050079"
+  },
+  {
+   "mark": 4,
+   "type": "push/pull",
+   "description": "as req'd"
+  },
+  {
+   "mark": 5,
+   "type": "door closer at head",
+   "description": "as req'd"
+  },
+  {
+   "mark": 6,
+   "type": "wheel caster and casting mounting bracket",
+   "description": "Faultless No. 527-2 caster with 2\" diameter hard rubber wheel or equal",
+   "part": "048104"
+  }
+ ],
+ "installation_anchors": [
+  {
+   "method": "through frame",
+   "anchor": "#14 wood screw",
+   "substrate": "wood (S.G. = 0.55)",
+   "min_embedment": "1.25\"",
+   "min_edge_distance": "0.75\"",
+   "sheet": 5
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" self-tapping screw",
+   "substrate": "min. 18 ga. steel (33 ksi) / aluminum 1/8\" min. 6063-T5",
+   "min_embedment": "three (3) threads min. penetration beyond metal face",
+   "min_edge_distance": "0.50\"",
+   "sheet": 5
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "concrete f'c = 3000 psi",
+   "min_embedment": "1.50\"",
+   "min_edge_distance": "2.5\"",
+   "sheet": 5
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "masonry: CMU per ASTM C90, min. 2000 psi",
+   "min_embedment": "1.00\"",
+   "min_edge_distance": "2.5\"",
+   "sheet": 5
+  }
+ ],
+ "anchor_layouts": [
+  {
+   "layout": "double swing and 3-panel swing/bi-fold",
+   "head_sill_max_oc_in": 13.5,
+   "jamb_max_oc_in": 13.5,
+   "max_from_corners_in": 4.0,
+   "meeting_stile_cluster_oc_in": 3.0,
+   "sheet": 2
+  }
+ ],
+ "max_shim_in": 0.375,
+ "rules": {
+  "governing": "Single design rating table: +/-70 psf at the tabulated overall frame sizes (sheet 1).",
+  "water": "Door units are not approved where water infiltration resistance is required unless installed under an overhang with ratio >= 1:1 per FBC (sheet 1).",
+  "notes": [
+   "Double swing door elevation: heavy wall only - only the 350HW may be used in this configuration; 350IR is not applicable (sheet 2 note *).",
+   "Glass meets ASTM E1300; setting blocks 70-90 Shore A at 1/4 span for glass wider than 36\" (sheet 1 glazing notes).",
+   "D.L.O. and design pressures may not exceed the max values shown (sheet 1 glazing note 4).",
+   "One installation anchor at each anchor location shown unless otherwise stated.",
+   "Install anchors within +/-1.000\" of the depicted location and spacing (not cumulative).",
+   "Shim with load-bearing high-density plastic shims where the gap is 1/16\" or more; max shim stack 3/8\".",
+   "Embedment and edge distance exclude wall finishes (stucco, foam, brick veneer, siding).",
+   "Anchors and hardware corrosion resistant or coated.",
+   "Optional 1x wood buck at masonry/concrete if min. embedment and edge distance are still met in the host substrate.",
+   "Hollow / grout-filled block: no anchors in mortar joints; edge distance from free edge of block or mortar joint.",
+   "Install per anchor manufacturer's instructions; not in substrates weaker than the manufacturer's minimum."
+  ]
+ },
+ "warnings": []
+}

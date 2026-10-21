@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20",
+ "generated": "2026-10-21",
  "approvals": {
   "FL15404": {
    "fl_number": "FL15404-R7",
@@ -59,18 +59,72 @@
    "has_structured_tables": true,
    "learned_rules": 2,
    "path": "approvals/FL47012"
+  },
+  "FL47880": {
+   "fl_number": "FL47880-R0",
+   "manufacturer": "Kawneer Company",
+   "category": "Exterior Doors",
+   "subcategory": "Swinging Exterior Door Assemblies",
+   "status": "Approved",
+   "code_version": "2023",
+   "series": [],
+   "products": [
+    {
+     "fl": "FL47880.1",
+     "description": "350 IR/HW Outswing & Bi-Fold Showroom Doors (HVHZ) (Impact)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.2",
+     "description": "350/500 IR 8 ft. Tall Outswing Doors (HVHZ) (Impact)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.3",
+     "description": "350/500 IR 9 ft. Tall Outswing Doors (HVHZ) (Impact)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.4",
+     "description": "350/500 IR Outswing Doors",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.5",
+     "description": "Flushline Outswing Doors (HVHZ) (Impact)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.6",
+     "description": "IR350/500 HW Outswing Doors (HVHZ) (Impact)",
+     "has_structured_tables": true
+    },
+    {
+     "fl": "FL47880.7",
+     "description": "IR350/500 HW Outswing Doors (WZ3) (Impact)",
+     "has_structured_tables": true
+    }
+   ],
+   "ingest_status": "structured",
+   "has_structured_tables": true,
+   "learned_rules": 2,
+   "path": "approvals/FL47880"
   }
  },
  "by_category": {
   "Panel Walls/Storefronts": [
    "FL15404",
    "FL47012"
+  ],
+  "Exterior Doors/Swinging Exterior Door Assemblies": [
+   "FL47880"
   ]
  },
  "by_manufacturer": {
   "Kawneer Company": [
    "FL15404",
-   "FL47012"
+   "FL47012",
+   "FL47880"
   ]
  },
  "by_series": {

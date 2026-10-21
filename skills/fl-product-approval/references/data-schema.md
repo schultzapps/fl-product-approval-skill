@@ -54,8 +54,22 @@ When a product file has `extends`, `check_config.py` merges it over the shared f
 
 Product-level keys:
 - `product`, `drawing`, `evaluation_report`;
-- `missile` (the product's rating; the checker flags a mismatch with the project);
+- `missile` (the product's rating, a level or a list of levels such as `["D", "A"]`; the checker flags a project level not in it);
 - `glazing_method`, `glass[]` (approved make-ups), `glazing`, `warnings[]`.
+
+## Door rating tables (FL47880 style)
+
+Door-only products put their tables in `door_ratings.tables[]`, with no `tables` key. Each table is one component (`door_lock`, `door_glass`, `door_hinge` or `door_assembly`), and the least passing capacity across components governs.
+
+```json
+{"id": "lock", "component": "door_lock", "sheet": 1, "title": "Design Pressure Rating - Lock",
+ "rows": [{"option": "Jackson 2086", "max_leaf_w_in": 48, "max_leaf_h_in": 96, "dp_psf": 90}]}
+```
+
+- **Size limits** (any subset): `max_leaf_w_in`, `max_leaf_h_in`, `max_opening_w_in`, `max_opening_h_in`, `max_frame_w_in`, `max_frame_h_in`. Glass tables may use `max_leaf_w_single_in` / `max_opening_w_double_in`.
+- **Row filters:** `config` (`X`, `XX`, `XXX`), `frame_types`, `door_series`, `missile`, `lock_options`, `glass_options`, `hinges`, `wind_zone`.
+- **Values:** `dp_psf` is +/- ASD psf; `null` means N/A on the drawing.
+- **Other product keys:** `hvhz`, `max_wind_zone_unprotected` (WZ3 products), `missile_rating` (text), `door_legend` (frame → door opening → D.L.O. deductions), `lock_options`, `glass[]`, `installation_anchors[]`, `anchor_layouts[]`.
 
 ## Frame-height tables and glass size limits (FL15404 style)
 

@@ -41,9 +41,9 @@ def search(num: str):
     found = []
     for href, label in re.findall(r"href=['\"]([^'\"]*pr_app_dtl\.aspx\?param=[^'\"]+)['\"][^>]*>(.*?)</a>", t, flags=re.S):
         label = re.sub(r"<[^>]+>", "", label).strip()
-        m = re.match(r"FL(\d+)-R(\d+)", label)
+        m = re.match(r"FL(\d+)(?:-R(\d+))?$", label)  # original applications have no -R suffix
         if m and m.group(1) == num:
-            found.append({"fl": label, "rev": int(m.group(2)), "url": requests.compat.urljoin(BASE, href)})
+            found.append({"fl": label, "rev": int(m.group(2) or 0), "url": requests.compat.urljoin(BASE, href)})
     return s, found
 
 
@@ -153,7 +153,7 @@ def main():
     if not found:
         sys.exit(f"no FL{num} record found")
     print("revisions listed:", ", ".join(f["fl"] for f in found))
-    pick = next((f for f in found if f["rev"] == a.rev), None) if a.rev else max(found, key=lambda f: f["rev"])
+    pick = next((f for f in found if f["rev"] == a.rev), None) if a.rev is not None else max(found, key=lambda f: f["rev"])
     if not pick:
         sys.exit(f"revision {a.rev} not listed")
     r = s.get(pick["url"], timeout=120); r.raise_for_status()

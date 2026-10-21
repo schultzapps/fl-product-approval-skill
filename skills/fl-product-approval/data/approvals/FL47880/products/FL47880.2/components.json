@@ -1,0 +1,497 @@
+{
+ "approval": "FL47880",
+ "product": "FL47880.2",
+ "drawing": "KAW042",
+ "drawing_date": "2025-03-11",
+ "evaluation_report": "PER9642 (2025-10-21)",
+ "description": "350/500 IR 8 ft. tall outswing doors (HVHZ)(impact)",
+ "hvhz": true,
+ "missile": [
+  "D"
+ ],
+ "missile_rating": "Large missile = Level D per general rule R-004; drawing states only (impact); small missile not stated",
+ "value_semantics": "Design pressures are allowable (ASD) PSF, +/- unless stated. Size limits are maxima. null = N/A on the drawing (not permitted).",
+ "door_ratings": {
+  "sheet": 1,
+  "tables": [
+   {
+    "id": "lock",
+    "component": "door_lock",
+    "sheet": 1,
+    "title": "Design Pressure Rating - Lock (max. door leaf dimension)",
+    "rows": [
+     {
+      "option": "Sargent AD8400",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Adams Rite G86",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Calibre 9100",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Von Duprin HH-KAW-9947",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 65
+     },
+     {
+      "option": "Jackson 2086",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 90
+     },
+     {
+      "option": "Kawneer 1686",
+      "max_leaf_w_in": 42,
+      "max_leaf_h_in": 96,
+      "dp_psf": 90
+     },
+     {
+      "option": "Kawneer 1686",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Paneline CR-90",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Corbin Russwin ED5200S(A)",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 50
+     },
+     {
+      "option": "Falcon HH1690",
+      "max_leaf_w_in": 36,
+      "max_leaf_h_in": 96,
+      "dp_psf": 65
+     },
+     {
+      "option": "Lock Option 1",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 70
+     },
+     {
+      "option": "Lock Option 1",
+      "max_leaf_w_in": 42,
+      "max_leaf_h_in": 96,
+      "dp_psf": 90
+     },
+     {
+      "option": "Lock Option 2",
+      "max_leaf_w_in": 48,
+      "max_leaf_h_in": 96,
+      "dp_psf": 90
+     }
+    ]
+   },
+   {
+    "id": "glass",
+    "component": "door_glass",
+    "sheet": 1,
+    "title": "Design Pressure Rating - Glass (max. door leaf opening width; leaf height 96)",
+    "rows": [
+     {
+      "option": "1 & 2 (dry)",
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_leaf_w_single_in": 48,
+      "max_opening_w_double_in": 96,
+      "dp_psf": 70,
+      "glazing_method": "dry"
+     },
+     {
+      "option": "5A & 5B (wet)",
+      "glass_options": [
+       "5A",
+       "5B"
+      ],
+      "max_leaf_w_single_in": 48,
+      "max_opening_w_double_in": 96,
+      "dp_psf": 65,
+      "glazing_method": "wet"
+     },
+     {
+      "option": "4A & 4B & 4D & 4E (tape)",
+      "glass_options": [
+       "4A",
+       "4B",
+       "4D",
+       "4E"
+      ],
+      "max_leaf_w_single_in": 48,
+      "max_opening_w_double_in": 96,
+      "dp_psf": 70,
+      "glazing_method": "tape"
+     },
+     {
+      "option": "3A & 4C (tape)",
+      "glass_options": [
+       "3A",
+       "4C"
+      ],
+      "max_leaf_w_single_in": 48,
+      "max_opening_w_double_in": 96,
+      "dp_psf": 90,
+      "glazing_method": "tape"
+     },
+     {
+      "option": "5C & 5D (wet)",
+      "glass_options": [
+       "5C",
+       "5D"
+      ],
+      "max_leaf_w_single_in": 42,
+      "max_opening_w_double_in": 84,
+      "dp_psf": 90,
+      "glazing_method": "wet"
+     },
+     {
+      "option": "3B & 3C (tape)",
+      "glass_options": [
+       "3B",
+       "3C"
+      ],
+      "max_leaf_w_single_in": 48,
+      "max_opening_w_double_in": 96,
+      "dp_psf": 60,
+      "glazing_method": "tape"
+     }
+    ]
+   },
+   {
+    "id": "hinge",
+    "component": "door_hinge",
+    "sheet": 2,
+    "title": "Butt / pivot hinge quantity (sheet 2 legend notes 3-4)",
+    "rows": [
+     {
+      "option": "3 hinges",
+      "hinges": 3,
+      "max_leaf_h_in": 90,
+      "dp_psf": 70
+     },
+     {
+      "option": "4 hinges",
+      "hinges": 4,
+      "dp_psf": 90
+     }
+    ]
+   }
+  ]
+ },
+ "lock_options": {
+  "sheet": 2,
+  "Lock Option 1": {
+   "inactive": "Kawneer flush bolts with Kawneer's push/pull package",
+   "active": "Adams-Rite M51850 3-point lock system with Kawneer's cylinder"
+  },
+  "Lock Option 2": {
+   "inactive": "Adams-Rite 2180 2-point lock system with Kawneer's push/pull package",
+   "active": "Adams-Rite M51850 3-point lock system with Kawneer's cylinder, thumbturn & push/pull package"
+  }
+ },
+ "glass": [
+  {
+   "id": "1",
+   "glazing_detail": 1,
+   "method": "dry",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Trosifol PVB / 3/16\" HS",
+   "bite": "7/8\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "2",
+   "glazing_detail": 2,
+   "method": "dry",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" SentryGlas (Kuraray) / 1/4\" HS",
+   "bite": "7/8\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "3A",
+   "glazing_detail": 3,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Kuraray SG / 3/16\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "3B",
+   "glazing_detail": 3,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Butacite PVB / 3/16\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "3C",
+   "glazing_detail": 3,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Saflex Storm (Eastman) / 3/16\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4A",
+   "glazing_detail": 4,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Saflex Storm (Eastman) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4B",
+   "glazing_detail": 4,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Kuraray SG / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4C",
+   "glazing_detail": 4,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.077\" Saflex Storm (Eastman) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4D",
+   "glazing_detail": 4,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.100\" Saflex Storm (Eastman) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4E",
+   "glazing_detail": 4,
+   "method": "tape",
+   "seal": "3M comp. tape",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Kuraray Butacite PVB / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "5A",
+   "glazing_detail": 5,
+   "method": "wet",
+   "seal": "Dow 995 or Tremco Proglaze SSG",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Saflex Storm (Eastman) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "5B",
+   "glazing_detail": 5,
+   "method": "wet",
+   "seal": "Dow 995 or Tremco Proglaze SSG",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Kuraray Butacite PVB / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "5C",
+   "glazing_detail": 5,
+   "method": "wet",
+   "seal": "Dow 995 or Tremco Proglaze SSG",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Kuraray SG / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "5D",
+   "glazing_detail": 5,
+   "method": "wet",
+   "seal": "Dow 995 or Tremco Proglaze SSG",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.077\" Saflex Storm (Eastman) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  }
+ ],
+ "door_legend": {
+  "sheet": 2,
+  "frames": [
+   {
+    "frame_series": "500/501",
+    "do_w_deduct_in": 5.0,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "521",
+    "do_w_deduct_in": 5.5,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "450",
+    "do_w_deduct_in": 3.5,
+    "do_h_deduct_in": 1.75
+   }
+  ],
+  "dlo_from_door_opening": {
+   "500 stile": {
+    "dlo_w_deduct_in": 12.1875,
+    "dlo_h_deduct_in": 14.3125
+   },
+   "350 stile": {
+    "dlo_w_deduct_in": 9.1875,
+    "dlo_h_deduct_in": 12.8125
+   }
+  },
+  "notes": [
+   "FW = frame width, FH = frame height; D.O.(W) = FW - deduction, D.O.(H) = FH - deduction.",
+   "For double doors divide D.O.(W) by two for D.L.O. width.",
+   "Door leaf clearance: 1/8\" at head and jambs, 11/16\" at sill; 3/32\" hinge and lock clearance at jambs."
+  ]
+ },
+ "installation_anchors": [
+  {
+   "type": "A",
+   "substrate": "2x wood frame (min. S.G. = 0.55)",
+   "anchor": "No. 14 wood screw",
+   "min_embedment": "1-1/4\"",
+   "min_edge_distance": "3/4\"",
+   "sheet": 13
+  },
+  {
+   "type": "B",
+   "substrate": "min. 18 ga. 33 ksi steel stud, or min. 1/8\" 6063-T5 aluminum stud",
+   "anchor": "1/4\"-20 self drilling/tapping screw (min. Gr. 5)",
+   "min_embedment": "three threads past metal wall",
+   "min_edge_distance": "1/2\"",
+   "sheet": 13
+  },
+  {
+   "type": "C",
+   "substrate": "min. 0.22\" thick A36 steel",
+   "anchor": "1/4\"-20 self drilling/tapping screw (min. Gr. 5)",
+   "min_embedment": "three threads past metal wall",
+   "min_edge_distance": "1/2\"",
+   "sheet": 13
+  },
+  {
+   "type": "D",
+   "substrate": "min. 3000 psi concrete",
+   "anchor": "1/4\" DeWalt Ultracon+ screw",
+   "min_embedment": "1-3/4\"",
+   "min_edge_distance": "2-1/2\"",
+   "sheet": 13
+  },
+  {
+   "type": "E",
+   "substrate": "min. C90 concrete filled block",
+   "anchor": "1/4\" DeWalt Ultracon+ screw",
+   "min_embedment": "1-3/4\"",
+   "min_edge_distance": "2-1/2\"",
+   "sheet": 13
+  },
+  {
+   "type": "F",
+   "substrate": "curtain wall",
+   "anchor": "1/4\"-20 self drilling screw (min. Gr. 5)",
+   "min_embedment": "full",
+   "min_edge_distance": "1/2\"",
+   "sheet": 13
+  },
+  {
+   "type": "G",
+   "substrate": "min. 3000 psi concrete",
+   "anchor": "5/16\" DeWalt Ultracon",
+   "min_embedment": "1-3/4\"",
+   "min_edge_distance": "3\"",
+   "note": "panic device mullion base plates only",
+   "sheet": 13
+  }
+ ],
+ "anchor_layouts": [
+  {
+   "layout": "IR500/501 storefront, pair",
+   "head_max_oc_in": 19.25,
+   "jamb_max_oc_in": 14.375,
+   "sill_max_oc_in": 19,
+   "head_jamb_from_corners_in": 6,
+   "sill_from_corners_in": 7.5,
+   "meeting_stile_cluster_oc_in": 3,
+   "sheet": 3
+  },
+  {
+   "layout": "IR500/501 storefront, single",
+   "head_max_oc_in": 20.5,
+   "jamb_max_oc_in": 14.375,
+   "sill_max_oc_in": 19,
+   "head_jamb_from_corners_in": 6,
+   "sill_from_corners_in": 7.5,
+   "sheet": 3
+  },
+  {
+   "layout": "Trifab 450/451, pair",
+   "head_max_oc_in": 18.5,
+   "jamb_max_oc_in": 14.375,
+   "sill_max_oc_in": 18.25,
+   "head_jamb_from_corners_in": 6,
+   "sill_from_corners_in": 7.5,
+   "meeting_stile_cluster_oc_in": 3,
+   "sheet": 3
+  },
+  {
+   "layout": "Trifab 450/451, single",
+   "head_max_oc_in": 19,
+   "jamb_max_oc_in": 14.375,
+   "sill_max_oc_in": 17.5,
+   "head_jamb_from_corners_in": 6,
+   "sill_from_corners_in": 7.5,
+   "sheet": 3
+  },
+  {
+   "layout": "Alternate hinge installation (butt & pivot hinge only), Trifab 450/451 & IR500/501",
+   "note": "extra jamb anchors at 3.00\"/5.00\" each side of hinge locations, 6\" max from corners",
+   "sheet": 3
+  }
+ ],
+ "max_shim_in": 0.375,
+ "rules": {
+  "governing": "The lesser pressure in any one table controls the allowable pressure on the door assembly (sheet 1 note **).",
+  "separate_framing": "Storefront / curtain wall framing around the door is under a separate approval; the lesser allowable pressure of the door and the framing controls the overall assembly. (sheet 4)",
+  "water": "Not approved where water infiltration resistance is required unless: (a) non-habitable areas designed to accept water; (b) protected by canopy/overhang with OH ratio >= 1.0; or (c) installed in IR-501 with head jamb weather seal (A1 or A5), sill & sill dam (D2), meeting stile covers (E1) for pairs, 2-point lock part 40/42 at inactive, 3-point lock part 39/41 at active, gear or butt hinges part 36/37. Positive pressure on a water-rated door may not exceed +80 psf (sheet 4).",
+  "notes": [
+   "Units with 3 hinges are limited to 70 psf and to a maximum height of 90\"; units with 4 hinges are limited to 90 psf (sheet 2 legend notes 3-4).",
+   "Mid-rail (sheet 6 section C/6) shall not be used for doors with design pressure over +/-70 psf; section B/6 sill dam only with water-rated doors (sheet 6 notes).",
+   "Section B/8 meeting stile covers only with water-rated IR-501 doors; B/8 applies to all locks except Corbin Russwin and Von Duprin panic devices; D/8 (keyed removable mullion) applies with Corbin Russwin and Von Duprin panic device only (sheet 8 notes).",
+   "Corner construction per sheet 1 (frame head corners, sill corners, door panel corners, mid-rail ends).",
+   "One installation anchor at each anchor location shown unless otherwise stated.",
+   "Install anchors within +/-1.000\" of the depicted location and spacing (not cumulative).",
+   "Shim with load-bearing high-density plastic shims where the gap is 1/16\" or more; max shim stack 3/8\".",
+   "Embedment and edge distance exclude wall finishes (stucco, foam, brick veneer, siding).",
+   "Anchors and hardware corrosion resistant or coated.",
+   "Optional 1x wood buck at masonry/concrete if min. embedment and edge distance are still met in the host substrate.",
+   "Hollow / grout-filled block: no anchors in mortar joints; edge distance from free edge of block or mortar joint.",
+   "Install per anchor manufacturer's instructions; not in substrates weaker than the manufacturer's minimum."
+  ]
+ },
+ "warnings": []
+}

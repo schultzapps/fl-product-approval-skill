@@ -1,0 +1,253 @@
+{
+ "approval": "FL47880",
+ "product": "FL47880.3",
+ "drawing": "KAW041",
+ "drawing_date": "2025-03-11",
+ "evaluation_report": "PER9641 (2025-10-21)",
+ "description": "350/500 IR 9 ft. tall outswing doors (HVHZ)(impact)",
+ "hvhz": true,
+ "missile": [
+  "D",
+  "A"
+ ],
+ "missile_rating": "Large missile = Level D per general rule R-004; drawing states LMI/SMI (sheet 1)",
+ "value_semantics": "Design pressures are allowable (ASD) PSF, +/- unless stated. Size limits are maxima. null = N/A on the drawing (not permitted).",
+ "door_ratings": {
+  "sheet": 1,
+  "tables": [
+   {
+    "id": "design-rating",
+    "component": "door_assembly",
+    "sheet": 1,
+    "title": "Design Rating (overall frame size)",
+    "rows": [
+     {
+      "option": "IR500/501/521 frame, pair (XX)",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "IR500",
+       "IR501",
+       "IR521"
+      ],
+      "max_frame_w_in": 77,
+      "max_frame_h_in": 110.5,
+      "dp_psf": 65
+     },
+     {
+      "option": "IR500/501/521 frame, single (X)",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "IR500",
+       "IR501",
+       "IR521"
+      ],
+      "max_frame_w_in": 41,
+      "max_frame_h_in": 110.5,
+      "dp_psf": 65
+     },
+     {
+      "option": "Trifab 450 frame, pair (XX)",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 450"
+      ],
+      "max_frame_w_in": 75.5,
+      "max_frame_h_in": 109.75,
+      "dp_psf": 65
+     },
+     {
+      "option": "1600 curtain wall, pair (XX)",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "1600"
+      ],
+      "max_frame_w_in": 73.75,
+      "max_frame_h_in": 109.75,
+      "dp_psf": 65
+     },
+     {
+      "option": "Trifab 450 frame, single (X)",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "Trifab 450"
+      ],
+      "max_frame_w_in": 39.5,
+      "max_frame_h_in": 109.75,
+      "dp_psf": 65
+     },
+     {
+      "option": "1600 curtain wall, single (X)",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "1600"
+      ],
+      "max_frame_w_in": 37.75,
+      "max_frame_h_in": 109.75,
+      "dp_psf": 65
+     }
+    ]
+   }
+  ]
+ },
+ "lock_options": {
+  "sheet": 2,
+  "Lock 1": {
+   "inactive": "Kawneer flush bolts, top and bottom flush bolt",
+   "active": "Adams-Rite 1850 3-point lock system with Kawneer's cylinder, thumbturn & push package"
+  },
+  "Lock 2": {
+   "inactive": "Kawneer 1686 panic device (actuates top & bottom rods)",
+   "active": "Kawneer 1686 panic device system with Kawneer's cylinder (actuates top & bottom rods)"
+  },
+  "Lock 3": {
+   "inactive": "Falcon HH 1690 panic device system (actuates top & bottom rods)",
+   "active": "Falcon HH 1690 panic device system with Schlage's cylinder (actuates top & bottom rods)"
+  },
+  "Lock 4": {
+   "inactive": "Von Duprin HH-KAW-9947 panic device system (actuates top & bottom rods)",
+   "active": "Von Duprin HH-KAW-9947 panic device system with Schlage's cylinder (actuates top & bottom rods)"
+  }
+ },
+ "glass": [
+  {
+   "id": "Detail 1",
+   "build": "1\" O.A. laminated IG: 1/4\" tempered / 1/2\" aluminum spacer / 1/8\" HS / 0.090\" SentryGlas (Kuraray) / 1/8\" HS",
+   "seal": "3M VHB glazing tape",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "Detail 2",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Saflex (Eastman) / 1/4\" HS",
+   "seal": "Dow 995 or Dow 983",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "Detail 3",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.100\" Saflex (Eastman) / 1/4\" HS",
+   "seal": "Dow 995 or Dow 983",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  }
+ ],
+ "door_legend": {
+  "sheet": 2,
+  "frames": [
+   {
+    "frame_series": "500/501",
+    "do_w_deduct_in": 5.0,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "521",
+    "do_w_deduct_in": 5.5,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "450",
+    "do_w_deduct_in": 3.5,
+    "do_h_deduct_in": 1.75
+   }
+  ],
+  "dlo_from_door_opening": {
+   "500 stile": {
+    "dlo_w_deduct_in": 12.1875,
+    "dlo_h_deduct_in": 14.3125
+   },
+   "350 stile": {
+    "dlo_w_deduct_in": 9.1875,
+    "dlo_h_deduct_in": 12.8125
+   }
+  },
+  "notes": [
+   "FW = frame width, FH = frame height; D.O.(W) = FW - deduction, D.O.(H) = FH - deduction.",
+   "For double doors divide D.O.(W) by two for D.L.O. width.",
+   "Door leaf clearance: 1/8\" at head and jambs, 11/16\" at sill; 3/32\" hinge and lock clearance at jambs."
+  ]
+ },
+ "installation_anchors": [
+  {
+   "method": "through frame",
+   "anchor": "#14 wood screw",
+   "substrate": "wood (S.G. = 0.55)",
+   "min_embedment": "1.25\"",
+   "min_edge_distance": "0.75\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" self-drilling/tapping screw",
+   "substrate": "min. 18 ga. steel (33 ksi) / aluminum 1/8\" min. 6063-T5",
+   "min_embedment": "three (3) threads min. penetration beyond metal face",
+   "min_edge_distance": "0.50\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "concrete f'c = 3000 psi",
+   "min_embedment": "1.50\"",
+   "min_edge_distance": "2.0\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "masonry: CMU per ASTM C90, min. 2000 psi",
+   "min_embedment": "1.00\"",
+   "min_edge_distance": "2.0\"",
+   "sheet": 10
+  }
+ ],
+ "anchor_layouts": [
+  {
+   "layout": "pair",
+   "head_max_oc_in": 14,
+   "head_from_corners_in": 4.5,
+   "meeting_stile_cluster_oc_in": 4,
+   "jamb_max_oc_in": 16.375,
+   "jamb_from_corners_in": 6,
+   "sheet": 2
+  },
+  {
+   "layout": "single",
+   "head_max_oc_in": 15,
+   "head_from_corners_in": 4.5,
+   "jamb_max_oc_in": 16.375,
+   "jamb_from_corners_in": 6,
+   "sheet": 2
+  }
+ ],
+ "max_shim_in": 0.375,
+ "rules": {
+  "governing": "Single design rating table: +65/-65 psf at the tabulated overall frame sizes (sheet 1).",
+  "separate_framing": "Storefront / curtain wall framing around the door is under a separate approval; the lesser allowable pressure of the door and the framing controls the overall assembly. (sheet 3 elevations: doors inside IR-521, IR-500/501 and 1600 System 1 are under separate approval).",
+  "water": "Not approved where water infiltration resistance is required, unless installed only at locations covered by an overhang with overhang ratio >= 1:1 per FBC. (sheet 1)",
+  "notes": [
+   "Max shim space 3/8\" (1/4\" at 1600 curtain wall jamb, section D/10).",
+   "Corner construction per sheet 1 (storefront and standard corner & frame end construction).",
+   "One installation anchor at each anchor location shown unless otherwise stated.",
+   "Install anchors within +/-1.000\" of the depicted location and spacing (not cumulative).",
+   "Shim with load-bearing high-density plastic shims where the gap is 1/16\" or more; max shim stack 3/8\".",
+   "Embedment and edge distance exclude wall finishes (stucco, foam, brick veneer, siding).",
+   "Anchors and hardware corrosion resistant or coated.",
+   "Optional 1x wood buck at masonry/concrete if min. embedment and edge distance are still met in the host substrate.",
+   "Hollow / grout-filled block: no anchors in mortar joints; edge distance from free edge of block or mortar joint.",
+   "Install per anchor manufacturer's instructions; not in substrates weaker than the manufacturer's minimum."
+  ]
+ },
+ "warnings": []
+}

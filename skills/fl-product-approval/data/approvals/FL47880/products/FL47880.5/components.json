@@ -1,0 +1,477 @@
+{
+ "approval": "FL47880",
+ "product": "FL47880.5",
+ "drawing": "KAW047",
+ "drawing_date": "2025-03-11",
+ "evaluation_report": "PER9647 (2025-10-21)",
+ "description": "Flushline outswing doors (HVHZ)(impact)",
+ "hvhz": true,
+ "missile": [
+  "D",
+  "A"
+ ],
+ "missile_rating": "Large missile = Level D per general rule R-004; drawing states large and small impact rated (sheet 1)",
+ "value_semantics": "Design pressures are allowable (ASD) PSF, +/- unless stated. Size limits are maxima. null = N/A on the drawing (not permitted).",
+ "door_ratings": {
+  "sheet": 1,
+  "tables": [
+   {
+    "id": "design-pressure-rating",
+    "component": "door_assembly",
+    "sheet": 1,
+    "title": "Design Pressure Rating (door opening size)",
+    "rows": [
+     {
+      "option": "IR501 pair (XX), lock 1",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "IR501 pair (XX), lock 2",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "IR501 pair (XX), lock 3",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 50,
+      "wind_zone": 3
+     },
+     {
+      "option": "IR501 single (X), lock 1",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "IR501 single (X), lock 2",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "IR501 single (X), lock 3",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 3
+     },
+     {
+      "option": "IR501 single (X), lock 4**",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "IR501"
+      ],
+      "lock_options": [
+       "4"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 75,
+      "wind_zone": 4,
+      "note": "only continuous gear hinge when DP exceeds +/-70 psf"
+     },
+     {
+      "option": "Trifab 4511T pair (XX), lock 1",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 50,
+      "wind_zone": 3
+     },
+     {
+      "option": "Trifab 4511T pair (XX), lock 2",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 50,
+      "wind_zone": 3
+     },
+     {
+      "option": "Trifab 4511T pair (XX), lock 3",
+      "config": [
+       "XX"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 84,
+      "max_opening_h_in": 90,
+      "dp_psf": 50,
+      "wind_zone": 3
+     },
+     {
+      "option": "Trifab 4511T single (X), lock 1",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "Trifab 4511T single (X), lock 2",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 4
+     },
+     {
+      "option": "Trifab 4511T single (X), lock 3",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 70,
+      "wind_zone": 3
+     },
+     {
+      "option": "Trifab 4511T single (X), lock 4**",
+      "config": [
+       "X"
+      ],
+      "frame_types": [
+       "Trifab 4511T"
+      ],
+      "lock_options": [
+       "4"
+      ],
+      "glass_options": [
+       "1",
+       "2"
+      ],
+      "max_opening_w_in": 42,
+      "max_opening_h_in": 90,
+      "dp_psf": 75,
+      "wind_zone": 4,
+      "note": "only continuous gear hinge when DP exceeds +/-70 psf"
+     }
+    ]
+   }
+  ]
+ },
+ "lock_options": {
+  "sheet": 2,
+  "1": {
+   "inactive": "inactive door top flush bolt and door bottom flush bolt",
+   "active": "3-point multi-point active door lock"
+  },
+  "2": {
+   "inactive": "Kawneer 1686 concealed rod exit/panic device (single and double doors)",
+   "active": "Kawneer 1686 concealed rod exit/panic device"
+  },
+  "3": {
+   "inactive": "Corbin Russwin ED5200S(A) rim panic device with keyed removable mullion (single and double doors)",
+   "active": "Corbin Russwin ED5200S(A) rim panic device with keyed removable mullion"
+  },
+  "4": {
+   "both": "Schlage L9453P mortise lock (single doors only)"
+  }
+ },
+ "glass": [
+  {
+   "id": "1",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Saflex (Eastman) / 3/16\" HS",
+   "seal": "Dow 995 or Tremco Proglaze SSG sealant; cont. silicone sealant",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "2",
+   "build": "1\" O.A. laminated IG: 3/16\" tempered / 3/8\" aluminum spacer / 3/16\" HS / 0.090\" Trosifol PVB (Kuraray) / 3/16\" HS",
+   "seal": "Dow 995 or Tremco Proglaze SSG sealant; cont. silicone sealant",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  }
+ ],
+ "door_legend": {
+  "sheet": 2,
+  "frames": [
+   {
+    "frame_series": "500/501",
+    "do_w_deduct_in": 5.0,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "521",
+    "do_w_deduct_in": 5.5,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "451",
+    "do_w_deduct_in": 4.0,
+    "do_h_deduct_in": 2.0
+   },
+   {
+    "frame_series": "450",
+    "do_w_deduct_in": 3.5,
+    "do_h_deduct_in": 1.75
+   }
+  ],
+  "dlo_limit": "Door panel D.L.O. dimensions such that the overall D.L.O. area does not exceed 7.36 sq ft (1060 sq in).",
+  "notes": [
+   "FW = frame width, FH = frame height; D.O.(W) = FW - deduction, D.O.(H) = FH - deduction.",
+   "For double doors divide D.O.(W) by two for D.L.O. width.",
+   "Door leaf clearance: 1/8\" at head and jambs, 11/16\" at sill; 3/32\" hinge and lock clearance at jambs."
+  ]
+ },
+ "installation_anchors": [
+  {
+   "method": "through frame",
+   "anchor": "No. 12 wood screw",
+   "substrate": "wood (S.G. = 0.55)",
+   "min_embedment": "1.25\"",
+   "min_edge_distance": "0.875\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "No. 12 Gr. 5 self-drilling/tapping screw",
+   "substrate": "min. 18 ga. steel (33 ksi) / aluminum 1/8\" min. 6063-T5",
+   "min_embedment": "three (3) threads min. penetration beyond metal face",
+   "min_edge_distance": "0.50\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "concrete f'c = 3000 psi",
+   "min_embedment": "1.50\"",
+   "min_edge_distance": "2.0\"",
+   "sheet": 10
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "masonry: CMU per ASTM C90, min. 2000 psi",
+   "min_embedment": "1.00\"",
+   "min_edge_distance": "2.0\"",
+   "sheet": 10
+  }
+ ],
+ "anchor_layouts": [
+  {
+   "layout": "pair",
+   "head_max_oc_in": 16.25,
+   "head_from_corners_in": 6,
+   "meeting_stile_cluster_oc_in": 3,
+   "jamb_max_oc_in": 20.125,
+   "sill_from_corners_in": 5,
+   "sheet": 3
+  },
+  {
+   "layout": "pair with transom",
+   "head_max_oc_in": 15.5,
+   "head_from_corners_in": 6,
+   "jamb_max_oc_in": 20.125,
+   "sill_max_oc_in": 16,
+   "sill_from_corners_in": 5,
+   "meeting_stile_cluster_oc_in": 3,
+   "note": "seven (7) anchors at 4\" o.c. at the transom bar each jamb",
+   "sheet": 3
+  },
+  {
+   "layout": "single",
+   "head_max_oc_in": 16,
+   "head_from_corners_in": 6,
+   "jamb_max_oc_in": 20.125,
+   "sill_from_corners_in": 5,
+   "sheet": 3
+  },
+  {
+   "layout": "single with transom",
+   "head_max_oc_in": 15,
+   "head_from_corners_in": 6,
+   "jamb_max_oc_in": 20.125,
+   "sill_from_corners_in": 5,
+   "note": "anchors 5\" each side of the transom bar",
+   "sheet": 3
+  },
+  {
+   "layout": "IR-521 storefront",
+   "head_max_oc_in": 15,
+   "meeting_stile_cluster_oc_in": 3,
+   "jamb_max_oc_in": 20.125,
+   "jamb_from_corners_in": 7,
+   "sill_from_corners_in": 5,
+   "sheet": 3
+  }
+ ],
+ "max_shim_in": 0.375,
+ "rules": {
+  "governing": "Single design pressure rating table by door opening size, frame type, config and lock option; glass options 1 or 2 throughout (sheet 1).",
+  "water": "Not approved where water infiltration resistance is required, unless installed only at locations covered by an overhang with overhang ratio >= 1:1 per FBC. (sheet 1)",
+  "notes": [
+   "** Only the continuous gear hinge is applicable when DP exceeds +/-70 psf (sheet 1).",
+   "See sheet 2 for transom/door sizes and lock option details.",
+   "One installation anchor at each anchor location shown unless otherwise stated.",
+   "Install anchors within +/-1.000\" of the depicted location and spacing (not cumulative).",
+   "Shim with load-bearing high-density plastic shims where the gap is 1/16\" or more; max shim stack 3/8\".",
+   "Embedment and edge distance exclude wall finishes (stucco, foam, brick veneer, siding).",
+   "Anchors and hardware corrosion resistant or coated.",
+   "Optional 1x wood buck at masonry/concrete if min. embedment and edge distance are still met in the host substrate.",
+   "Hollow / grout-filled block: no anchors in mortar joints; edge distance from free edge of block or mortar joint.",
+   "Install per anchor manufacturer's instructions; not in substrates weaker than the manufacturer's minimum."
+  ]
+ },
+ "warnings": [
+  "Rows carry a wind zone rating (3 or 4) although the product is listed for HVHZ; check the row's wind zone against the project's."
+ ]
+}

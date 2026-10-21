@@ -1,0 +1,12 @@
+{
+  "_comment": "ILLUSTRATIVE ONLY - exercises a door approval (FL47880.2 = 350/500 IR 8 ft. outswing doors, HVHZ). Door tables are checked with members: [\"door\"].",
+  "project": {"name": "Example 350/500 IR entrance", "location": "Broward County, FL", "hvhz": true},
+  "approval": "FL47880.2",
+  "design_pressures": {"positive_psf": 65, "negative_psf": -70, "basis": "ASD"},
+  "missile_level": "D",
+  "openings": [
+    {"id": "Main entrance pair", "door_config": "XX", "door_opening_width_in": 72, "door_opening_height_in": 96, "door_leaf_width_in": 36, "door_leaf_height_in": 96,
+     "door_frame_type": "Trifab 451", "door_hinges": 4, "members": ["door"]},
+    {"id": "Side single, 3 hinges", "door_config": "X", "door_opening_width_in": 44, "door_opening_height_in": 90, "door_lock": "Jackson 2086", "door_hinges": 3, "members": ["door"]}
+  ]
+}

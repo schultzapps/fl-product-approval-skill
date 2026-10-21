@@ -1,0 +1,610 @@
+{
+ "approval": "FL47880",
+ "product": "FL47880.6",
+ "drawing": "KAW044",
+ "drawing_date": "2025-03-11",
+ "evaluation_report": "PER9644 (2025-10-21)",
+ "description": "IR350/500 HW outswing doors (HVHZ)(impact)",
+ "hvhz": true,
+ "missile": [
+  "D",
+  "E"
+ ],
+ "missile_rating": "Level D or E per row (sheet 1); the only FL47880 product rated Level E (FL47880 rule R-002)",
+ "value_semantics": "Design pressures are allowable (ASD) PSF, +/- unless stated. Size limits are maxima. null = N/A on the drawing (not permitted).",
+ "door_ratings": {
+  "sheet": 1,
+  "tables": [
+   {
+    "id": "design-pressure-rating",
+    "component": "door_assembly",
+    "sheet": 1,
+    "title": "Design Pressure Rating (door opening size)",
+    "rows": [
+     {
+      "option": "Trifab 450/451 or 1600 frame: 72x96 pair, lock 1/2/3/4, glass 2, missile D",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 60,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      "glass_options": [
+       "2"
+      ],
+      "max_opening_w_in": 72,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 72x96 pair, lock 1/2/3/4, glass 2, missile D",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 60,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      "glass_options": [
+       "2"
+      ],
+      "max_opening_w_in": 72,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 96x96 pair, lock 1/2/3/4, glass 1/3/4/5, missile D",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 70,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      "glass_options": [
+       "1",
+       "3",
+       "4",
+       "5"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 96x96 pair, lock 1/2/3/4, glass 1/3/4/5, missile D",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 70,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      "glass_options": [
+       "1",
+       "3",
+       "4",
+       "5"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 96x96 pair, lock 1, glass 4, missile E",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 110,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "4"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 96x96 pair, lock 1, glass 4, missile E",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 90,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1"
+      ],
+      "glass_options": [
+       "4"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 96x96 pair, lock 2, glass 6, missile E",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 90,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "6"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 96x96 pair, lock 2, glass 6, missile E",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 70,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "2"
+      ],
+      "glass_options": [
+       "6"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 96x96 pair, lock 3, glass 6, missile E",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 70,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "6"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 96x96 pair, lock 3, glass 6, missile E",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": null,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "3"
+      ],
+      "glass_options": [
+       "6"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "E"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 96x96 pair, lock 1/2, glass 3/4/5, missile D",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 110,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2"
+      ],
+      "glass_options": [
+       "3",
+       "4",
+       "5"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 96x96 pair, lock 1/2, glass 3/4/5, missile D",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 90,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2"
+      ],
+      "glass_options": [
+       "3",
+       "4",
+       "5"
+      ],
+      "max_opening_w_in": 96,
+      "max_opening_h_in": 96,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "Trifab 450/451 or 1600 frame: 72x108 pair, lock 1/2, glass 3/5, missile D",
+      "frame_types": [
+       "Trifab 450",
+       "Trifab 451",
+       "1600"
+      ],
+      "dp_psf": 110,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2"
+      ],
+      "glass_options": [
+       "3",
+       "5"
+      ],
+      "max_opening_w_in": 72,
+      "max_opening_h_in": 108,
+      "missile": [
+       "D"
+      ]
+     },
+     {
+      "option": "IR500/501 frame: 72x108 pair, lock 1/2, glass 3/5, missile D",
+      "frame_types": [
+       "IR500",
+       "IR501"
+      ],
+      "dp_psf": 90,
+      "config": [
+       "XX"
+      ],
+      "lock_options": [
+       "1",
+       "2"
+      ],
+      "glass_options": [
+       "3",
+       "5"
+      ],
+      "max_opening_w_in": 72,
+      "max_opening_h_in": 108,
+      "missile": [
+       "D"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "hardware_schedule": {
+  "sheet": 2,
+  "500 series": {
+   "locks": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "350 series": {
+   "locks": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "hinges": [
+   "Kawneer continuous hinge",
+   "butt hinge",
+   "pivot hinge"
+  ]
+ },
+ "lock_options": {
+  "sheet": 2,
+  "1": {
+   "inactive": "Kawneer flush bolts with top flush bolt and bottom flush bolt",
+   "active": "Adams-Rite 1850 3-point lock system with Kawneer's cylinder, thumbturn & push package"
+  },
+  "2": {
+   "inactive": "Kawneer 1686 panic device (actuates top & bottom rods)",
+   "active": "Kawneer 1686 panic device system with Kawneer's cylinder (actuates top & bottom rods)"
+  },
+  "3": {
+   "inactive": "Von Duprin HH-KAW-9947 panic device system (actuates top & bottom rods)",
+   "active": "Von Duprin HH-KAW-9947 panic device system with Schlage's cylinder (actuates top & bottom rods)"
+  },
+  "4": {
+   "inactive": "Falcon HH1690 panic device system (actuates top & bottom rods)",
+   "active": "Falcon HH1690 panic device system with Schlage's cylinder (actuates top & bottom rods)"
+  }
+ },
+ "glass": [
+  {
+   "id": "1",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" Saflex (drawing says \"by Kuraray\") / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "2",
+   "build": "1\" O.A. laminated IG: 1/4\" tempered / 1/2\" aluminum spacer / 1/8\" HS / 0.090\" Trosifol PVB (Kuraray) / 1/8\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "3",
+   "build": "1\" O.A. laminated IG: 1/4\" tempered / 1/2\" aluminum spacer / 1/8\" HS / 0.090\" SentryGlas (Kuraray) / 1/8\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "4",
+   "build": "1\" O.A. laminated IG: 1/4\" tempered / 1/4\" aluminum spacer / 3/16\" HS / 0.180\" SentryGlas (Kuraray) / 3/16\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "5",
+   "build": "9/16\" O.A. laminated: 1/4\" HS / 0.090\" SentryGlas (Kuraray) / 1/4\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  },
+  {
+   "id": "6",
+   "build": "1\" O.A. laminated IG: 1/4\" tempered / 1/4\" aluminum spacer / 3/16\" HS / 0.180\" Saflex (drawing says \"by Kuraray\") / 3/16\" HS",
+   "bite": "3/4\" max.",
+   "sheet": 1
+  }
+ ],
+ "door_legend": {
+  "sheet": 2,
+  "frames": [
+   {
+    "frame_series": "500/501",
+    "do_w_deduct_in": 5.0,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "521",
+    "do_w_deduct_in": 5.5,
+    "do_h_deduct_in": 2.5
+   },
+   {
+    "frame_series": "451",
+    "do_w_deduct_in": 4.0,
+    "do_h_deduct_in": 2.0
+   },
+   {
+    "frame_series": "450",
+    "do_w_deduct_in": 3.5,
+    "do_h_deduct_in": 1.75
+   }
+  ],
+  "dlo_from_door_opening": {
+   "500 stile": {
+    "dlo_w_deduct_in": 12.1875,
+    "dlo_h_deduct_in": 14.3125
+   },
+   "350 stile": {
+    "dlo_w_deduct_in": 9.1875,
+    "dlo_h_deduct_in": 12.8125
+   }
+  },
+  "notes": [
+   "FW = frame width, FH = frame height; D.O.(W) = FW - deduction, D.O.(H) = FH - deduction.",
+   "For double doors divide D.O.(W) by two for D.L.O. width.",
+   "Door leaf clearance: 1/8\" at head and jambs, 11/16\" at sill; 3/32\" hinge and lock clearance at jambs."
+  ]
+ },
+ "installation_anchors": [
+  {
+   "method": "through frame",
+   "anchor": "#14 wood screw",
+   "substrate": "wood (S.G. = 0.55)",
+   "min_embedment": "1.25\"",
+   "min_edge_distance": "0.75\"",
+   "sheet": 12
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" self-drilling/tapping screw",
+   "substrate": "min. 18 ga. steel (33 ksi) / aluminum 1/8\" min. 6063-T5",
+   "min_embedment": "three (3) threads min. penetration beyond metal face",
+   "min_edge_distance": "0.50\"",
+   "sheet": 12
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "concrete f'c = 3000 psi",
+   "min_embedment": "1.50\"",
+   "min_edge_distance": "2.5\"",
+   "sheet": 12
+  },
+  {
+   "method": "through frame",
+   "anchor": "1/4\" ITW Tapcon",
+   "substrate": "masonry: CMU per ASTM C90, min. 2000 psi",
+   "min_embedment": "1.00\"",
+   "min_edge_distance": "2.5\"",
+   "sheet": 12
+  },
+  {
+   "method": "mullion end plates",
+   "anchor": "No. 18 wood screw",
+   "substrate": "wood (S.G. = 0.55)",
+   "min_embedment": "1.25\"",
+   "min_edge_distance": "0.75\"",
+   "sheet": 12
+  },
+  {
+   "method": "mullion end plates",
+   "anchor": "5/16\" Gr. 5 self-tapping screw",
+   "substrate": "min. 18 ga. steel (33 ksi) / aluminum 1/8\" min. 6063-T5",
+   "min_embedment": "three (3) threads min. penetration beyond metal face",
+   "min_edge_distance": "0.50\"",
+   "sheet": 12
+  },
+  {
+   "method": "mullion end plates",
+   "anchor": "5/16\" DeWalt Ultracon",
+   "substrate": "concrete f'c = 3000 psi",
+   "min_embedment": "1.75\"",
+   "min_edge_distance": "2.50\"",
+   "sheet": 12
+  },
+  {
+   "method": "mullion end plates",
+   "anchor": "5/16\" DeWalt Ultracon",
+   "substrate": "masonry: CMU per ASTM C90, min. 2000 psi",
+   "min_embedment": "1.75\"",
+   "min_edge_distance": "2.50\"",
+   "sheet": 12
+  }
+ ],
+ "anchor_layouts": [
+  {
+   "layout": "pair",
+   "head_sill_max_oc_in": 18,
+   "head_from_corner_in": 5,
+   "meeting_stile_cluster_oc_in": 3,
+   "jamb_max_oc_in": {
+    "masonry": 10.8125,
+    "other substrates": 14
+   },
+   "jamb_from_corners_in": 6,
+   "sheet": 4
+  },
+  {
+   "layout": "single",
+   "head_sill_max_oc_in": 20,
+   "head_from_corner_in": 5,
+   "jamb_max_oc_in": {
+    "masonry": 10.8125,
+    "other substrates": 14
+   },
+   "jamb_from_corners_in": 6,
+   "sheet": 4
+  },
+  {
+   "layout": "installation with butt & pivot hinges (pair and single)",
+   "note": "as above plus jamb anchor pairs at 4.00\" max o.c. at hinge locations, 4.00\" max from corners",
+   "sheet": 4
+  }
+ ],
+ "max_shim_in": 0.375,
+ "rules": {
+  "governing": "Single design pressure rating table by door opening size, lock option, glass option and frame family (sheet 1).",
+  "separate_framing": "Storefront / curtain wall framing around the door is under a separate approval; the lesser allowable pressure of the door and the framing controls the overall assembly. (sheet 3)",
+  "missile": "Where missile level E is stated, only lock options 1-3 and glass options 5 or 6 are applicable (sheet 1 note) - see warnings.",
+  "water": "Not approved where water infiltration resistance is required, unless installed only at locations covered by an overhang with overhang ratio >= 1:1 per FBC. (sheet 1)",
+  "notes": [
+   "One installation anchor at each anchor location shown unless otherwise stated.",
+   "Install anchors within +/-1.000\" of the depicted location and spacing (not cumulative).",
+   "Shim with load-bearing high-density plastic shims where the gap is 1/16\" or more; max shim stack 3/8\".",
+   "Embedment and edge distance exclude wall finishes (stucco, foam, brick veneer, siding).",
+   "Anchors and hardware corrosion resistant or coated.",
+   "Optional 1x wood buck at masonry/concrete if min. embedment and edge distance are still met in the host substrate.",
+   "Hollow / grout-filled block: no anchors in mortar joints; edge distance from free edge of block or mortar joint.",
+   "Install per anchor manufacturer's instructions; not in substrates weaker than the manufacturer's minimum."
+  ]
+ },
+ "warnings": [
+  "Sheet 1 note says missile level E allows only glass options 5 or 6, yet the 110/90 psf missile E row lists glass option 4. Unresolved on the drawing - confirm with Kawneer / the PE before relying on that row.",
+  "Sheet 1 column header reads \"450, 450, OR 1600 FRAMES\"; stored as Trifab 450/451 and 1600 (presumed typo). Confirm if a Trifab 451 frame governs.",
+  "Row 5 (lock 3, glass 6, missile E) is N/A in IR500/501 frames."
+ ]
+}

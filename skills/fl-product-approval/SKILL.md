@@ -43,7 +43,7 @@ One FL number often covers several **sub-products**, numbered `.1`, `.2`, `.3` a
 1. Make sure the approval has been ingested (`data/approvals/FL<n>/components.json` or `products/*/components.json` exists). If it hasn't, run Workflow B first. For a multi-product approval, decide which sub-product applies (see above).
 2. Collect the project facts using `references/project-intake.md`. **Ask for anything missing; don't assume it.** The most important items are:
    - Design pressures and their basis. The approval tables are **ASD**, while ASCE 7 C&C pressures are strength-level (multiply by 0.6 for ASD). Ask which one the user has.
-   - Missile level (Large D, Large E, or Small A).
+   - Missile level (Large D, Large E, or Small A). `references/missile-levels.md` explains levels A–E and LMI/SMI. An unqualified "LMI" is Level D (general rule R-004).
    - Field- or pre-glazed, and frame type (NT/T/UT).
    - Tributary width, mullion height (or **frame height**, for approvals whose tables use it, such as FL15404) and DLO for each typical and worst-case opening, plus shim gap and substrate. Check each table's `x_axis` / `y_axis` to see which inputs it uses.
 3. Write a `project.json` file in the format of `examples/miami-dade-storefront.project.json` and run `python3 scripts/check_config.py project.json`. Add `--json` for structured output.
@@ -113,3 +113,12 @@ Check `data/index.json`. As of this version it contains:
   - .3 small missile A, dry glazed;
   - .4 large missile E, wet glazed.
   .1–.3 share their framing tables (`common/`). .4 is standalone. Tables use frame height × load width with end-anchor columns. Project-out GLASSvent windows apply to .1–.3.
+- **FL47880-R0:** Kawneer IR entrance doors (doors only; the surrounding storefront / curtain wall is under its own approval). Seven standalone sub-products:
+  - .1 350 IR/HW outswing & bi-fold showroom doors;
+  - .2 350/500 IR 8 ft;
+  - .3 350/500 IR 9 ft;
+  - .4 350/500 IR (WZ3, not HVHZ);
+  - .5 Flushline;
+  - .6 IR350/500 HW (missile D/E);
+  - .7 IR350/500 HW (WZ3, not HVHZ).
+  Tables are `door_ratings` (lock / glass / hinge / assembly), checked with `members: ["door"]`. See `examples/fl47880-door.project.json`.

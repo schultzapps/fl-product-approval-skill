@@ -1,9 +1,0 @@
-{
-  "name": "fl-product-approval",
-  "version": "0.1.0",
-  "description": "Florida Product Approval (FL#) review for storefronts, curtain walls, windows and doors: checks mullions, glass, anchors, heads/sills and doors against project design pressures, missile level and HVHZ.",
-  "author": { "name": "schultzapps" },
-  "homepage": "https://github.com/schultzapps/fl-product-approval-skill",
-  "repository": "https://github.com/schultzapps/fl-product-approval-skill",
-  "keywords": ["florida product approval", "FPA", "HVHZ", "storefront", "curtain wall", "wind load"]
-}

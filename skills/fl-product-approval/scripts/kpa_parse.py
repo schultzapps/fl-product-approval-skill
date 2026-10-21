@@ -9,7 +9,7 @@ import pdfplumber, requests
 
 HERE = pathlib.Path(__file__).resolve().parent
 SKILL = HERE.parent
-REPO = SKILL.parent.parent
+ROOT = SKILL  # cache/ lives in the skill dir so paths hold wherever the skill is installed
 URL = "https://www.kawneer.com/kawneer_files/shared%20files/Performance_Solutions/KPA001.pdf"
 
 
@@ -58,7 +58,7 @@ def parse_page(page, pno):
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else None
     if src is None:
-        dest = REPO / "cache" / "KPA001.pdf"; dest.parent.mkdir(exist_ok=True)
+        dest = ROOT / "cache" / "KPA001.pdf"; dest.parent.mkdir(exist_ok=True)
         dest.write_bytes(requests.get(URL, timeout=120).content); src = str(dest)
     raw = pathlib.Path(src).read_bytes()
     rows, edition = [], None
@@ -74,7 +74,7 @@ def main():
     dest = SKILL / "data" / "kpa" / "KPA001.json"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
-    print(f"{len(rows)} rows, edition {edition} -> {dest.relative_to(REPO)}")
+    print(f"{len(rows)} rows, edition {edition} -> {dest.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

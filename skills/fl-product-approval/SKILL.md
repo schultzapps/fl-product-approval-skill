@@ -1,6 +1,7 @@
 ---
 name: fl-product-approval
 description: Florida Product Approval (FPA / FL#) review for building-envelope products — storefronts, curtain walls, windows, doors. Use when the user gives an FL number (e.g. "FL47012", "FPA 16517"), names a product series that has a Florida approval (e.g. Kawneer IR 521, Trifab 601T), or asks whether a configuration (mullions, glass/interlayers, anchors, heads/sills, doors) meets project design wind pressures, missile/impact level, or HVHZ requirements. Also use to ingest a new approval from floridabuilding.org into the skill's data store.
+compatibility: Agent Skills format; works in Claude Code and OpenAI Codex. Needs python3 with requests and pdfplumber (requirements.txt), poppler-utils (pdftotext, pdftoppm); tesseract for scanned approvals. Ingest needs network access to floridabuilding.org and a writable skill directory.
 ---
 
 # Florida Product Approval review
@@ -10,7 +11,9 @@ This skill does two things:
 1. **Review a project against an approval**: take the project facts (location, HVHZ, design pressures, missile level, glazing mode, frame type, opening sizes) and list which configurations in the approval's installation instructions meet them.
 2. **Ingest an approval**: given an FL number, pull the record and its documents from the Florida Building Commission site and turn the sealed drawing's tables into structured data. Every approval follows the same path, so "analyze FPA 16517" means running the ingest workflow on 16517.
 
-Paths below are relative to this skill directory. Scripts need `python3` with `requests` and `pdfplumber` (`pip install -r requirements.txt` at the repo root).
+Paths below are relative to this skill directory. Run the scripts from this directory. They need `python3` with `requests` and `pdfplumber` (`pip install -r requirements.txt`, here in the skill directory), plus `pdftotext`/`pdftoppm` from poppler-utils. Scanned approvals also need `tesseract`.
+
+Reviewing a project only reads files. Ingesting an approval or saving a learned rule writes inside this directory (`data/`, `cache/`), and ingest needs network access to floridabuilding.org. If the agent's sandbox blocks either, tell the user what the step needs instead of working around it.
 
 ## Data store
 
@@ -26,7 +29,7 @@ Paths below are relative to this skill directory. Scripts need `python3` with `r
     - `products/FL<n>.<k>/components.json`: one per sub-product. It holds what is specific to that product (glass, glazing method, missile level, any of its own tables), and `"extends": "../../common/components.json"` when it shares the common tables. A sub-product with a different system stands alone (no `extends`).
 - `data/manufacturers/<slug>/RULES.md`: rules the user has taught that apply to every product from one manufacturer.
 - `data/kpa/KPA001.json` is Kawneer's published approval directory, parsed into rows (series → FL number, missile rating, DP, glazing). It is maintained by hand and can be wrong: use it **only to find approvals**. Ratings, pressures and glazing come from the approval's own documents (general rule R-003).
-- Source PDFs are downloaded to `<repo>/cache/` (git-ignored). Re-fetch them with `scripts/fpa_fetch.py`.
+- Source PDFs are downloaded to `cache/` in this directory (git-ignored). Re-fetch them with `scripts/fpa_fetch.py`.
 
 ## Multi-product approvals (FL<n>.1, .2, ...)
 

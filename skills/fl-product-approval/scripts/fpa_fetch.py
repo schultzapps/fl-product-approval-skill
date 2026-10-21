@@ -5,7 +5,7 @@
     python3 fpa_fetch.py FL16517 --rev 7  # specific revision (if the search lists it)
 
 Steps: search form (floridabuilding.org) -> list page -> detail page -> download the linked PDFs into
-<repo>/cache/FL<number>/ (git-ignored) -> write data/approvals/FL<number>/approval.json -> rebuild data/index.json.
+<skill>/cache/FL<number>/ (git-ignored) -> write data/approvals/FL<number>/approval.json -> rebuild data/index.json.
 """
 import argparse, datetime, hashlib, html, json, pathlib, re, sys
 import requests
@@ -13,9 +13,9 @@ import requests
 BASE = "https://www.floridabuilding.org/pr/"
 HERE = pathlib.Path(__file__).resolve().parent
 SKILL = HERE.parent
-REPO = SKILL.parent.parent
+ROOT = SKILL  # cache/ lives in the skill dir so paths hold wherever the skill is installed
 DATA = SKILL / "data"
-CACHE = REPO / "cache"
+CACHE = ROOT / "cache"
 UA = {"User-Agent": "fl-product-approval-skill/0.1 (+research; contact repo owner)"}
 
 
@@ -166,7 +166,7 @@ def main():
         for doc in rec["documents"]:
             dest = CACHE / f"FL{num}" / doc["file"]
             doc["sha256"], doc["bytes"] = download(s, doc["url"], dest)
-            doc["cache_path"] = str(dest.relative_to(REPO))
+            doc["cache_path"] = str(dest.relative_to(ROOT))
             print("downloaded", doc["role"], doc["file"], doc["bytes"], "bytes")
     # keep hand-curated fields from a previous run
     prev = out / "approval.json"
@@ -177,7 +177,7 @@ def main():
                 rec[k] = old[k]
     rec.setdefault("ingest_status", "fetched")
     prev.write_text(json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
-    print("wrote", prev.relative_to(REPO))
+    print("wrote", prev.relative_to(ROOT))
     sys.path.insert(0, str(HERE))
     import catalog
     catalog.rebuild()

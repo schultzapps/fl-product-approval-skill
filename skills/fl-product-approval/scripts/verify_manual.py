@@ -12,7 +12,7 @@ import pdfplumber
 
 HERE = pathlib.Path(__file__).resolve().parent
 SKILL = HERE.parent
-REPO = SKILL.parent.parent
+ROOT = SKILL  # cache/ lives in the skill dir so paths hold wherever the skill is installed
 
 
 def fmt(v):
@@ -100,7 +100,7 @@ def verify_doors(adir, app):
             continue
         prod = next(p for p in app["products"] if p["fl"] == comp["product"])
         doc = next(d for d in app["documents"] if d["role"] == "installation_instructions" and d["file"] in prod["documents"])
-        pdf = pdfplumber.open(str(REPO / doc["cache_path"]))
+        pdf = pdfplumber.open(str(ROOT / doc["cache_path"]))
         for t in comp["door_ratings"]["tables"]:
             cands = [rows for title, rows in door_table_rows(pdf.pages[t["sheet"] - 1]) if DOOR_TITLE[t["component"]] in title and rows]
             if not cands:
@@ -126,7 +126,7 @@ def main():
     comp = json.loads((adir / "components.json").read_text())
     app = json.loads((adir / "approval.json").read_text())
     doc = next(d for d in app["documents"] if d["role"] == "installation_instructions")
-    pdf = pdfplumber.open(str(REPO / doc["cache_path"]))
+    pdf = pdfplumber.open(str(ROOT / doc["cache_path"]))
     bad = checked = 0
     tabs = {t["id"]: t for t in comp["tables"]}
     for t in comp["tables"]:

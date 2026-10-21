@@ -19,7 +19,7 @@ sys.path.insert(0, str(HERE))
 import panel_parse as pp
 
 SKILL = HERE.parent
-REPO = SKILL.parent.parent
+ROOT = SKILL  # cache/ lives in the skill dir so paths hold wherever the skill is installed
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
     pdf_path = a.pdf
     if not pdf_path:
         doc = next(d for d in approval["documents"] if d["role"] == spec["pdf_role"])
-        pdf_path = REPO / doc["cache_path"]
+        pdf_path = ROOT / doc["cache_path"]
         if not pdf_path.exists():
             sys.exit(f"{pdf_path} missing - run: python3 scripts/fpa_fetch.py {num}")
     pdf = pdfplumber.open(str(pdf_path))
@@ -66,7 +66,7 @@ def main():
     (adir / "components.json").write_text(json.dumps(comp, indent=1) + "\n")
     if problems:
         print("\nVALIDATION PROBLEMS:\n  " + "\n  ".join(problems)); sys.exit(1)
-    print(f"\nwrote {(adir / 'components.json').relative_to(REPO)}  ({len(tables)} tables) - validation OK")
+    print(f"\nwrote {(adir / 'components.json').relative_to(ROOT)}  ({len(tables)} tables) - validation OK")
 
 
 if __name__ == "__main__":

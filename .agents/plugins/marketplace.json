@@ -1,0 +1,12 @@
+{
+  "name": "fl-product-approval",
+  "interface": { "displayName": "FL Product Approval" },
+  "plugins": [
+    {
+      "name": "fl-product-approval",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

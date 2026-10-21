@@ -2,7 +2,7 @@
 
 An agent skill for reviewing building-envelope products (storefront, curtain wall, windows, doors) against their **Florida Product Approval (FL#)**. You give it the project facts (location/HVHZ, design wind pressures, missile level, glazing mode, opening sizes). It reads the approval's installation tables and tells you which mullions, glass and interlayers, anchorage, heads and sills, and door assemblies meet those requirements. The least capacity of the chosen components governs the system.
 
-It uses the open [Agent Skills](https://agentskills.io) format (a folder with a `SKILL.md`), so the same folder works in **Claude Code** and **OpenAI Codex**, as well as claude.ai and other agents that read that format.
+It uses the open [Agent Skills](https://agentskills.io) format (a folder with a `SKILL.md`), and is published as a plugin for **Claude Code** and **OpenAI Codex**. The same skill folder also works in claude.ai and other agents that read that format.
 
 ## Skills
 
@@ -23,29 +23,54 @@ Approvals ingested so far:
 
 Any other approval goes through the same workflow: say "analyze FPA 16517" and the skill fetches, extracts and verifies it.
 
-## Compatibility
+## Install (customers)
+
+The skill is published as a plugin for **Claude Code** and **Codex** from this repository. Install it once, and you get new approvals and fixes when you update.
+
+### Claude Code
+
+In a Claude Code session:
+
+```
+/plugin marketplace add schultzapps/fl-product-approval-skill
+/plugin install fl-product-approval@fl-product-approval
+```
+
+To get updates automatically, open `/plugin`, go to **Marketplaces**, select `fl-product-approval` and choose **Enable auto-update**. To update by hand, run `/plugin marketplace update fl-product-approval`.
+
+### Codex
+
+```bash
+codex plugin marketplace add schultzapps/fl-product-approval-skill
+codex plugin add fl-product-approval@fl-product-approval
+```
+
+To update, run `codex plugin marketplace upgrade fl-product-approval`.
+
+### Other agents and claude.ai
+
+- **Other agents that read the [Agent Skills](https://agentskills.io) format:** run `npx skills add schultzapps/fl-product-approval-skill`, and later `npx skills update` to get updates.
+- **claude.ai:** download the latest `skills/fl-product-approval` folder, zip it without `cache/`, and upload it as a skill in your settings. Code execution must be on. claude.ai doesn't update uploaded skills, so upload a fresh zip to get new approvals.
+
+### Requirements
+
+- `python3` with `requests` and `pdfplumber`: `pip install -r skills/fl-product-approval/requirements.txt`
+- `pdftotext` and `pdftoppm` from poppler-utils
+
+### What an installed copy can do
 
 | | Claude Code | Codex | claude.ai |
 | --- | --- | --- | --- |
-| Review a project | Yes | Yes | Yes (with code execution) |
-| Ingest a new approval | Yes | Yes, with network enabled (see below) | No: needs floridabuilding.org access and a writable skill folder |
-| Save learned rules | Yes | Yes | No: the uploaded skill is read-only |
-| Project skill folder in this repo | `.claude/skills/` (symlink) | `.agents/skills/` (symlink) | n/a |
-| Personal skill folder | `~/.claude/skills/` | `~/.agents/skills/` (older versions: `~/.codex/skills/`) | Upload a zip |
-| Invoke explicitly | `/fl-product-approval` | `$fl-product-approval` or `/skills` | Mention it by name |
+| Review a project against an ingested approval | Yes | Yes | Yes (with code execution) |
+| Invoke by name | `/fl-product-approval:fl-product-approval` | `$fl-product-approval` | Mention it by name |
 
 Both agents also pick the skill up on their own when you mention an FL number or a product series with a Florida approval.
 
-Requirements on every platform:
-- `python3` with `requests` and `pdfplumber` (`pip install -r requirements.txt`)
-- `pdftotext` and `pdftoppm` from poppler-utils
-- `tesseract`, only for ingesting scanned (older) approvals
+An installed plugin is a copy that updates replace. Anything written into it is lost on the next update, including a new approval ingested there or a rule saved there. New approvals and rules reach customers by being added to this repository and released (see below).
 
-## Install
+## Maintain and release (publisher)
 
-### Recommended: work from a clone
-
-The skill writes to its own folder when it ingests an approval (`data/`, `cache/`) or saves a rule you teach it (`RULES.md`). Working from a clone keeps that work in git, where you can review, commit and share it.
+Ingesting approvals and teaching rules happen in a clone of this repository, never in an installed copy.
 
 ```bash
 git clone https://github.com/schultzapps/fl-product-approval-skill.git
@@ -53,39 +78,29 @@ cd fl-product-approval-skill
 pip install -r requirements.txt
 ```
 
-Then start your agent in that folder:
-- **Claude Code:** run `claude`. It finds the skill through `.claude/skills/fl-product-approval`.
-- **Codex:** run `codex`. It finds the skill through `.agents/skills/fl-product-approval`.
+Start Claude Code (`claude`) or Codex (`codex`) in the clone. Both pick the skill up from the clone itself: Claude Code through `.claude/skills/fl-product-approval`, Codex through `.agents/skills/fl-product-approval`. Both links point at `skills/fl-product-approval`, so there is one copy of the data. Then:
 
-Both links point at the same `skills/fl-product-approval` folder, so there is one copy of the data.
+- **Ingest a new approval:** "analyze FPA 16517". Ingest needs `tesseract` for scanned approvals and network access to floridabuilding.org. In Codex, allow network for that session: set `network_access = true` under `[sandbox_workspace_write]` in `~/.codex/config.toml`, or approve the command when Codex asks.
+- **Teach a rule:** correct the skill or state a practice; it saves the rule to the right `RULES.md`.
+- Review the diff (`NOTES.md`, `components.json`, `RULES.md`) before releasing. Customers will rely on it.
 
-### Use it from any project
+To release:
 
-Symlink the clone into your personal skills folder, so new approvals and rules still land in the clone:
+1. Bump `version` in **both** `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`, keeping them equal. Installed copies update only when the version changes, so a push without a bump doesn't reach customers.
+2. Run `claude plugin validate .` and check that it passes.
+3. Commit and push to `main`.
 
-```bash
-# Claude Code
-mkdir -p ~/.claude/skills && ln -s "$PWD/skills/fl-product-approval" ~/.claude/skills/fl-product-approval
-# Codex
-mkdir -p ~/.agents/skills && ln -s "$PWD/skills/fl-product-approval" ~/.agents/skills/fl-product-approval
-```
+Customers with auto-update get it at their next session start. Others get it when they run the update command.
 
-Or install a copy with the [skills CLI](https://github.com/vercel-labs/skills):
+### Distribution files
 
-```bash
-npx skills add schultzapps/fl-product-approval-skill
-```
-
-A copy is fine for reviews. Approvals you ingest or rules you teach go into that copy and are lost if you reinstall it.
-
-### claude.ai
-
-Zip the `skills/fl-product-approval` folder, leaving out `cache/`, and upload it as a skill in your claude.ai settings. Code execution must be on. The uploaded skill can review projects against the approvals already in it. To ingest new approvals, use Claude Code or Codex and upload a fresh zip.
-
-### Codex sandbox notes
-
-- **Network:** Codex's default sandbox blocks the network, and ingest has to reach floridabuilding.org. For an ingest session, allow network access: either set `network_access = true` under `[sandbox_workspace_write]` in `~/.codex/config.toml`, or approve the command when Codex asks to run it outside the sandbox.
-- **Writes:** Codex can write only inside the workspace. If the skill is symlinked from `~/.agents/skills` to a clone outside your current project, ingest and rule saving are blocked. Run Codex from the clone for that work.
+| File | Used by |
+| --- | --- |
+| `.claude-plugin/marketplace.json` | Claude Code marketplace catalog (lists this repo root as the plugin) |
+| `.claude-plugin/plugin.json` | Claude Code plugin manifest |
+| `.agents/plugins/marketplace.json` | Codex marketplace catalog |
+| `.codex-plugin/plugin.json` | Codex plugin manifest |
+| `skills/fl-product-approval/SKILL.md` | The skill itself, in the Agent Skills format both agents read |
 
 ## Layout
 
@@ -111,8 +126,9 @@ skills/fl-product-approval/      # the skill: copy or link this folder to instal
     approvals/FL15404/           # multi-product: common/components.json + products/FL15404.1..4/components.json
     approvals/FL47880/           # multi-product doors: products/FL47880.1..7/components.json
   cache/                         # downloaded PDFs (git-ignored; re-fetch with fpa_fetch.py)
-.claude/skills/fl-product-approval -> ../../skills/fl-product-approval   # Claude Code project skill
-.agents/skills/fl-product-approval -> ../../skills/fl-product-approval   # Codex project skill
+.claude/skills/fl-product-approval -> ../../skills/fl-product-approval   # Claude Code, when working in this clone
+.agents/skills/fl-product-approval -> ../../skills/fl-product-approval   # Codex, when working in this clone
+.claude-plugin/, .codex-plugin/, .agents/plugins/                        # plugin and marketplace manifests
 requirements.txt                 # points at skills/fl-product-approval/requirements.txt
 ```
 

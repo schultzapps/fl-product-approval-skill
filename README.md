@@ -6,30 +6,13 @@ It uses the open [Agent Skills](https://agentskills.io) format (a folder with a 
 
 ## Supported approvals
 
-| FL# | Rev | Product | Type | Sub-products | Missile levels | HVHZ | Approved | QA expires |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [FL47012](skills/fl-product-approval/data/approvals/FL47012/NOTES.md) | R9 | Kawneer IR 521 / 521T / 521UT | Storefront | 1 | D, E, A | Yes | 2026-08-11 | 2026-12-31 |
-| [FL15404](skills/fl-product-approval/data/approvals/FL15404/NOTES.md) | R7 | Kawneer IR 501T / 501UT | Storefront | 4 | D, E, A | Yes | 2023-10-17 | 2026-12-31 |
-| [FL47880](skills/fl-product-approval/data/approvals/FL47880/NOTES.md) | R0 | Kawneer 350 / 500 IR entrance doors | Swinging exterior doors | 7 | D, E, A | Yes, except .4 and .7 | 2025-12-09 | 2026-12-31 |
+| FL# | Rev | Product | Type | Sub-products (missile level) | HVHZ | Approved | QA expires |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| [FL47012](skills/fl-product-approval/data/approvals/FL47012/NOTES.md) | R9 | Kawneer IR 521 / 521T / 521UT | Storefront | .1 field or pre-glazed, NT/T/UT (D, E, A) | Yes | 2026-08-11 | 2026-12-31 |
+| [FL15404](skills/fl-product-approval/data/approvals/FL15404/NOTES.md) | R7 | Kawneer IR 501T / 501UT | Storefront | .1 wet glazed (D)<br>.2 dry glazed (D)<br>.3 small missile (A)<br>.4 wet glazed (E) | Yes | 2023-10-17 | 2026-12-31 |
+| [FL47880](skills/fl-product-approval/data/approvals/FL47880/NOTES.md) | R0 | Kawneer 350 / 500 IR entrance doors | Swinging exterior doors | .1 350 IR/HW outswing and bi-fold showroom (D, A)<br>.2 350/500 IR, 8 ft (D)<br>.3 350/500 IR, 9 ft (D, A)<br>.4 350/500 IR, Wind Zone 3 (D)<br>.5 Flushline (D, A)<br>.6 IR 350/500 HW (D, E)<br>.7 IR 350/500 HW, Wind Zone 3 (D, A) | Yes, except .4 and .7 | 2025-12-09 | 2026-12-31 |
 
 Missile levels: D and E are large missile, A is small missile. An unqualified "LMI" means Level D.
-
-### Sub-products
-
-| Sub-product | Description | Missile | HVHZ | Drawing |
-| --- | --- | --- | --- | --- |
-| FL47012.1 | IR 521 storefront, field or pre-glazed, NT/T/UT frames | D, E, A | Yes | IR521-FPA |
-| FL15404.1 | IR 501T/UT storefront, wet glazed | D | Yes | 1758 |
-| FL15404.2 | IR 501T/UT storefront, dry glazed | D | Yes | 1760 |
-| FL15404.3 | IR 501T/UT storefront, small missile | A | Yes | 1759 |
-| FL15404.4 | IR 501T/UT storefront, wet glazed, Level E | E | Yes | 1981 |
-| FL47880.1 | 350 IR/HW outswing and bi-fold showroom doors | D, A | Yes | KAW046 |
-| FL47880.2 | 350/500 IR outswing doors, 8 ft | D | Yes | KAW042 |
-| FL47880.3 | 350/500 IR outswing doors, 9 ft | D, A | Yes | KAW041 |
-| FL47880.4 | 350/500 IR outswing doors (Wind Zone 3) | D | No | KAW045 |
-| FL47880.5 | Flushline outswing doors | D, A | Yes | KAW047 |
-| FL47880.6 | IR 350/500 HW outswing doors | D, E | Yes | KAW044 |
-| FL47880.7 | IR 350/500 HW outswing doors (Wind Zone 3) | D, A | No | KAW043 |
 
 FL15404.1–.3 share their framing tables. FL47880 covers the doors only; the storefront or curtain wall around them is reviewed under its own approval.
 
